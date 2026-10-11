@@ -1,19 +1,19 @@
 {
   "by_model": {
-    "gemini-3.8-flash-exp-a": {
+    "gemini-3.8-flash-exp-a-high": {
       "errors": 0,
-      "mean": 0.7275,
+      "mean": 0.9166666666666666,
       "n": 12
     }
   },
   "by_model_tag": {
-    "gemini-3.8-flash-exp-a": {
+    "gemini-3.8-flash-exp-a-high": {
       "acg_knowledge": {
-        "mean": 0.3333333333333333,
+        "mean": 1.0,
         "n": 3
       },
       "culture_knowledge": {
-        "mean": 0.9400000000000002,
+        "mean": 1.0,
         "n": 1
       },
       "emotion_alignment": {
@@ -29,15 +29,15 @@
         "n": 2
       },
       "geo_knowledge": {
-        "mean": 1.0,
+        "mean": 0.5,
         "n": 1
       },
       "image_detail": {
-        "mean": 0.9400000000000002,
+        "mean": 1.0,
         "n": 1
       },
       "insight": {
-        "mean": 1.0,
+        "mean": 0.5,
         "n": 1
       },
       "language_reasoning": {
@@ -45,11 +45,11 @@
         "n": 1
       },
       "long_tail_knowledge": {
-        "mean": 0.5,
+        "mean": 0.9166666666666666,
         "n": 6
       },
       "maths": {
-        "mean": 0.895,
+        "mean": 0.75,
         "n": 2
       },
       "subtle_attention": {
@@ -57,11 +57,11 @@
         "n": 1
       },
       "token_efficiency": {
-        "mean": 0.895,
+        "mean": 0.75,
         "n": 2
       },
       "vision": {
-        "mean": 0.8600000000000001,
+        "mean": 0.875,
         "n": 4
       },
       "vision_reasoning": {
@@ -69,51 +69,51 @@
         "n": 1
       },
       "world_knowledge": {
-        "mean": 0.6175,
+        "mean": 0.9375,
         "n": 8
       }
     }
   },
   "models": [
-    "gemini-3.8-flash-exp-a"
+    "gemini-3.8-flash-exp-a-high"
   ],
-  "run_id": "2026-10-11T08-01-31",
+  "run_id": "2026-10-11T08-31-43",
   "score_matrix": {
     "debug_mc_stronghold_eye_mismatch": {
-      "gemini-3.8-flash-exp-a": 1.0
+      "gemini-3.8-flash-exp-a-high": 1.0
     },
     "frp_tcp_meltdown": {
-      "gemini-3.8-flash-exp-a": 1.0
+      "gemini-3.8-flash-exp-a-high": 1.0
     },
     "integration_by_substitution": {
-      "gemini-3.8-flash-exp-a": 0.7899999999999999
+      "gemini-3.8-flash-exp-a-high": 1.0
     },
     "know_aqua_friends": {
-      "gemini-3.8-flash-exp-a": 0.0
+      "gemini-3.8-flash-exp-a-high": 1.0
     },
     "know_deco27_thanks_songs": {
-      "gemini-3.8-flash-exp-a": 0.5
+      "gemini-3.8-flash-exp-a-high": 1.0
     },
     "know_ken_brennan": {
-      "gemini-3.8-flash-exp-a": 0.0
+      "gemini-3.8-flash-exp-a-high": 1.0
     },
     "know_monogatari_homage": {
-      "gemini-3.8-flash-exp-a": 0.5
+      "gemini-3.8-flash-exp-a-high": 1.0
     },
     "know_shenzhen_qianhai": {
-      "gemini-3.8-flash-exp-a": 1.0
+      "gemini-3.8-flash-exp-a-high": 0.5
     },
     "know_twitch_raid": {
-      "gemini-3.8-flash-exp-a": 1.0
+      "gemini-3.8-flash-exp-a-high": 1.0
     },
     "subtle_lyrics_discovery": {
-      "gemini-3.8-flash-exp-a": 1.0
+      "gemini-3.8-flash-exp-a-high": 1.0
     },
     "sym_sum": {
-      "gemini-3.8-flash-exp-a": 1.0
+      "gemini-3.8-flash-exp-a-high": 0.5
     },
     "understand_oreapo_fanart_details": {
-      "gemini-3.8-flash-exp-a": 0.9400000000000002
+      "gemini-3.8-flash-exp-a-high": 1.0
     }
   },
   "tags": [
