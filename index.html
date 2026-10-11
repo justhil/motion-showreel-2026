@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="sepia" data-font="serif">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>gemini-3.8-flash-exp-a 中文文学与轻小说创作评测馆 (72篇 / 50.6万字)</title>
+  <style>
+    :root {
+      --bg-main: #f6f1e7;
+      --bg-card: #fcf9f2;
+      --bg-elevated: #efe8d8;
+      --text-main: #2c2623;
+      --text-muted: #6e655f;
+      --text-faint: #998f87;
+      --border-color: #e2d9c8;
+      --accent: #8c3b2b;
+      --accent-soft: rgba(140, 59, 43, 0.1);
+      --badge-ok-bg: rgba(46, 125, 50, 0.12);
+      --badge-ok-text: #2e7d32;
+      --shadow: 0 2px 10px rgba(44, 38, 35, 0.05);
+      --reader-font-size: 18px;
+      --reader-max-width: 780px;
+      --font-serif: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "STSong", "SimSun", Georgia, serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    }
+
+    [data-theme="light"] {
+      --bg-main: #f8f9fa;
+      --bg-card: #ffffff;
+      --bg-elevated: #f1f3f5;
+      --text-main: #1f2328;
+      --text-muted: #59636e;
+      --text-faint: #8c959f;
+      --border-color: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: rgba(37, 99, 235, 0.1);
+      --shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    [data-theme="green"] {
+      --bg-main: #e3edcd;
+      --bg-card: #ebf4d8;
+      --bg-elevated: #d7e4bc;
+      --text-main: #233020;
+      --text-muted: #52634e;
+      --text-faint: #788a73;
+      --border-color: #c7d6ab;
+      --accent: #2e6b34;
+      --accent-soft: rgba(46, 107, 52, 0.12);
+      --shadow: 0 2px 8px rgba(35, 48, 32, 0.05);
+    }
+
+    [data-theme="dark"] {
+      --bg-main: #141517;
+      --bg-card: #1c1e22;
+      --bg-elevated: #25282e;
+      --text-main: #d8dae0;
+      --text-muted: #9096a2;
+      --text-faint: #636875;
+      --border-color: #2c3038;
+      --accent: #e07a5f;
+      --accent-soft: rgba(224, 122, 95, 0.15);
+      --badge-ok-bg: rgba(76, 175, 80, 0.15);
+      --badge-ok-text: #81c784;
+      --shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Reading progress bar */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: var(--accent);
+      width: 0%;
+      z-index: 1000;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Top Sticky Navigation */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      box-shadow: var(--shadow);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .brand-badge {
+      background: var(--accent);
+      color: #fff;
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .toolbar-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: var(--bg-elevated);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+      padding: 5px 11px;
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 28px 20px 80px;
+    }
+
+    /* Hero Header */
+    .hero {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 28px 30px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      font-size: 24px;
+      font-family: var(--font-serif);
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-sub {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    .stat-box {
+      background: var(--bg-elevated);
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .stat-val {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accent);
+      font-family: var(--font-serif);
+    }
+
+    /* Filter Bar */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      background: var(--bg-card);
+      padding: 14px 18px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .search-input {
+      background: var(--bg-main);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      min-width: 240px;
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+    }
+
+    /* Round Section */
+    .round-section {
+      margin-bottom: 40px;
+    }
+
+    .round-header {
+      border-left: 4px solid var(--accent);
+      padding-left: 14px;
+      margin-bottom: 18px;
+    }
+
+    .round-header h2 {
+      font-size: 20px;
+      font-family: var(--font-serif);
+      margin-bottom: 4px;
+    }
+
+    .round-header p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .category-block {
+      margin-bottom: 28px;
+    }
+
+    .category-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+      gap: 16px;
+    }
+
+    @media (max-width: 640px) {
+      .topics-grid {
+        grid-template-columns: 1fr;
+      }
+      .search-input {
+        width: 100%;
+      }
+    }
+
+    .topic-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .topic-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .topic-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+    }
+
+    .prompt-preview {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      background: var(--bg-elevated);
+      padding: 8px 12px;
+      border-radius: 6px;
+      line-height: 1.5;
+    }
+
+    .runs-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    @media (max-width: 500px) {
+      .runs-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .run-box {
+      border: 1px solid var(--border-color);
+      background: var(--bg-main);
+      border-radius: 8px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .run-box:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+
+    .run-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .run-tag {
+      font-weight: 700;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .cliche-ok {
+      background: var(--badge-ok-bg);
+      color: var(--badge-ok-text);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .run-story-title {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--text-main);
+      line-height: 1.35;
+    }
+
+    .run-excerpt {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .run-meta-foot {
+      font-size: 11px;
+      color: var(--text-faint);
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      border-top: 1px dashed var(--border-color);
+      padding-top: 6px;
+    }
+
+    /* ================= READER VIEW ================= */
+    #reader-view {
+      display: none;
+    }
+
+    .reader-wrapper {
+      max-width: var(--reader-max-width);
+      margin: 0 auto;
+      padding: 24px 16px 100px;
+      transition: max-width 0.2s ease;
+    }
+
+    .reader-wrapper.compare-mode {
+      max-width: 1440px;
+    }
+
+    .reader-meta-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .reader-eyebrow {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .reader-topic-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .reader-stats-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 12px;
+    }
+
+    .drawer-box {
+      display: none;
+      margin-top: 12px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 13px;
+      white-space: pre-wrap;
+      line-height: 1.65;
+      max-height: 420px;
+      overflow-y: auto;
+      color: var(--text-main);
+    }
+
+    .drawer-box.open {
+      display: block;
+    }
+
+    /* Novel Paper Area */
+    .paper-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .reader-wrapper.compare-mode .paper-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 900px) {
+      .reader-wrapper.compare-mode .paper-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .novel-paper {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 44px 48px;
+      box-shadow: var(--shadow);
+      font-size: var(--reader-font-size);
+      line-height: 1.95;
+      letter-spacing: 0.02em;
+    }
+
+    [data-font="serif"] .novel-paper {
+      font-family: var(--font-serif);
+    }
+
+    [data-font="sans"] .novel-paper {
+      font-family: var(--font-sans);
+    }
+
+    @media (max-width: 640px) {
+      .novel-paper {
+        padding: 26px 20px;
+        line-height: 1.85;
+      }
+    }
+
+    .novel-paper h1, .novel-paper h2, .novel-paper h3 {
+      font-family: var(--font-serif);
+      line-height: 1.4;
+      margin: 1.2em 0 0.8em;
+      color: var(--text-main);
+    }
+
+    .novel-paper h1:first-child, .novel-paper h2:first-child {
+      margin-top: 0;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 28px;
+      font-size: 1.45em;
+    }
+
+    .novel-paper p {
+      margin-bottom: 1.15em;
+      text-align: justify;
+    }
+
+    .novel-paper blockquote {
+      border-left: 3px solid var(--accent);
+      background: var(--bg-elevated);
+      padding: 10px 16px;
+      margin: 1.2em 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.95em;
+    }
+
+    .novel-paper hr {
+      border: none;
+      border-top: 1px dashed var(--border-color);
+      margin: 2em 0;
+    }
+
+    .reader-footer-nav {
+      margin-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <!-- Top Sticky Bar -->
+  <header class="topbar">
+    <a class="brand" href="#/" onclick="goHome(event)">
+      <span>📚 Exp-A 文学评测馆</span>
+      <span class="brand-badge">HIGH THINKING · 72篇</span>
+    </a>
+
+    <!-- Reader Controls (Visible everywhere for theme, expanded in reader) -->
+    <div class="toolbar-group">
+      <button class="btn" id="btn-back-home" style="display:none;" onclick="goHome(event)">← 返回分类目录</button>
+      <button class="btn" id="btn-font-toggle" onclick="toggleFont()" title="切换衬线/无衬线字体">字体: 宋体</button>
+      <button class="btn" onclick="changeFontSize(-1)" title="减小字号">A-</button>
+      <button class="btn" onclick="changeFontSize(1)" title="增大字号">A+</button>
+      <button class="btn" id="theme-sepia" onclick="setTheme('sepia')">📜 羊皮纸</button>
+      <button class="btn" id="theme-light" onclick="setTheme('light')">☀️ 纯白</button>
+      <button class="btn" id="theme-green" onclick="setTheme('green')">🌿 护眼</button>
+      <button class="btn" id="theme-dark" onclick="setTheme('dark')">🌙 夜间</button>
+    </div>
+  </header>
+
+  <!-- ================= DIRECTORY VIEW ================= -->
+  <main id="directory-view" class="container">
+    <section class="hero">
+      <h1><code>gemini-3.8-flash-exp-a</code> 中文文学与轻小说深度基准测试</h1>
+      <p class="hero-sub">
+        全程固定思考强度 <strong><code>thinkingLevel: HIGH</code></strong> · 严苛反 AI 套话指令约束 · 每个测试课题独立生成 <strong>Run 01 (T=0.85)</strong> 与 <strong>Run 02 (T=0.95)</strong> 双盲样本防止误差
+      </p>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-label">收录完整长篇作品</div>
+          <div class="stat-val" id="stat-articles">72 篇</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">累计生成中文正文字数</div>
+          <div class="stat-val" id="stat-chars">506,137 字</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">累计消耗思考 Tokens</div>
+          <div class="stat-val" id="stat-thoughts">238,970</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">测试维度架构</div>
+          <div class="stat-val">3 轮 × 12 题 × 2 篇</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="filter-bar">
+      <div class="tabs" id="round-tabs">
+        <button class="btn active" data-round="all" onclick="filterRound('all')">全部三轮 (72篇)</button>
+        <button class="btn" data-round="round1" onclick="filterRound('round1')">第一轮：同人与多体裁基线 (24篇)</button>
+        <button class="btn" data-round="round2" onclick="filterRound('round2')">第二轮：进阶同人与实验文体 (24篇)</button>
+        <button class="btn" data-round="round3" onclick="filterRound('round3')">第三轮：纯正统轻小说专项 (24篇)</button>
+      </div>
+      <input type="search" id="search-box" class="search-input" placeholder="🔍 搜索作家、作品名、题材或标题关键词..." oninput="renderDirectory()" />
+    </section>
+
+    <div id="catalog-container"></div>
+  </main>
+
+  <!-- ================= READER VIEW ================= -->
+  <main id="reader-view">
+    <div class="reader-wrapper" id="reader-wrapper">
+      <div class="reader-meta-card">
+        <div class="reader-eyebrow">
+          <span id="r-breadcrumb">Round 1 · 分类</span>
+          <div class="toolbar-group">
+            <button class="btn" id="btn-switch-run1" onclick="switchRun(1)">Run 01 (T=0.85)</button>
+            <button class="btn" id="btn-switch-run2" onclick="switchRun(2)">Run 02 (T=0.95)</button>
+            <button class="btn" id="btn-compare" onclick="toggleCompare()">⚖️ 双栏同屏对比</button>
+          </div>
+        </div>
+        <div class="reader-topic-title" id="r-topic-title">课题名称</div>
+        <div class="reader-stats-strip" id="r-stats-strip"></div>
+        <div class="toolbar-group">
+          <button class="btn" onclick="toggleDrawer('drawer-prompt')">📋 查看测试 Prompt (System + User)</button>
+          <button class="btn" onclick="toggleDrawer('drawer-thoughts')">🧠 查看 High 思考链 (<span id="r-thought-count">0</span> tokens)</button>
+          <a class="btn" id="r-raw-md" href="#" target="_blank">📄 查看原始 Markdown</a>
+        </div>
+        <div id="drawer-prompt" class="drawer-box"></div>
+        <div id="drawer-thoughts" class="drawer-box"></div>
+      </div>
+
+      <div class="paper-grid" id="paper-grid">
+        <article class="novel-paper" id="novel-content-1"></article>
+        <article class="novel-paper" id="novel-content-2" style="display:none;"></article>
+      </div>
+
+      <div class="reader-footer-nav">
+        <button class="btn" id="btn-prev-art" onclick="navArticle(-1)">← 上一篇</button>
+        <button class="btn" onclick="goHome(event)">📚 返回分类总目录</button>
+        <button class="btn" id="btn-next-art" onclick="navArticle(1)">下一篇 →</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    let CATALOG = null;
+    let FLAT_ARTICLES = [];
+    let ARTICLE_CACHE = {};
+    let currentRoundFilter = 'all';
+    let currentArticleId = null;
+    let currentPairIds = [null, null];
+    let isCompareMode = false;
+    let fontSize = parseInt(localStorage.getItem('expa_font_size') || '18', 10);
+
+    // Simple & clean Markdown to HTML parser for novel text
+    function renderMarkdown(md) {
+      if (!md) return '';
+      const escaped = md
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+
+      const lines = escaped.split('\n');
+      let html = [];
+      let inQuote = false;
+
+      for (let i = 0; i < lines.length; i++) {
+        let line = lines[i].trimEnd();
+        let trimmed = line.trim();
+
+        if (!trimmed) {
+          if (inQuote) {
+            html.push('</blockquote>');
+            inQuote = false;
+          }
+          continue;
+        }
+
+        if (/^---+$|^\*\*\*+$/.test(trimmed)) {
+          if (inQuote) { html.push('</blockquote>'); inQuote = false; }
+          html.push('<hr/>');
+          continue;
+        }
+
+        if (trimmed.startsWith('# ')) {
+          if (inQuote) { html.push('</blockquote>'); inQuote = false; }
+          html.push(`<h1>${ formatInline(trimmed.slice(2)) }</h1>`);
+        } else if (trimmed.startsWith('## ')) {
+          if (inQuote) { html.push('</blockquote>'); inQuote = false; }
+          html.push(`<h2>${ formatInline(trimmed.slice(3)) }</h2>`);
+        } else if (trimmed.startsWith('### ')) {
+          if (inQuote) { html.push('</blockquote>'); inQuote = false; }
+          html.push(`<h3>${ formatInline(trimmed.slice(4)) }</h3>`);
+        } else if (trimmed.startsWith('&gt;')) {
+          if (!inQuote) {
+            html.push('<blockquote>');
+            inQuote = true;
+          }
+          html.push(`<p>${ formatInline(trimmed.replace(/^&gt;\s*/, '')) }</p>`);
+        } else {
+          if (inQuote) { html.push('</blockquote>'); inQuote = false; }
+          html.push(`<p>${ formatInline(trimmed) }</p>`);
+        }
+      }
+      if (inQuote) html.push('</blockquote>');
+      return html.join('\n');
+    }
+
+    function formatInline(str) {
+      return str
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.+?)\*/g, '<em>$1</em>')
+        .replace(/`([^`]+)`/g, '<code>$1</code>');
+    }
+
+    async function init() {
+      // Restore theme & font preferences
+      const savedTheme = localStorage.getItem('expa_theme') || 'sepia';
+      const savedFont = localStorage.getItem('expa_font') || 'serif';
+      setTheme(savedTheme);
+      setFont(savedFont);
+      document.documentElement.style.setProperty('--reader-font-size', fontSize + 'px');
+
+      const res = await fetch('data/catalog.json');
+      CATALOG = await res.json();
+
+      document.getElementById('stat-articles').textContent = CATALOG.total_articles + ' 篇';
+      document.getElementById('stat-chars').textContent = CATALOG.total_chars.toLocaleString() + ' 字';
+      document.getElementById('stat-thoughts').textContent = CATALOG.total_thought_tokens.toLocaleString();
+
+      FLAT_ARTICLES = [];
+      CATALOG.rounds.forEach(r => {
+        r.categories.forEach(c => {
+          c.topics.forEach(t => {
+            t.runs.forEach(run => {
+              FLAT_ARTICLES.push({
+                ...run,
+                round_id: r.round_id,
+                round_short: r.round_short,
+                cat_name: c.cat_name,
+                topic_title: t.topic_title,
+                pair_ids: t.runs.map(x => x.id)
+              });
+            });
+          });
+        });
+      });
+
+      renderDirectory();
+      handleRoute();
+      window.addEventListener('hashchange', handleRoute);
+      window.addEventListener('scroll', updateScrollProgress);
+      window.addEventListener('keydown', (e) => {
+        if (document.getElementById('reader-view').style.display === 'block') {
+          if (e.key === 'ArrowLeft') navArticle(-1);
+          if (e.key === 'ArrowRight') navArticle(1);
+        }
+      });
+    }
+
+    function updateScrollProgress() {
+      const docEl = document.documentElement;
+      const scrollTop = docEl.scrollTop || document.body.scrollTop;
+      const scrollHeight = docEl.scrollHeight - docEl.clientHeight;
+      const pct = scrollHeight > 0 ? Math.min(100, (scrollTop / scrollHeight) * 100) : 0;
+      document.getElementById('progress-bar').style.width = pct + '%';
+    }
+
+    function filterRound(roundId) {
+      currentRoundFilter = roundId;
+      document.querySelectorAll('#round-tabs .btn').forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-round') === roundId);
+      });
+      renderDirectory();
+    }
+
+    function renderDirectory() {
+      if (!CATALOG) return;
+      const q = (document.getElementById('search-box').value || '').trim().toLowerCase();
+      const container = document.getElementById('catalog-container');
+      let html = '';
+
+      CATALOG.rounds.forEach(r => {
+        if (currentRoundFilter !== 'all' && r.round_id !== currentRoundFilter) return;
+
+        let catsHtml = '';
+        r.categories.forEach(c => {
+          let topicsHtml = '';
+          c.topics.forEach(t => {
+            const matchText = (t.topic_title + ' ' + t.topic_short + ' ' + t.prompt_preview + ' ' + t.runs.map(x => x.story_title + ' ' + x.excerpt).join(' ')).toLowerCase();
+            if (q && !matchText.includes(q)) return;
+
+            const r1 = t.runs[0];
+            const r2 = t.runs[1];
+
+            const renderRunBox = (run) => {
+              if (!run) return '';
+              const hitBadge = run.cliche_total === 0
+                ? `<span class="cliche-ok">零套话 ✅</span>`
+                : `<span style="color:var(--text-muted)">套话×${run.cliche_total}</span>`;
+              return `
+                <a class="run-box" href="#/read/${run.id}">
+                  <div>
+                    <div class="run-badge-row">
+                      <span class="run-tag">Run 0${run.run_idx} (T=${run.temperature})</span>
+                      ${hitBadge}
+                    </div>
+                    <div class="run-story-title" style="margin-top:6px;">《${run.story_title}》</div>
+                    <div class="run-excerpt" style="margin-top:4px;">${run.excerpt}</div>
+                  </div>
+                  <div class="run-meta-foot">
+                    <span>📝 ${run.char_count.toLocaleString()} 字</span>
+                    <span>🧠 思考 ${run.thought_tokens.toLocaleString()} tok</span>
+                    <span>⏱️ ${run.duration_s}s</span>
+                  </div>
+                </a>
+              `;
+            };
+
+            topicsHtml += `
+              <div class="topic-card">
+                <div class="topic-top">
+                  <div class="topic-name">${t.topic_title}</div>
+                  ${r1 && r2 ? `<a class="btn" href="#/compare/${r1.id}">⚖️ 双篇对比</a>` : ''}
+                </div>
+                <div class="prompt-preview"><strong>Prompt 摘要：</strong>${t.prompt_preview}</div>
+                <div class="runs-row">
+                  ${renderRunBox(r1)}
+                  ${renderRunBox(r2)}
+                </div>
+              </div>
+            `;
+          });
+
+          if (topicsHtml) {
+            catsHtml += `
+              <div class="category-block">
+                <div class="category-title">📂 ${c.cat_name}</div>
+                <div class="topics-grid">${topicsHtml}</div>
+              </div>
+            `;
+          }
+        });
+
+        if (catsHtml) {
+          html += `
+            <section class="round-section">
+              <div class="round-header">
+                <h2>${r.round_name}</h2>
+                <p>${r.desc}</p>
+              </div>
+              ${catsHtml}
+            </section>
+          `;
+        }
+      });
+
+      container.innerHTML = html || `<div class="hero" style="text-align:center;color:var(--text-muted)">未找到匹配的测试文章，请尝试其他关键词。</div>`;
+    }
+
+    async function fetchArticle(id) {
+      if (ARTICLE_CACHE[id]) return ARTICLE_CACHE[id];
+      const res = await fetch(`data/articles/${id}.json`);
+      const data = await res.json();
+      ARTICLE_CACHE[id] = data;
+      return data;
+    }
+
+    async function handleRoute() {
+      const hash = window.location.hash || '#/';
+      if (hash.startsWith('#/read/') || hash.startsWith('#/compare/')) {
+        const isComp = hash.startsWith('#/compare/');
+        const artId = hash.replace('#/read/', '').replace('#/compare/', '').trim();
+        await openReader(artId, isComp);
+      } else {
+        document.getElementById('directory-view').style.display = 'block';
+        document.getElementById('reader-view').style.display = 'none';
+        document.getElementById('btn-back-home').style.display = 'none';
+        window.scrollTo({ top: 0 });
+      }
+    }
+
+    function goHome(e) {
+      if (e) e.preventDefault();
+      window.location.hash = '#/';
+    }
+
+    async function openReader(artId, compareMode = false) {
+      const metaItem = FLAT_ARTICLES.find(x => x.id === artId);
+      if (!metaItem) {
+        goHome();
+        return;
+      }
+
+      currentArticleId = artId;
+      currentPairIds = metaItem.pair_ids || [artId];
+      isCompareMode = compareMode;
+
+      document.getElementById('directory-view').style.display = 'none';
+      document.getElementById('reader-view').style.display = 'block';
+      document.getElementById('btn-back-home').style.display = 'inline-flex';
+
+      const art = await fetchArticle(artId);
+
+      document.getElementById('r-breadcrumb').textContent = `${art.round_short}  ›  ${art.cat_name}  ›  第 ${art.seq}/72 篇`;
+      document.getElementById('r-topic-title').textContent = art.topic_title;
+      document.getElementById('r-thought-count').textContent = art.thought_tokens.toLocaleString();
+      document.getElementById('r-raw-md').href = art.md_path;
+
+      const hitText = art.cliche_total === 0
+        ? '0 命中 (100% 纯净 ✅)'
+        : JSON.stringify(art.cliche_hits);
+
+      document.getElementById('r-stats-strip').innerHTML = `
+        <span><strong>当前批次：</strong>Run 0${art.run_idx} (temperature=${art.temperature})</span>
+        <span><strong>正文字数：</strong>${art.char_count.toLocaleString()} 中文字</span>
+        <span><strong>思考 Tokens：</strong>${art.thought_tokens.toLocaleString()}</span>
+        <span><strong>输出 Tokens：</strong>${art.output_tokens.toLocaleString()}</span>
+        <span><strong>生成耗时：</strong>${art.duration_s} 秒</span>
+        <span><strong>违禁 AI 词扫描：</strong>${hitText}</span>
+      `;
+
+      document.getElementById('drawer-prompt').textContent =
+        `【System Instruction】\n${art.sys_instruction}\n\n【User Prompt】\n${art.prompt}`;
+      document.getElementById('drawer-thoughts').textContent =
+        art.thoughts || '（无思考链记录）';
+
+      // Close drawers on switch
+      document.getElementById('drawer-prompt').classList.remove('open');
+      document.getElementById('drawer-thoughts').classList.remove('open');
+
+      // Update Run buttons
+      document.getElementById('btn-switch-run1').classList.toggle('active', !isCompareMode && art.run_idx === 1);
+      document.getElementById('btn-switch-run2').classList.toggle('active', !isCompareMode && art.run_idx === 2);
+      document.getElementById('btn-compare').classList.toggle('active', isCompareMode);
+
+      const wrapper = document.getElementById('reader-wrapper');
+      const paper1 = document.getElementById('novel-content-1');
+      const paper2 = document.getElementById('novel-content-2');
+
+      if (isCompareMode && currentPairIds.length === 2) {
+        wrapper.classList.add('compare-mode');
+        const [a1, a2] = await Promise.all([fetchArticle(currentPairIds[0]), fetchArticle(currentPairIds[1])]);
+        paper1.innerHTML = `<div style="font-size:13px;color:var(--accent);font-weight:700;margin-bottom:10px;">【Run 01 · T=${a1.temperature} · ${a1.char_count.toLocaleString()}字 · 思考 ${a1.thought_tokens} tok】</div>` + renderMarkdown(a1.text);
+        paper2.innerHTML = `<div style="font-size:13px;color:var(--accent);font-weight:700;margin-bottom:10px;">【Run 02 · T=${a2.temperature} · ${a2.char_count.toLocaleString()}字 · 思考 ${a2.thought_tokens} tok】</div>` + renderMarkdown(a2.text);
+        paper2.style.display = 'block';
+      } else {
+        wrapper.classList.remove('compare-mode');
+        paper1.innerHTML = renderMarkdown(art.text);
+        paper2.style.display = 'none';
+      }
+
+      // Update Prev / Next buttons
+      const idx = FLAT_ARTICLES.findIndex(x => x.id === artId);
+      document.getElementById('btn-prev-art').disabled = idx <= 0;
+      document.getElementById('btn-next-art').disabled = idx >= FLAT_ARTICLES.length - 1;
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function switchRun(runIdx) {
+      if (!currentPairIds || currentPairIds.length < runIdx) return;
+      window.location.hash = `#/read/${currentPairIds[runIdx - 1]}`;
+    }
+
+    function toggleCompare() {
+      if (!currentArticleId) return;
+      if (isCompareMode) {
+        window.location.hash = `#/read/${currentArticleId}`;
+      } else {
+        window.location.hash = `#/compare/${currentArticleId}`;
+      }
+    }
+
+    function navArticle(delta) {
+      const idx = FLAT_ARTICLES.findIndex(x => x.id === currentArticleId);
+      if (idx === -1) return;
+      const nextIdx = idx + delta;
+      if (nextIdx >= 0 && nextIdx < FLAT_ARTICLES.length) {
+        window.location.hash = `#/read/${FLAT_ARTICLES[nextIdx].id}`;
+      }
+    }
+
+    function toggleDrawer(id) {
+      document.getElementById(id).classList.toggle('open');
+    }
+
+    function setTheme(t) {
+      document.documentElement.setAttribute('data-theme', t);
+      localStorage.setItem('expa_theme', t);
+      ['sepia', 'light', 'green', 'dark'].forEach(k => {
+        const el = document.getElementById('theme-' + k);
+        if (el) el.classList.toggle('active', k === t);
+      });
+    }
+
+    function setFont(f) {
+      document.documentElement.setAttribute('data-font', f);
+      localStorage.setItem('expa_font', f);
+      document.getElementById('btn-font-toggle').textContent = f === 'serif' ? '字体: 宋体' : '字体: 黑体';
+    }
+
+    function toggleFont() {
+      const cur = document.documentElement.getAttribute('data-font') || 'serif';
+      setFont(cur === 'serif' ? 'sans' : 'serif');
+    }
+
+    function changeFontSize(delta) {
+      fontSize = Math.max(14, Math.min(26, fontSize + delta));
+      document.documentElement.style.setProperty('--reader-font-size', fontSize + 'px');
+      localStorage.setItem('expa_font_size', String(fontSize));
+    }
+
+    init();
+  </script>
+</body>
+</html>
