@@ -1,9 +1,9 @@
 {
   "model": "gemini-3.8-flash-exp-a (thinkingLevel: HIGH)",
   "total_articles": 82,
-  "total_chars": 750476,
-  "total_thought_tokens": 308358,
-  "total_output_tokens": 586401,
+  "total_chars": 745387,
+  "total_thought_tokens": 311017,
+  "total_output_tokens": 591347,
   "rounds": [
     {
       "round_id": "round5",
@@ -125,7 +125,7 @@
             {
               "topic_folder": "05_村上春树_星期二下午煮意大利面时打来的电话",
               "topic_short": "村上春树 · 星期二下午煮意大利面时打来的电话",
-              "topic_title": "《星期二下午煮意大利面时，找猫的女孩打来电话》",
+              "topic_title": "《星期二下午的意大利面条与院子里的枯井》",
               "prompt_preview": "",
               "runs": [
                 {
@@ -133,14 +133,14 @@
                   "seq": 5,
                   "run_idx": 1,
                   "temperature": 0.88,
-                  "story_title": "星期二下午煮意大利面时，找猫的女孩打来电话",
-                  "char_count": 14697,
-                  "thought_tokens": 3405,
-                  "output_tokens": 11026,
-                  "duration_s": 209.4,
+                  "story_title": "《星期二下午的意大利面条与院子里的枯井》",
+                  "char_count": 6051,
+                  "thought_tokens": 7013,
+                  "output_tokens": 13005,
+                  "duration_s": 277.6,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "十月中旬的一个星期二下午，我站在厨房的煤气灶前煮意大利面。 水在深底铝锅里欢快地翻滚着，腾起一阵阵白茫茫的蒸汽。我捏了一小撮粗盐撒进锅里，拿过搁在案板上的那把塑料盒装意大利面，抽出一大把，像插花一样散开着放进沸水里。面条…",
+                  "excerpt": "那是我三十岁那年秋天的事，所以距今已过去八九年了。 我时常想，充其量八九年，能称得上久远么？唐纳德·费根唱《夜蝇》、比利·乔尔唱《纯真之人》的时代——顺序大约有点颠倒，反正就是那个时代——居然已算是往昔，我却怎么也上不来…",
                   "md_path": "writing-bench-round5-worldlit/03_村上春树_Haruki_Murakami/05_村上春树_星期二下午煮意大利面时打来的电话/run_01.md"
                 }
               ]
@@ -148,7 +148,7 @@
             {
               "topic_folder": "06_村上春树_四国雨夜的高速公路服务区与第六只大象",
               "topic_short": "村上春树 · 四国雨夜的高速公路服务区与第六只大象",
-              "topic_title": "《雨夜的高速公路服务区与借打火机的男人》",
+              "topic_title": "《雨夜的富士川服务站与借打火机的男人》",
               "prompt_preview": "",
               "runs": [
                 {
@@ -156,14 +156,14 @@
                   "seq": 6,
                   "run_idx": 1,
                   "temperature": 0.88,
-                  "story_title": "《雨夜的高速公路服务区与借打火机的男人》",
-                  "char_count": 11927,
-                  "thought_tokens": 3800,
-                  "output_tokens": 8904,
-                  "duration_s": 176.9,
+                  "story_title": "雨夜的富士川服务站与借打火机的男人",
+                  "char_count": 15484,
+                  "thought_tokens": 2851,
+                  "output_tokens": 11871,
+                  "duration_s": 188.7,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "十一月中旬的雨，从傍晚六点刚过便开始落下来，到了午夜两点，彻底变成了一场倾盆大雨。 我独自开着那辆老旧的深绿色斯巴鲁旅行车，在穿山而过的高速公路上向北行驶。这辆车跟随我已经超过十年，里程表上的数字在两个月前跨过了十八万公…",
+                  "excerpt": "那是我31岁那年11月中旬的事，距今已过去4年了。 当时我之所以半夜1点过后还独自一人开着一辆跑了8万公里的二手蓝色“斯巴鲁”行驶在东名高速公路上，是因为替一个老朋友处理一桩不大不小的善后事宜。所谓善后事宜，说穿了也算不…",
                   "md_path": "writing-bench-round5-worldlit/03_村上春树_Haruki_Murakami/06_村上春树_四国雨夜的高速公路服务区与第六只大象/run_01.md"
                 }
               ]
