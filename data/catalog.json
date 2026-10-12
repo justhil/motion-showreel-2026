@@ -1,10 +1,78 @@
 {
   "model": "gemini-3.8-flash-exp-a (thinkingLevel: HIGH)",
-  "total_articles": 72,
-  "total_chars": 502775,
-  "total_thought_tokens": 238786,
-  "total_output_tokens": 379290,
+  "total_articles": 74,
+  "total_chars": 593753,
+  "total_thought_tokens": 258937,
+  "total_output_tokens": 457486,
   "rounds": [
+    {
+      "round_id": "round4",
+      "round_name": "第四轮：单行本全卷级长篇续作（1M MaxOutput & 全上下文多轮架构）",
+      "round_short": "Round 4 · 单行本全卷",
+      "desc": "紧接《安达与岛村》第12～13卷与《败犬女主太多了！》第8～9卷最新原著剧情，采用 1M MaxOutput + 原著译本文体锚定 + 全上下文三幕推进，创作单本 4.4万～4.8万字的单行本级续作。",
+      "categories": [
+        {
+          "cat_id": "round4_01_安达与岛村_单行本续作",
+          "cat_name": "壹 · 安达与岛村_单行本续作",
+          "raw_folder": "01_安达与岛村_单行本续作",
+          "topics": [
+            {
+              "topic_folder": "Vol14_穿过二楼体育馆的最后一个冬天",
+              "topic_short": "Vol14 · 穿过二楼体育馆的最后一个冬天",
+              "topic_title": "《安达与岛村 14》——穿过二楼体育馆的最后一个冬天——",
+              "prompt_preview": "",
+              "runs": [
+                {
+                  "id": "round4_t01_01_r1",
+                  "seq": 1,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "《安达与岛村 14》——穿过二楼体育馆的最后一个冬天——",
+                  "char_count": 47222,
+                  "thought_tokens": 11183,
+                  "output_tokens": 40329,
+                  "duration_s": 728.4,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "excerpt": "「喂——安达，你填好了吗？」 前排的椅子发出一阵刺耳的摩擦声，潘乔整个人转了过来，手肘撑在我的课桌上。 我把自动铅笔停下来，用左手手背稍微挡了一下桌上的纸。倒也不是什么需要保密的国家机密，只是被人从正上方盯着看，总觉得笔…",
+                  "md_path": "writing-bench-round4-tankobon/01_安达与岛村_单行本续作/Vol14_穿过二楼体育馆的最后一个冬天/run_01.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cat_id": "round4_02_败犬女主太多了_单行本续作",
+          "cat_name": "贰 · 败犬女主太多了_单行本续作",
+          "raw_folder": "02_败犬女主太多了_单行本续作",
+          "topics": [
+            {
+              "topic_folder": "Vol10_盛夏合宿的蓝舌头与学生会长的决胜局",
+              "topic_short": "Vol10 · 盛夏合宿的蓝舌头与学生会长的决胜局",
+              "topic_title": "《败犬女主太多了！ 10》——盛夏合宿的蓝舌头与学生会长的决胜局——",
+              "prompt_preview": "",
+              "runs": [
+                {
+                  "id": "round4_t01_02_r1",
+                  "seq": 2,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "《败犬女主太多了！ 10》——盛夏合宿的蓝舌头与学生会长的决胜局——",
+                  "char_count": 43756,
+                  "thought_tokens": 8968,
+                  "output_tokens": 37867,
+                  "duration_s": 572.8,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "excerpt": "序章 院子里的铁皮水桶倒扣在砖块上，底朝天晒着太阳。 昨晚文艺部那帮人在我家院子里放完烟花后，空气里残留的火药味已经散干净了，只剩下盛夏清晨独有的蝉鸣声吵得人耳朵发痒。 七月下旬，高二暑假正式开始的第一天。 我盘腿坐在客…",
+                  "md_path": "writing-bench-round4-tankobon/02_败犬女主太多了_单行本续作/Vol10_盛夏合宿的蓝舌头与学生会长的决胜局/run_01.md"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     {
       "round_id": "round1",
       "round_name": "第一轮：名家同人与原创多场景基线",
@@ -24,7 +92,7 @@
               "runs": [
                 {
                   "id": "round1_t01_01_r1",
-                  "seq": 1,
+                  "seq": 3,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "妹妹人生：自那本绘图日记起的漫长夏日",
@@ -39,7 +107,7 @@
                 },
                 {
                   "id": "round1_t01_01_r2",
-                  "seq": 2,
+                  "seq": 4,
                   "run_idx": 2,
                   "temperature": 0.92,
                   "story_title": "过去与未来，以及夹在中间的晚饭时间",
@@ -62,7 +130,7 @@
               "runs": [
                 {
                   "id": "round1_t02_01_r1",
-                  "seq": 3,
+                  "seq": 5,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "周日、电风扇与中华冷面的芥末包",
@@ -77,7 +145,7 @@
                 },
                 {
                   "id": "round1_t02_01_r2",
-                  "seq": 4,
+                  "seq": 6,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "有关风扇、布丁与指尖距离的周日",
@@ -100,7 +168,7 @@
               "runs": [
                 {
                   "id": "round1_t03_01_r1",
-                  "seq": 5,
+                  "seq": 7,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "退币口里的硬币与第四个早晨",
@@ -115,7 +183,7 @@
                 },
                 {
                   "id": "round1_t03_01_r2",
-                  "seq": 6,
+                  "seq": 8,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "不计价的黄昏",
@@ -138,7 +206,7 @@
               "runs": [
                 {
                   "id": "round1_t04_01_r1",
-                  "seq": 7,
+                  "seq": 9,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "在即将注销的街区等待复电",
@@ -153,7 +221,7 @@
                 },
                 {
                   "id": "round1_t04_01_r2",
-                  "seq": 8,
+                  "seq": 10,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "在被注销的街区等待雨停",
@@ -176,7 +244,7 @@
               "runs": [
                 {
                   "id": "round1_t05_01_r1",
-                  "seq": 9,
+                  "seq": 11,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "未通电的放学后",
@@ -191,7 +259,7 @@
                 },
                 {
                   "id": "round1_t05_01_r2",
-                  "seq": 10,
+                  "seq": 12,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "茶梗立起来的傍晚",
@@ -214,7 +282,7 @@
               "runs": [
                 {
                   "id": "round1_t06_01_r1",
-                  "seq": 11,
+                  "seq": 13,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "高架桥下的拉环声",
@@ -229,7 +297,7 @@
                 },
                 {
                   "id": "round1_t06_01_r2",
-                  "seq": 12,
+                  "seq": 14,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "夜风、易拉罐与低空飞行",
@@ -259,7 +327,7 @@
               "runs": [
                 {
                   "id": "round1_t01_02_r1",
-                  "seq": 13,
+                  "seq": 15,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "六月蒸笼与咔哒作响的塑料齿轮",
@@ -274,7 +342,7 @@
                 },
                 {
                   "id": "round1_t01_02_r2",
-                  "seq": 14,
+                  "seq": 16,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "六楼顶层的闷罐与塑料齿轮",
@@ -297,7 +365,7 @@
               "runs": [
                 {
                   "id": "round1_t02_02_r1",
-                  "seq": 15,
+                  "seq": 17,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "沉降区凌晨两点",
@@ -312,7 +380,7 @@
                 },
                 {
                   "id": "round1_t02_02_r2",
-                  "seq": 16,
+                  "seq": 18,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "枕骨下的三分钟",
@@ -335,7 +403,7 @@
               "runs": [
                 {
                   "id": "round1_t03_02_r1",
-                  "seq": 17,
+                  "seq": 19,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "荒铺铜铃",
@@ -350,7 +418,7 @@
                 },
                 {
                   "id": "round1_t03_02_r2",
-                  "seq": 18,
+                  "seq": 20,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "苦水驿",
@@ -373,7 +441,7 @@
               "runs": [
                 {
                   "id": "round1_t04_02_r1",
-                  "seq": 19,
+                  "seq": 21,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "守偏厅",
@@ -388,7 +456,7 @@
                 },
                 {
                   "id": "round1_t04_02_r2",
-                  "seq": 20,
+                  "seq": 22,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "樟溪镇守夜",
@@ -411,7 +479,7 @@
               "runs": [
                 {
                   "id": "round1_t05_02_r1",
-                  "seq": 21,
+                  "seq": 23,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "公差",
@@ -426,7 +494,7 @@
                 },
                 {
                   "id": "round1_t05_02_r2",
-                  "seq": 22,
+                  "seq": 24,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "道口",
@@ -449,7 +517,7 @@
               "runs": [
                 {
                   "id": "round1_t06_02_r1",
-                  "seq": 23,
+                  "seq": 25,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "暗坎",
@@ -464,7 +532,7 @@
                 },
                 {
                   "id": "round1_t06_02_r2",
-                  "seq": 24,
+                  "seq": 26,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "暗伤",
@@ -502,7 +570,7 @@
               "runs": [
                 {
                   "id": "round2_t01_01_r1",
-                  "seq": 25,
+                  "seq": 27,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "有关妹妹出门见编辑这件大事",
@@ -517,7 +585,7 @@
                 },
                 {
                   "id": "round2_t01_01_r2",
-                  "seq": 26,
+                  "seq": 28,
                   "run_idx": 2,
                   "temperature": 0.92,
                   "story_title": "有关妹妹出门见世面这件事",
@@ -540,7 +608,7 @@
               "runs": [
                 {
                   "id": "round2_t02_01_r1",
-                  "seq": 27,
+                  "seq": 29,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "宇宙人与夏末夜风里的青春点数",
@@ -555,7 +623,7 @@
                 },
                 {
                   "id": "round2_t02_01_r2",
-                  "seq": 28,
+                  "seq": 30,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "八月末的防波堤与名为表妹的不明发光体",
@@ -578,7 +646,7 @@
               "runs": [
                 {
                   "id": "round2_t03_01_r1",
-                  "seq": 29,
+                  "seq": 31,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "雪夜暗室里的体温",
@@ -593,7 +661,7 @@
                 },
                 {
                   "id": "round2_t03_01_r2",
-                  "seq": 30,
+                  "seq": 32,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "大雪封存的洁白之夜",
@@ -616,7 +684,7 @@
               "runs": [
                 {
                   "id": "round2_t04_01_r1",
-                  "seq": 31,
+                  "seq": 33,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "柠檬糖与太阳雨的违约金",
@@ -631,7 +699,7 @@
                 },
                 {
                   "id": "round2_t04_01_r2",
-                  "seq": 32,
+                  "seq": 34,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "柠檬糖与十月的违约金",
@@ -654,7 +722,7 @@
               "runs": [
                 {
                   "id": "round2_t05_01_r1",
-                  "seq": 33,
+                  "seq": 35,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "下北泽雨夜，在烘干机停转之前",
@@ -669,7 +737,7 @@
                 },
                 {
                   "id": "round2_t05_01_r2",
-                  "seq": 34,
+                  "seq": 36,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "周二雨夜、肉包与变成水蚤之前",
@@ -692,7 +760,7 @@
               "runs": [
                 {
                   "id": "round2_t06_01_r1",
-                  "seq": 35,
+                  "seq": 37,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "窗缝里的记号",
@@ -707,7 +775,7 @@
                 },
                 {
                   "id": "round2_t06_01_r2",
-                  "seq": 36,
+                  "seq": 38,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "窗框上的权宜之计",
@@ -737,7 +805,7 @@
               "runs": [
                 {
                   "id": "round2_t01_02_r1",
-                  "seq": 37,
+                  "seq": 39,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "抽屉最里层的草稿本",
@@ -752,7 +820,7 @@
                 },
                 {
                   "id": "round2_t01_02_r2",
-                  "seq": 38,
+                  "seq": 40,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "四号自习室，靠窗第三张课桌",
@@ -775,7 +843,7 @@
               "runs": [
                 {
                   "id": "round2_t02_02_r1",
-                  "seq": 39,
+                  "seq": 41,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "下午四点的漫长复健",
@@ -790,7 +858,7 @@
                 },
                 {
                   "id": "round2_t02_02_r2",
-                  "seq": 40,
+                  "seq": 42,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "封窗之后的阁楼留声",
@@ -813,7 +881,7 @@
               "runs": [
                 {
                   "id": "round2_t03_02_r1",
-                  "seq": 41,
+                  "seq": 43,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "旧寸",
@@ -828,7 +896,7 @@
                 },
                 {
                   "id": "round2_t03_02_r2",
-                  "seq": 42,
+                  "seq": 44,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "半寸肥瘦",
@@ -851,7 +919,7 @@
               "runs": [
                 {
                   "id": "round2_t04_02_r1",
-                  "seq": 43,
+                  "seq": 45,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "明日有小到中雨",
@@ -866,7 +934,7 @@
                 },
                 {
                   "id": "round2_t04_02_r2",
-                  "seq": 44,
+                  "seq": 46,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "盐湖上的梅雨季",
@@ -889,7 +957,7 @@
               "runs": [
                 {
                   "id": "round2_t05_02_r1",
-                  "seq": 45,
+                  "seq": 47,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "零点过后的生态指标",
@@ -904,7 +972,7 @@
                 },
                 {
                   "id": "round2_t05_02_r2",
-                  "seq": 46,
+                  "seq": 48,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "三号点位突发情况",
@@ -927,7 +995,7 @@
               "runs": [
                 {
                   "id": "round2_t06_02_r1",
-                  "seq": 47,
+                  "seq": 49,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "台风过境的器乐准备室",
@@ -942,7 +1010,7 @@
                 },
                 {
                   "id": "round2_t06_02_r2",
-                  "seq": 48,
+                  "seq": 50,
                   "run_idx": 2,
                   "temperature": 0.9,
                   "story_title": "九月十四号台风，以及叠在一起的绿色体操垫",
@@ -980,7 +1048,7 @@
               "runs": [
                 {
                   "id": "round3_t01_01_r1",
-                  "seq": 49,
+                  "seq": 51,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "即便如此，六月的梅雨依然不懂得察言观色。",
@@ -995,7 +1063,7 @@
                 },
                 {
                   "id": "round3_t01_01_r2",
-                  "seq": 50,
+                  "seq": 52,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "说到底，千叶的梅雨从不体恤独行者的糖分摄取。",
@@ -1018,7 +1086,7 @@
               "runs": [
                 {
                   "id": "round3_t02_01_r1",
-                  "seq": 51,
+                  "seq": 53,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "第〇话　黑仪文具",
@@ -1033,7 +1101,7 @@
                 },
                 {
                   "id": "round3_t02_01_r2",
-                  "seq": 52,
+                  "seq": 54,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "第零话　历橡皮·放学后的抹消游戏",
@@ -1056,7 +1124,7 @@
               "runs": [
                 {
                   "id": "round3_t03_01_r1",
-                  "seq": 53,
+                  "seq": 55,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "十二月的检票口与鞋尖的温度",
@@ -1071,7 +1139,7 @@
                 },
                 {
                   "id": "round3_t03_01_r2",
-                  "seq": 54,
+                  "seq": 56,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "半价猪排饭与十二月的正确取暖方式",
@@ -1094,7 +1162,7 @@
               "runs": [
                 {
                   "id": "round3_t04_01_r1",
-                  "seq": 55,
+                  "seq": 57,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "游魂与过剩的针织物",
@@ -1109,7 +1177,7 @@
                 },
                 {
                   "id": "round3_t04_01_r2",
-                  "seq": 56,
+                  "seq": 58,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "缠绕的温度与松开的线头",
@@ -1132,7 +1200,7 @@
               "runs": [
                 {
                   "id": "round3_t05_01_r1",
-                  "seq": 57,
+                  "seq": 59,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "冬日旧馆与SOS团的午后",
@@ -1147,7 +1215,7 @@
                 },
                 {
                   "id": "round3_t05_01_r2",
-                  "seq": 58,
+                  "seq": 60,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "北风与电热炉的叹息",
@@ -1170,7 +1238,7 @@
               "runs": [
                 {
                   "id": "round3_t06_01_r1",
-                  "seq": 59,
+                  "seq": 61,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "掺铜的金货、酸麦酒与狼的算盘",
@@ -1185,7 +1253,7 @@
                 },
                 {
                   "id": "round3_t06_01_r2",
-                  "seq": 60,
+                  "seq": 62,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "掺铜的金币与黑麦酒的泡沫",
@@ -1215,7 +1283,7 @@
               "runs": [
                 {
                   "id": "round3_t01_02_r1",
-                  "seq": 61,
+                  "seq": 63,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "第四节课后的废纸点心与不寄出的信",
@@ -1230,7 +1298,7 @@
                 },
                 {
                   "id": "round3_t01_02_r2",
-                  "seq": 62,
+                  "seq": 64,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "退稿回收员的偏食菜单",
@@ -1253,7 +1321,7 @@
               "runs": [
                 {
                   "id": "round3_t02_02_r1",
-                  "seq": 63,
+                  "seq": 65,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "第一章 凌晨两点半，用报废猪排饭收买完美超人的秘密交易",
@@ -1268,7 +1336,7 @@
                 },
                 {
                   "id": "round3_t02_02_r2",
-                  "seq": 64,
+                  "seq": 66,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "第四章 关东煮高汤与打折的优等生",
@@ -1291,7 +1359,7 @@
               "runs": [
                 {
                   "id": "round3_t03_02_r1",
-                  "seq": 65,
+                  "seq": 67,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "暴雨夜与半颗溏心蛋的归属",
@@ -1306,7 +1374,7 @@
                 },
                 {
                   "id": "round3_t03_02_r2",
-                  "seq": 66,
+                  "seq": 68,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "旧T恤与半颗溏心蛋",
@@ -1329,7 +1397,7 @@
               "runs": [
                 {
                   "id": "round3_t04_02_r1",
-                  "seq": 67,
+                  "seq": 69,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "称量谎言之国 ——Weight of Kindness——",
@@ -1344,7 +1412,7 @@
                 },
                 {
                   "id": "round3_t04_02_r2",
-                  "seq": 68,
+                  "seq": 70,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "善意上秤之国——The Weight of Kindness——",
@@ -1367,7 +1435,7 @@
               "runs": [
                 {
                   "id": "round3_t05_02_r1",
-                  "seq": 69,
+                  "seq": 71,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "第十四话　古龙种的骨质增生与排风管里的史莱姆除湿法",
@@ -1382,7 +1450,7 @@
                 },
                 {
                   "id": "round3_t05_02_r2",
-                  "seq": 70,
+                  "seq": 72,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "古龙的老寒腿与地暖改造账本",
@@ -1405,7 +1473,7 @@
               "runs": [
                 {
                   "id": "round3_t06_02_r1",
-                  "seq": 71,
+                  "seq": 73,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "在柠檬汽水走气之前",
@@ -1420,7 +1488,7 @@
                 },
                 {
                   "id": "round3_t06_02_r2",
-                  "seq": 72,
+                  "seq": 74,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "旧排水渠与走气的哈密瓜苏打",
