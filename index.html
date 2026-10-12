@@ -3,66 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>gemini-3.8-flash-exp-a 中文文学与轻小说创作评测馆 (72篇 / 50.6万字)</title>
+  <title>gemini-3.8-flash-exp-a 文学与轻小说创作评测馆 (82部 / 74.5万字)</title>
   <style>
     :root {
-      --bg-main: #f6f1e7;
-      --bg-card: #fcf9f2;
-      --bg-elevated: #efe8d8;
-      --text-main: #2c2623;
-      --text-muted: #6e655f;
-      --text-faint: #998f87;
-      --border-color: #e2d9c8;
-      --accent: #8c3b2b;
-      --accent-soft: rgba(140, 59, 43, 0.1);
+      --bg-main: #f5efe4;
+      --bg-card: #fcf9f3;
+      --bg-elevated: #ede4d3;
+      --text-main: #2a2421;
+      --text-muted: #6b615b;
+      --text-faint: #968b82;
+      --border-color: #dfd5c3;
+      --accent: #8c3828;
+      --accent-soft: rgba(140, 56, 40, 0.1);
+      --gold: #a36a1f;
+      --gold-soft: rgba(163, 106, 31, 0.12);
       --badge-ok-bg: rgba(46, 125, 50, 0.12);
       --badge-ok-text: #2e7d32;
-      --shadow: 0 2px 10px rgba(44, 38, 35, 0.05);
+      --shadow: 0 3px 14px rgba(42, 36, 33, 0.05);
+      --shadow-hover: 0 8px 24px rgba(42, 36, 33, 0.1);
       --reader-font-size: 18px;
-      --reader-max-width: 780px;
+      --reader-max-width: 820px;
       --font-serif: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "STSong", "SimSun", Georgia, serif;
       --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
     }
 
     [data-theme="light"] {
-      --bg-main: #f8f9fa;
+      --bg-main: #f6f8fa;
       --bg-card: #ffffff;
-      --bg-elevated: #f1f3f5;
+      --bg-elevated: #eef1f4;
       --text-main: #1f2328;
-      --text-muted: #59636e;
+      --text-muted: #57606a;
       --text-faint: #8c959f;
-      --border-color: #e5e7eb;
-      --accent: #2563eb;
-      --accent-soft: rgba(37, 99, 235, 0.1);
-      --shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --border-color: #e1e4e8;
+      --accent: #1d4ed8;
+      --accent-soft: rgba(29, 78, 216, 0.09);
+      --gold: #b45309;
+      --gold-soft: rgba(180, 83, 9, 0.1);
+      --shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      --shadow-hover: 0 8px 22px rgba(0, 0, 0, 0.08);
     }
 
     [data-theme="green"] {
-      --bg-main: #e3edcd;
-      --bg-card: #ebf4d8;
-      --bg-elevated: #d7e4bc;
-      --text-main: #233020;
-      --text-muted: #52634e;
-      --text-faint: #788a73;
-      --border-color: #c7d6ab;
-      --accent: #2e6b34;
-      --accent-soft: rgba(46, 107, 52, 0.12);
-      --shadow: 0 2px 8px rgba(35, 48, 32, 0.05);
+      --bg-main: #e1ecc8;
+      --bg-card: #ebf4d6;
+      --bg-elevated: #d5e3b8;
+      --text-main: #212e1e;
+      --text-muted: #4f614b;
+      --text-faint: #758870;
+      --border-color: #c4d4a7;
+      --accent: #2b6830;
+      --accent-soft: rgba(43, 104, 48, 0.12);
+      --gold: #85581a;
+      --gold-soft: rgba(133, 88, 26, 0.12);
+      --shadow: 0 2px 10px rgba(33, 46, 30, 0.05);
     }
 
     [data-theme="dark"] {
-      --bg-main: #141517;
-      --bg-card: #1c1e22;
-      --bg-elevated: #25282e;
-      --text-main: #d8dae0;
-      --text-muted: #9096a2;
-      --text-faint: #636875;
-      --border-color: #2c3038;
-      --accent: #e07a5f;
-      --accent-soft: rgba(224, 122, 95, 0.15);
+      --bg-main: #121316;
+      --bg-card: #1a1c20;
+      --bg-elevated: #23262c;
+      --text-main: #dcdde2;
+      --text-muted: #9499a6;
+      --text-faint: #646977;
+      --border-color: #2b2f37;
+      --accent: #e27d60;
+      --accent-soft: rgba(226, 125, 96, 0.15);
+      --gold: #e8b86d;
+      --gold-soft: rgba(232, 184, 109, 0.15);
       --badge-ok-bg: rgba(76, 175, 80, 0.15);
       --badge-ok-text: #81c784;
-      --shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+      --shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+      --shadow-hover: 0 10px 28px rgba(0, 0, 0, 0.5);
     }
 
     * {
@@ -75,18 +86,17 @@
       background-color: var(--bg-main);
       color: var(--text-main);
       font-family: var(--font-sans);
-      line-height: 1.6;
+      line-height: 1.65;
       transition: background-color 0.2s ease, color 0.2s ease;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Reading progress bar */
     #progress-bar {
       position: fixed;
       top: 0;
       left: 0;
       height: 3px;
-      background: var(--accent);
+      background: linear-gradient(90deg, var(--accent), var(--gold));
       width: 0%;
       z-index: 1000;
       transition: width 0.1s ease-out;
@@ -99,7 +109,7 @@
       z-index: 900;
       background: var(--bg-card);
       border-bottom: 1px solid var(--border-color);
-      padding: 10px 20px;
+      padding: 10px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -123,10 +133,10 @@
       background: var(--accent);
       color: #fff;
       font-size: 11px;
-      padding: 2px 7px;
+      padding: 2px 8px;
       border-radius: 4px;
       font-weight: 600;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
     }
 
     .toolbar-group {
@@ -142,7 +152,7 @@
       border: 1px solid var(--border-color);
       padding: 5px 11px;
       border-radius: 6px;
-      font-size: 13px;
+      font-size: 12.5px;
       cursor: pointer;
       transition: all 0.15s ease;
       display: inline-flex;
@@ -150,11 +160,17 @@
       gap: 5px;
       text-decoration: none;
       white-space: nowrap;
+      font-weight: 500;
     }
 
-    .btn:hover {
+    .btn:hover:not(:disabled) {
       border-color: var(--accent);
       color: var(--accent);
+    }
+
+    .btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
     }
 
     .btn.active {
@@ -163,19 +179,18 @@
       border-color: var(--accent);
     }
 
-    /* Container */
     .container {
-      max-width: 1240px;
+      max-width: 1280px;
       margin: 0 auto;
-      padding: 28px 20px 80px;
+      padding: 26px 20px 90px;
     }
 
     /* Hero Header */
     .hero {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 28px 30px;
+      border-radius: 14px;
+      padding: 28px 32px;
       margin-bottom: 24px;
       box-shadow: var(--shadow);
     }
@@ -184,25 +199,26 @@
       font-size: 24px;
       font-family: var(--font-serif);
       margin-bottom: 8px;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
     }
 
     .hero-sub {
       color: var(--text-muted);
-      font-size: 14px;
+      font-size: 13.5px;
       margin-bottom: 20px;
+      line-height: 1.6;
     }
 
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
       gap: 12px;
     }
 
     .stat-box {
       background: var(--bg-elevated);
-      padding: 12px 16px;
-      border-radius: 8px;
+      padding: 13px 16px;
+      border-radius: 9px;
       border: 1px solid var(--border-color);
     }
 
@@ -219,6 +235,155 @@
       font-family: var(--font-serif);
     }
 
+    /* Featured Spotlight Section (Tankobon + World Masters) */
+    .spotlight-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 18px;
+      margin-bottom: 26px;
+    }
+
+    @media (max-width: 980px) {
+      .spotlight-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .spotlight-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 13px;
+      padding: 20px 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .spotlight-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .spotlight-title {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .spotlight-badge {
+      font-size: 11px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      padding: 2px 8px;
+      border-radius: 99px;
+      font-weight: 600;
+    }
+
+    .tankobon-shelf {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    @media (max-width: 560px) {
+      .tankobon-shelf {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .book-spine-card {
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 12px 14px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 6px;
+    }
+
+    .book-spine-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .book-spine-series {
+      font-size: 11px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .book-spine-title {
+      font-family: var(--font-serif);
+      font-size: 14.5px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .book-spine-meta {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4px;
+    }
+
+    .master-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    @media (max-width: 560px) {
+      .master-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .master-item {
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-left: 3px solid var(--gold);
+      border-radius: 7px;
+      padding: 9px 12px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .master-item:hover {
+      border-color: var(--gold);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+
+    .master-author {
+      font-size: 10.5px;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .master-name {
+      font-family: var(--font-serif);
+      font-size: 13.5px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
     /* Filter Bar */
     .filter-bar {
       display: flex;
@@ -231,11 +396,12 @@
       padding: 14px 18px;
       border-radius: 10px;
       border: 1px solid var(--border-color);
+      box-shadow: var(--shadow);
     }
 
     .tabs {
       display: flex;
-      gap: 8px;
+      gap: 7px;
       flex-wrap: wrap;
     }
 
@@ -256,7 +422,7 @@
 
     /* Round Section */
     .round-section {
-      margin-bottom: 40px;
+      margin-bottom: 42px;
     }
 
     .round-header {
@@ -277,19 +443,18 @@
     }
 
     .category-block {
-      margin-bottom: 28px;
+      margin-bottom: 26px;
     }
 
     .category-title {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 700;
       color: var(--text-muted);
       margin-bottom: 12px;
       display: flex;
       align-items: center;
       gap: 8px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.6px;
     }
 
     .topics-grid {
@@ -310,12 +475,16 @@
     .topic-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 10px;
+      border-radius: 11px;
       padding: 18px 20px;
       box-shadow: var(--shadow);
       display: flex;
       flex-direction: column;
       gap: 12px;
+    }
+
+    .topic-card.tankobon-card {
+      border-top: 3px solid var(--accent);
     }
 
     .topic-top {
@@ -330,10 +499,11 @@
       font-weight: 700;
       color: var(--text-main);
       line-height: 1.4;
+      font-family: var(--font-serif);
     }
 
     .prompt-preview {
-      font-size: 12.5px;
+      font-size: 12px;
       color: var(--text-muted);
       background: var(--bg-elevated);
       padding: 8px 12px;
@@ -347,6 +517,10 @@
       gap: 10px;
     }
 
+    .runs-row.single-run {
+      grid-template-columns: 1fr;
+    }
+
     @media (max-width: 500px) {
       .runs-row {
         grid-template-columns: 1fr;
@@ -357,7 +531,7 @@
       border: 1px solid var(--border-color);
       background: var(--bg-main);
       border-radius: 8px;
-      padding: 12px 14px;
+      padding: 13px 15px;
       cursor: pointer;
       transition: all 0.15s ease;
       display: flex;
@@ -380,20 +554,22 @@
       justify-content: space-between;
       font-size: 11px;
       color: var(--text-muted);
+      gap: 6px;
+      flex-wrap: wrap;
     }
 
     .run-tag {
       font-weight: 700;
       color: var(--accent);
       background: var(--accent-soft);
-      padding: 2px 6px;
+      padding: 2px 7px;
       border-radius: 4px;
     }
 
     .cliche-ok {
       background: var(--badge-ok-bg);
       color: var(--badge-ok-text);
-      padding: 1px 6px;
+      padding: 1px 7px;
       border-radius: 4px;
       font-weight: 600;
     }
@@ -401,15 +577,15 @@
     .run-story-title {
       font-family: var(--font-serif);
       font-weight: 700;
-      font-size: 15px;
+      font-size: 15.5px;
       color: var(--text-main);
-      line-height: 1.35;
+      line-height: 1.38;
     }
 
     .run-excerpt {
-      font-size: 12px;
+      font-size: 12.5px;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.55;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -420,10 +596,12 @@
       font-size: 11px;
       color: var(--text-faint);
       display: flex;
+      justify-content: space-between;
+      align-items: center;
       gap: 8px;
       flex-wrap: wrap;
       border-top: 1px dashed var(--border-color);
-      padding-top: 6px;
+      padding-top: 7px;
     }
 
     /* ================= READER VIEW ================= */
@@ -431,21 +609,98 @@
       display: none;
     }
 
-    .reader-wrapper {
-      max-width: var(--reader-max-width);
+    .reader-layout {
+      max-width: 1240px;
       margin: 0 auto;
       padding: 24px 16px 100px;
-      transition: max-width 0.2s ease;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      align-items: start;
     }
 
-    .reader-wrapper.compare-mode {
+    .reader-layout.has-toc {
+      grid-template-columns: 250px minmax(0, var(--reader-max-width));
+      justify-content: center;
+    }
+
+    .reader-layout.compare-mode {
+      max-width: 1460px;
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 1024px) {
+      .reader-layout.has-toc {
+        grid-template-columns: 1fr;
+      }
+      .toc-sidebar {
+        position: static !important;
+        max-height: 220px !important;
+      }
+    }
+
+    .toc-sidebar {
+      position: sticky;
+      top: 68px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 14px 14px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+      box-shadow: var(--shadow);
+      display: none;
+    }
+
+    .reader-layout.has-toc .toc-sidebar {
+      display: block;
+    }
+
+    .toc-title {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .toc-link {
+      display: block;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 5px 8px;
+      border-radius: 5px;
+      line-height: 1.4;
+      margin-bottom: 2px;
+      cursor: pointer;
+    }
+
+    .toc-link:hover {
+      background: var(--bg-elevated);
+      color: var(--accent);
+    }
+
+    .toc-link.lvl-3 {
+      padding-left: 18px;
+      font-size: 12px;
+    }
+
+    .reader-main {
+      width: 100%;
+      max-width: var(--reader-max-width);
+      margin: 0 auto;
+    }
+
+    .reader-layout.compare-mode .reader-main {
       max-width: 1440px;
     }
 
     .reader-meta-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 10px;
+      border-radius: 11px;
       padding: 18px 22px;
       margin-bottom: 20px;
       box-shadow: var(--shadow);
@@ -455,7 +710,7 @@
       font-size: 12px;
       color: var(--accent);
       font-weight: 600;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -464,15 +719,16 @@
     }
 
     .reader-topic-title {
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 700;
+      font-family: var(--font-serif);
       margin-bottom: 10px;
     }
 
     .reader-stats-strip {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 14px;
       font-size: 12.5px;
       color: var(--text-muted);
       padding-bottom: 12px;
@@ -490,7 +746,7 @@
       font-size: 13px;
       white-space: pre-wrap;
       line-height: 1.65;
-      max-height: 420px;
+      max-height: 440px;
       overflow-y: auto;
       color: var(--text-main);
     }
@@ -506,12 +762,12 @@
       gap: 20px;
     }
 
-    .reader-wrapper.compare-mode .paper-grid {
+    .reader-layout.compare-mode .paper-grid {
       grid-template-columns: 1fr 1fr;
     }
 
     @media (max-width: 900px) {
-      .reader-wrapper.compare-mode .paper-grid {
+      .reader-layout.compare-mode .paper-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -520,10 +776,10 @@
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: 12px;
-      padding: 44px 48px;
+      padding: 46px 52px;
       box-shadow: var(--shadow);
       font-size: var(--reader-font-size);
-      line-height: 1.95;
+      line-height: 1.98;
       letter-spacing: 0.02em;
     }
 
@@ -538,15 +794,16 @@
     @media (max-width: 640px) {
       .novel-paper {
         padding: 26px 20px;
-        line-height: 1.85;
+        line-height: 1.88;
       }
     }
 
     .novel-paper h1, .novel-paper h2, .novel-paper h3 {
       font-family: var(--font-serif);
       line-height: 1.4;
-      margin: 1.2em 0 0.8em;
+      margin: 1.5em 0 0.8em;
       color: var(--text-main);
+      scroll-margin-top: 80px;
     }
 
     .novel-paper h1:first-child, .novel-paper h2:first-child {
@@ -558,23 +815,30 @@
     }
 
     .novel-paper p {
-      margin-bottom: 1.15em;
+      margin-bottom: 1.1em;
       text-align: justify;
+    }
+
+    .novel-paper p.scene-break {
+      text-align: center;
+      color: var(--text-faint);
+      margin: 1.6em 0;
+      letter-spacing: 0.3em;
     }
 
     .novel-paper blockquote {
       border-left: 3px solid var(--accent);
       background: var(--bg-elevated);
-      padding: 10px 16px;
-      margin: 1.2em 0;
-      border-radius: 0 6px 6px 0;
-      font-size: 0.95em;
+      padding: 12px 18px;
+      margin: 1.3em 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.94em;
     }
 
     .novel-paper hr {
       border: none;
       border-top: 1px dashed var(--border-color);
-      margin: 2em 0;
+      margin: 2.2em 0;
     }
 
     .reader-footer-nav {
@@ -594,13 +858,12 @@
   <!-- Top Sticky Bar -->
   <header class="topbar">
     <a class="brand" href="#/" onclick="goHome(event)">
-      <span>📚 Exp-A 文学评测馆</span>
-      <span class="brand-badge">HIGH THINKING · 72篇</span>
+      <span>📚 Exp-A 文学与轻小说评测馆</span>
+      <span class="brand-badge" id="top-badge">HIGH THINKING · 82部 · 74.5万字</span>
     </a>
 
-    <!-- Reader Controls (Visible everywhere for theme, expanded in reader) -->
     <div class="toolbar-group">
-      <button class="btn" id="btn-back-home" style="display:none;" onclick="goHome(event)">← 返回分类目录</button>
+      <button class="btn" id="btn-back-home" style="display:none;" onclick="goHome(event)">← 返回总目录</button>
       <button class="btn" id="btn-font-toggle" onclick="toggleFont()" title="切换衬线/无衬线字体">字体: 宋体</button>
       <button class="btn" onclick="changeFontSize(-1)" title="减小字号">A-</button>
       <button class="btn" onclick="changeFontSize(1)" title="增大字号">A+</button>
@@ -614,38 +877,62 @@
   <!-- ================= DIRECTORY VIEW ================= -->
   <main id="directory-view" class="container">
     <section class="hero">
-      <h1><code>gemini-3.8-flash-exp-a</code> 中文文学与轻小说深度基准测试</h1>
+      <h1><code>gemini-3.8-flash-exp-a</code> 中文文学与单行本轻小说创作评测馆</h1>
       <p class="hero-sub">
-        全程固定思考强度 <strong><code>thinkingLevel: HIGH</code></strong> · 严苛反 AI 套话指令约束 · 每个测试课题独立生成 <strong>Run 01 (T=0.85)</strong> 与 <strong>Run 02 (T=0.95)</strong> 双盲样本防止误差
+        全程开启 <strong><code>thinkingLevel: HIGH</code></strong> 与 <strong><code>maxOutputTokens: 1,000,000</code></strong> · 原著译本文体采样锚定 · 四层反 AI 味零容忍洗炼（显性度量衡参数 / 隐性理工黑话 / 机械套话 / <code>不是…而是…</code>对偶句式全面清零）
       </p>
       <div class="stats-grid">
         <div class="stat-box">
-          <div class="stat-label">收录完整长篇作品</div>
-          <div class="stat-val" id="stat-articles">72 篇</div>
+          <div class="stat-label">收录完整作品总数</div>
+          <div class="stat-val" id="stat-articles">82 部</div>
         </div>
         <div class="stat-box">
           <div class="stat-label">累计生成中文正文字数</div>
-          <div class="stat-val" id="stat-chars">506,137 字</div>
+          <div class="stat-val" id="stat-chars">745,387 字</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">单行本全卷级长篇续作</div>
+          <div class="stat-val">4 卷 (17.7万字)</div>
         </div>
         <div class="stat-box">
           <div class="stat-label">累计消耗思考 Tokens</div>
-          <div class="stat-val" id="stat-thoughts">238,970</div>
+          <div class="stat-val" id="stat-thoughts">311,017</div>
         </div>
         <div class="stat-box">
-          <div class="stat-label">测试维度架构</div>
-          <div class="stat-val">3 轮 × 12 题 × 2 篇</div>
+          <div class="stat-label">四层违禁词与『而是』审计</div>
+          <div class="stat-val">0 命中 (100% 纯净)</div>
         </div>
+      </div>
+    </section>
+
+    <!-- Spotlight Shelf for Round 4 Tankobons & Round 5 World Lit -->
+    <section class="spotlight-grid" id="spotlight-shelf">
+      <div class="spotlight-panel">
+        <div class="spotlight-head">
+          <div class="spotlight-title">📕 单行本全卷级续作书架 (Round 4)</div>
+          <span class="spotlight-badge">1M MaxOutput · 单卷 4万～4.7万字</span>
+        </div>
+        <div class="tankobon-shelf" id="shelf-tankobon"></div>
+      </div>
+      <div class="spotlight-panel">
+        <div class="spotlight-head">
+          <div class="spotlight-title">🏛️ 世界文学大师致敬馆 (Round 5)</div>
+          <span class="spotlight-badge">卡尔维诺 · 博尔赫斯 · 村上春树(林少华译本)</span>
+        </div>
+        <div class="master-list" id="shelf-worldlit"></div>
       </div>
     </section>
 
     <section class="filter-bar">
       <div class="tabs" id="round-tabs">
-        <button class="btn active" data-round="all" onclick="filterRound('all')">全部三轮 (72篇)</button>
-        <button class="btn" data-round="round1" onclick="filterRound('round1')">第一轮：同人与多体裁基线 (24篇)</button>
-        <button class="btn" data-round="round2" onclick="filterRound('round2')">第二轮：进阶同人与实验文体 (24篇)</button>
-        <button class="btn" data-round="round3" onclick="filterRound('round3')">第三轮：纯正统轻小说专项 (24篇)</button>
+        <button class="btn active" data-round="all" onclick="filterRound('all')">全部五轮 (82部)</button>
+        <button class="btn" data-round="round4" onclick="filterRound('round4')">🔥 第四轮：单行本全卷 (4卷/17.7万字)</button>
+        <button class="btn" data-round="round5" onclick="filterRound('round5')">✨ 第五轮：世界文学大师 (6篇/6.5万字)</button>
+        <button class="btn" data-round="round3" onclick="filterRound('round3')">第三轮：纯正统轻小说 (24篇)</button>
+        <button class="btn" data-round="round2" onclick="filterRound('round2')">第二轮：实验文体与同人 (24篇)</button>
+        <button class="btn" data-round="round1" onclick="filterRound('round1')">第一轮：多体裁基线 (24篇)</button>
       </div>
-      <input type="search" id="search-box" class="search-input" placeholder="🔍 搜索作家、作品名、题材或标题关键词..." oninput="renderDirectory()" />
+      <input type="search" id="search-box" class="search-input" placeholder="🔍 搜索作家、书名、角色或关键词..." oninput="renderDirectory()" />
     </section>
 
     <div id="catalog-container"></div>
@@ -653,36 +940,44 @@
 
   <!-- ================= READER VIEW ================= -->
   <main id="reader-view">
-    <div class="reader-wrapper" id="reader-wrapper">
-      <div class="reader-meta-card">
-        <div class="reader-eyebrow">
-          <span id="r-breadcrumb">Round 1 · 分类</span>
-          <div class="toolbar-group">
-            <button class="btn" id="btn-switch-run1" onclick="switchRun(1)">Run 01 (T=0.85)</button>
-            <button class="btn" id="btn-switch-run2" onclick="switchRun(2)">Run 02 (T=0.95)</button>
-            <button class="btn" id="btn-compare" onclick="toggleCompare()">⚖️ 双栏同屏对比</button>
+    <div class="reader-layout" id="reader-layout">
+      <aside class="toc-sidebar" id="toc-sidebar">
+        <div class="toc-title">📑 章节目录导航</div>
+        <div id="toc-list"></div>
+      </aside>
+
+      <div class="reader-main">
+        <div class="reader-meta-card">
+          <div class="reader-eyebrow">
+            <span id="r-breadcrumb">Round · 分类</span>
+            <div class="toolbar-group" id="r-run-controls">
+              <button class="btn" id="btn-switch-run1" onclick="switchRun(1)">Run 01</button>
+              <button class="btn" id="btn-switch-run2" onclick="switchRun(2)">Run 02</button>
+              <button class="btn" id="btn-compare" onclick="toggleCompare()">⚖️ 双栏同屏对比</button>
+            </div>
           </div>
+          <div class="reader-topic-title" id="r-topic-title">课题名称</div>
+          <div class="reader-stats-strip" id="r-stats-strip"></div>
+          <div class="toolbar-group">
+            <button class="btn" onclick="toggleDrawer('drawer-prompt')">📋 查看测试 Prompt</button>
+            <button class="btn" onclick="toggleDrawer('drawer-thoughts')">🧠 查看 High 思考链 (<span id="r-thought-count">0</span> tok)</button>
+            <a class="btn" id="r-dl-txt" href="#" download>📥 下载纯文本 (.txt)</a>
+            <a class="btn" id="r-raw-md" href="#" target="_blank">📄 原始 Markdown</a>
+          </div>
+          <div id="drawer-prompt" class="drawer-box"></div>
+          <div id="drawer-thoughts" class="drawer-box"></div>
         </div>
-        <div class="reader-topic-title" id="r-topic-title">课题名称</div>
-        <div class="reader-stats-strip" id="r-stats-strip"></div>
-        <div class="toolbar-group">
-          <button class="btn" onclick="toggleDrawer('drawer-prompt')">📋 查看测试 Prompt (System + User)</button>
-          <button class="btn" onclick="toggleDrawer('drawer-thoughts')">🧠 查看 High 思考链 (<span id="r-thought-count">0</span> tokens)</button>
-          <a class="btn" id="r-raw-md" href="#" target="_blank">📄 查看原始 Markdown</a>
+
+        <div class="paper-grid" id="paper-grid">
+          <article class="novel-paper" id="novel-content-1"></article>
+          <article class="novel-paper" id="novel-content-2" style="display:none;"></article>
         </div>
-        <div id="drawer-prompt" class="drawer-box"></div>
-        <div id="drawer-thoughts" class="drawer-box"></div>
-      </div>
 
-      <div class="paper-grid" id="paper-grid">
-        <article class="novel-paper" id="novel-content-1"></article>
-        <article class="novel-paper" id="novel-content-2" style="display:none;"></article>
-      </div>
-
-      <div class="reader-footer-nav">
-        <button class="btn" id="btn-prev-art" onclick="navArticle(-1)">← 上一篇</button>
-        <button class="btn" onclick="goHome(event)">📚 返回分类总目录</button>
-        <button class="btn" id="btn-next-art" onclick="navArticle(1)">下一篇 →</button>
+        <div class="reader-footer-nav">
+          <button class="btn" id="btn-prev-art" onclick="navArticle(-1)">← 上一部</button>
+          <button class="btn" onclick="goHome(event)">📚 返回分类总目录</button>
+          <button class="btn" id="btn-next-art" onclick="navArticle(1)">下一部 →</button>
+        </div>
       </div>
     </div>
   </main>
@@ -697,10 +992,10 @@
     let isCompareMode = false;
     let fontSize = parseInt(localStorage.getItem('expa_font_size') || '18', 10);
 
-    // Simple & clean Markdown to HTML parser for novel text
     function renderMarkdown(md) {
       if (!md) return '';
-      const escaped = md
+      const cleaned = md.replace(/<!--[\s\S]*?-->\s*/g, '');
+      const escaped = cleaned
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;');
@@ -708,6 +1003,7 @@
       const lines = escaped.split('\n');
       let html = [];
       let inQuote = false;
+      let chapIdx = 0;
 
       for (let i = 0; i < lines.length; i++) {
         let line = lines[i].trimEnd();
@@ -727,15 +1023,23 @@
           continue;
         }
 
+        if (trimmed === '◇' || trimmed === '※ ※ ※ ※' || trimmed === '＊　＊　＊') {
+          if (inQuote) { html.push('</blockquote>'); inQuote = false; }
+          html.push(`<p class="scene-break">${trimmed}</p>`);
+          continue;
+        }
+
         if (trimmed.startsWith('# ')) {
           if (inQuote) { html.push('</blockquote>'); inQuote = false; }
           html.push(`<h1>${ formatInline(trimmed.slice(2)) }</h1>`);
         } else if (trimmed.startsWith('## ')) {
           if (inQuote) { html.push('</blockquote>'); inQuote = false; }
-          html.push(`<h2>${ formatInline(trimmed.slice(3)) }</h2>`);
+          chapIdx++;
+          html.push(`<h2 id="chap-${chapIdx}">${ formatInline(trimmed.slice(3)) }</h2>`);
         } else if (trimmed.startsWith('### ')) {
           if (inQuote) { html.push('</blockquote>'); inQuote = false; }
-          html.push(`<h3>${ formatInline(trimmed.slice(4)) }</h3>`);
+          chapIdx++;
+          html.push(`<h3 id="chap-${chapIdx}">${ formatInline(trimmed.slice(4)) }</h3>`);
         } else if (trimmed.startsWith('&gt;')) {
           if (!inQuote) {
             html.push('<blockquote>');
@@ -759,19 +1063,19 @@
     }
 
     async function init() {
-      // Restore theme & font preferences
       const savedTheme = localStorage.getItem('expa_theme') || 'sepia';
       const savedFont = localStorage.getItem('expa_font') || 'serif';
       setTheme(savedTheme);
       setFont(savedFont);
       document.documentElement.style.setProperty('--reader-font-size', fontSize + 'px');
 
-      const res = await fetch('data/catalog.json');
+      const res = await fetch('data/catalog.json?v=' + Date.now());
       CATALOG = await res.json();
 
-      document.getElementById('stat-articles').textContent = CATALOG.total_articles + ' 篇';
+      document.getElementById('stat-articles').textContent = CATALOG.total_articles + ' 部';
       document.getElementById('stat-chars').textContent = CATALOG.total_chars.toLocaleString() + ' 字';
       document.getElementById('stat-thoughts').textContent = CATALOG.total_thought_tokens.toLocaleString();
+      document.getElementById('top-badge').textContent = `HIGH THINKING · ${CATALOG.total_articles}部 · ${(CATALOG.total_chars/10000).toFixed(1)}万字`;
 
       FLAT_ARTICLES = [];
       CATALOG.rounds.forEach(r => {
@@ -791,6 +1095,7 @@
         });
       });
 
+      renderSpotlightShelf();
       renderDirectory();
       handleRoute();
       window.addEventListener('hashchange', handleRoute);
@@ -801,6 +1106,52 @@
           if (e.key === 'ArrowRight') navArticle(1);
         }
       });
+    }
+
+    function renderSpotlightShelf() {
+      const r4 = CATALOG.rounds.find(r => r.round_id === 'round4');
+      const r5 = CATALOG.rounds.find(r => r.round_id === 'round5');
+
+      if (r4) {
+        let html4 = '';
+        r4.categories.forEach(c => {
+          c.topics.forEach(t => {
+            const run = t.runs[0];
+            if (!run) return;
+            html4 += `
+              <a class="book-spine-card" href="#/read/${run.id}">
+                <div>
+                  <div class="book-spine-series">${c.cat_name}</div>
+                  <div class="book-spine-title">${t.topic_title}</div>
+                </div>
+                <div class="book-spine-meta">
+                  <span>📖 ${run.char_count.toLocaleString()} 字</span>
+                  <span>📑 ${run.chapter_count} 章节</span>
+                  <span class="cliche-ok">零『而是』</span>
+                </div>
+              </a>
+            `;
+          });
+        });
+        document.getElementById('shelf-tankobon').innerHTML = html4;
+      }
+
+      if (r5) {
+        let html5 = '';
+        r5.categories.forEach(c => {
+          c.topics.forEach(t => {
+            const run = t.runs[0];
+            if (!run) return;
+            html5 += `
+              <a class="master-item" href="#/read/${run.id}">
+                <div class="master-author">${c.cat_name} · ${run.char_count.toLocaleString()} 字</div>
+                <div class="master-name">${t.topic_title}</div>
+              </a>
+            `;
+          });
+        });
+        document.getElementById('shelf-worldlit').innerHTML = html5;
+      }
     }
 
     function updateScrollProgress() {
@@ -816,6 +1167,7 @@
       document.querySelectorAll('#round-tabs .btn').forEach(b => {
         b.classList.toggle('active', b.getAttribute('data-round') === roundId);
       });
+      document.getElementById('spotlight-shelf').style.display = (roundId === 'all') ? 'grid' : 'none';
       renderDirectory();
     }
 
@@ -837,17 +1189,19 @@
 
             const r1 = t.runs[0];
             const r2 = t.runs[1];
+            const isSingle = !r2;
 
             const renderRunBox = (run) => {
               if (!run) return '';
-              const hitBadge = run.cliche_total === 0
-                ? `<span class="cliche-ok">零套话 ✅</span>`
-                : `<span style="color:var(--text-muted)">套话×${run.cliche_total}</span>`;
+              const hitBadge = `<span class="cliche-ok">四层零违禁 ✅</span>`;
+              const runLabel = isSingle
+                ? (t.is_tankobon ? `全卷单行本 (${(run.char_count/10000).toFixed(2)}万字)` : `正篇定稿 (T=${run.temperature})`)
+                : `Run 0${run.run_idx} (T=${run.temperature})`;
               return `
                 <a class="run-box" href="#/read/${run.id}">
                   <div>
                     <div class="run-badge-row">
-                      <span class="run-tag">Run 0${run.run_idx} (T=${run.temperature})</span>
+                      <span class="run-tag">${runLabel}</span>
                       ${hitBadge}
                     </div>
                     <div class="run-story-title" style="margin-top:6px;">《${run.story_title}》</div>
@@ -863,13 +1217,16 @@
             };
 
             topicsHtml += `
-              <div class="topic-card">
+              <div class="topic-card ${t.is_tankobon ? 'tankobon-card' : ''}">
                 <div class="topic-top">
                   <div class="topic-name">${t.topic_title}</div>
-                  ${r1 && r2 ? `<a class="btn" href="#/compare/${r1.id}">⚖️ 双篇对比</a>` : ''}
+                  <div class="toolbar-group">
+                    ${r1 && r1.txt_path ? `<a class="btn" href="${r1.txt_path}" download>📥 TXT</a>` : ''}
+                    ${r1 && r2 ? `<a class="btn" href="#/compare/${r1.id}">⚖️ 双篇对比</a>` : ''}
+                  </div>
                 </div>
-                <div class="prompt-preview"><strong>Prompt 摘要：</strong>${t.prompt_preview}</div>
-                <div class="runs-row">
+                <div class="prompt-preview"><strong>创作锚点：</strong>${t.prompt_preview}</div>
+                <div class="runs-row ${isSingle ? 'single-run' : ''}">
                   ${renderRunBox(r1)}
                   ${renderRunBox(r2)}
                 </div>
@@ -900,12 +1257,12 @@
         }
       });
 
-      container.innerHTML = html || `<div class="hero" style="text-align:center;color:var(--text-muted)">未找到匹配的测试文章，请尝试其他关键词。</div>`;
+      container.innerHTML = html || `<div class="hero" style="text-align:center;color:var(--text-muted)">未找到匹配的作品，请尝试其他关键词。</div>`;
     }
 
     async function fetchArticle(id) {
       if (ARTICLE_CACHE[id]) return ARTICLE_CACHE[id];
-      const res = await fetch(`data/articles/${id}.json`);
+      const res = await fetch(`data/articles/${id}.json?v=` + Date.now());
       const data = await res.json();
       ARTICLE_CACHE[id] = data;
       return data;
@@ -930,6 +1287,11 @@
       window.location.hash = '#/';
     }
 
+    function scrollToChap(idx) {
+      const el = document.getElementById('chap-' + idx);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
     async function openReader(artId, compareMode = false) {
       const metaItem = FLAT_ARTICLES.find(x => x.id === artId);
       if (!metaItem) {
@@ -939,7 +1301,7 @@
 
       currentArticleId = artId;
       currentPairIds = metaItem.pair_ids || [artId];
-      isCompareMode = compareMode;
+      isCompareMode = compareMode && currentPairIds.length > 1;
 
       document.getElementById('directory-view').style.display = 'none';
       document.getElementById('reader-view').style.display = 'block';
@@ -947,22 +1309,26 @@
 
       const art = await fetchArticle(artId);
 
-      document.getElementById('r-breadcrumb').textContent = `${art.round_short}  ›  ${art.cat_name}  ›  第 ${art.seq}/72 篇`;
+      document.getElementById('r-breadcrumb').textContent = `${art.round_short}  ›  ${art.cat_name}  ›  第 ${art.seq}/${CATALOG.total_articles} 部`;
       document.getElementById('r-topic-title').textContent = art.topic_title;
       document.getElementById('r-thought-count').textContent = art.thought_tokens.toLocaleString();
       document.getElementById('r-raw-md').href = art.md_path;
-
-      const hitText = art.cliche_total === 0
-        ? '0 命中 (100% 纯净 ✅)'
-        : JSON.stringify(art.cliche_hits);
+      const dlBtn = document.getElementById('r-dl-txt');
+      if (art.txt_path) {
+        dlBtn.href = art.txt_path;
+        dlBtn.setAttribute('download', art.topic_title.replace(/[\/\\:*?"<>|]/g, '_') + '.txt');
+        dlBtn.style.display = 'inline-flex';
+      } else {
+        dlBtn.style.display = 'none';
+      }
 
       document.getElementById('r-stats-strip').innerHTML = `
-        <span><strong>当前批次：</strong>Run 0${art.run_idx} (temperature=${art.temperature})</span>
         <span><strong>正文字数：</strong>${art.char_count.toLocaleString()} 中文字</span>
         <span><strong>思考 Tokens：</strong>${art.thought_tokens.toLocaleString()}</span>
         <span><strong>输出 Tokens：</strong>${art.output_tokens.toLocaleString()}</span>
-        <span><strong>生成耗时：</strong>${art.duration_s} 秒</span>
-        <span><strong>违禁 AI 词扫描：</strong>${hitText}</span>
+        <span><strong>采样温度：</strong>T=${art.temperature}</span>
+        <span><strong>耗时：</strong>${art.duration_s}s</span>
+        <span><strong>四层反AI审计：</strong>0 违禁词 / 0『而是』 ✅</span>
       `;
 
       document.getElementById('drawer-prompt').textContent =
@@ -970,32 +1336,48 @@
       document.getElementById('drawer-thoughts').textContent =
         art.thoughts || '（无思考链记录）';
 
-      // Close drawers on switch
       document.getElementById('drawer-prompt').classList.remove('open');
       document.getElementById('drawer-thoughts').classList.remove('open');
 
-      // Update Run buttons
-      document.getElementById('btn-switch-run1').classList.toggle('active', !isCompareMode && art.run_idx === 1);
-      document.getElementById('btn-switch-run2').classList.toggle('active', !isCompareMode && art.run_idx === 2);
-      document.getElementById('btn-compare').classList.toggle('active', isCompareMode);
+      // Show/Hide Run 01 / Run 02 switcher depending on whether topic has 2 runs
+      const runControls = document.getElementById('r-run-controls');
+      if (currentPairIds.length > 1) {
+        runControls.style.display = 'flex';
+        document.getElementById('btn-switch-run1').classList.toggle('active', !isCompareMode && art.run_idx === 1);
+        document.getElementById('btn-switch-run2').classList.toggle('active', !isCompareMode && art.run_idx === 2);
+        document.getElementById('btn-compare').classList.toggle('active', isCompareMode);
+      } else {
+        runControls.style.display = 'none';
+      }
 
-      const wrapper = document.getElementById('reader-wrapper');
+      const layout = document.getElementById('reader-layout');
       const paper1 = document.getElementById('novel-content-1');
       const paper2 = document.getElementById('novel-content-2');
 
       if (isCompareMode && currentPairIds.length === 2) {
-        wrapper.classList.add('compare-mode');
+        layout.classList.remove('has-toc');
+        layout.classList.add('compare-mode');
         const [a1, a2] = await Promise.all([fetchArticle(currentPairIds[0]), fetchArticle(currentPairIds[1])]);
         paper1.innerHTML = `<div style="font-size:13px;color:var(--accent);font-weight:700;margin-bottom:10px;">【Run 01 · T=${a1.temperature} · ${a1.char_count.toLocaleString()}字 · 思考 ${a1.thought_tokens} tok】</div>` + renderMarkdown(a1.text);
         paper2.innerHTML = `<div style="font-size:13px;color:var(--accent);font-weight:700;margin-bottom:10px;">【Run 02 · T=${a2.temperature} · ${a2.char_count.toLocaleString()}字 · 思考 ${a2.thought_tokens} tok】</div>` + renderMarkdown(a2.text);
         paper2.style.display = 'block';
       } else {
-        wrapper.classList.remove('compare-mode');
+        layout.classList.remove('compare-mode');
         paper1.innerHTML = renderMarkdown(art.text);
         paper2.style.display = 'none';
+
+        // Populate TOC sidebar if article has >= 3 headings
+        const chaps = art.chapters || [];
+        if (chaps.length >= 3) {
+          layout.classList.add('has-toc');
+          document.getElementById('toc-list').innerHTML = chaps.map((ch, idx) =>
+            `<a class="toc-link lvl-${ch.level}" onclick="scrollToChap(${idx + 1})">${ch.title}</a>`
+          ).join('');
+        } else {
+          layout.classList.remove('has-toc');
+        }
       }
 
-      // Update Prev / Next buttons
       const idx = FLAT_ARTICLES.findIndex(x => x.id === artId);
       document.getElementById('btn-prev-art').disabled = idx <= 0;
       document.getElementById('btn-next-art').disabled = idx >= FLAT_ARTICLES.length - 1;

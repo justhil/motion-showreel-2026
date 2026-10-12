@@ -1,30 +1,166 @@
 {
-  "model": "gemini-3.8-flash-exp-a (thinkingLevel: HIGH)",
+  "model": "gemini-3.8-flash-exp-a (thinkingLevel: HIGH, maxOutputTokens: 1,000,000)",
   "total_articles": 82,
   "total_chars": 745387,
   "total_thought_tokens": 311017,
   "total_output_tokens": 591347,
   "rounds": [
     {
+      "round_id": "round4",
+      "round_name": "第四轮：单行本全卷级长篇续作（1M MaxOutput & 全上下文多轮推进）",
+      "round_short": "Round 4 · 单行本全卷 (4卷)",
+      "desc": "紧接《安达与岛村》第12～13卷与《败犬女主太多了！》第8～9卷最新原著时间线，采用 1M MaxOutput + 原著译本文体采样锚定 + 全上下文三幕推进，创作单本 4万～4.7万字的单行本级续作（全卷清零『而是』句式与四层AI词）。",
+      "article_count": 4,
+      "char_count": 176777,
+      "categories": [
+        {
+          "cat_id": "round4_01_安达与岛村_单行本续作",
+          "cat_name": "壹 · 安达与岛村 单行本续作",
+          "raw_folder": "01_安达与岛村_单行本续作",
+          "topics": [
+            {
+              "topic_folder": "Vol14_穿过二楼体育馆的最后一个冬天",
+              "topic_short": "Vol14 · 穿过二楼体育馆的最后一个冬天",
+              "topic_title": "《安达与岛村 14》——穿过二楼体育馆的最后一个冬天——",
+              "is_single": true,
+              "is_tankobon": true,
+              "prompt_preview": "### Pass 1: 上篇（第一章 ～ 第二章） 请撰写单行本《安达与岛村 14 ——穿过二楼体育馆的最后一个冬天——》的 **上篇（第一章与第二章，共 6 个视角小节，请充分利用超大输出窗口把每节写得充实饱满，本篇目标字数：13,000～17,000 字）**。  【原著时间线与设定铁律（紧接原著第12卷高三夏日海…",
+              "runs": [
+                {
+                  "id": "round4_t01_01_r1",
+                  "seq": 1,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "安达与岛村 14》——穿过二楼体育馆的最后一个冬天——",
+                  "char_count": 46963,
+                  "thought_tokens": 11183,
+                  "output_tokens": 40329,
+                  "duration_s": 728.4,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 18,
+                  "excerpt": "「喂——安达，你填好了吗？」 前排的椅子发出一阵刺耳的摩擦声，潘乔整个人转了过来，手肘撑在我的课桌上。 我把自动铅笔停下来，用左手手背稍微挡了一下桌上的纸。倒也不是什么需要保密的国家机密，只是被人从正上方盯着看，总觉得笔尖会变得不太听话。 「还在填」 「咦，安达不是早就决定好要去哪里了吗？就是和岛村…",
+                  "md_path": "writing-bench-round4-tankobon/01_安达与岛村_单行本续作/Vol14_穿过二楼体育馆的最后一个冬天/run_01.md",
+                  "txt_path": "txt/round4_t01_01_r1.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "Vol15_大学时代的储蓄罐与搬进公寓的第一周",
+              "topic_short": "Vol15 · 大学时代的储蓄罐与搬进公寓的第一周",
+              "topic_title": "《安达与岛村 15》——大学时代的储蓄罐与搬进公寓的第一周——",
+              "is_single": true,
+              "is_tankobon": true,
+              "prompt_preview": "### Pass 1: 上篇（第一章 ～ 第二章：大学篇） 请撰写单行本《安达与岛村 15 ——大学时代的储蓄罐与搬进公寓的第一周——》的 **上篇（第一章与第二章，共 6 个视角小节，本篇目标字数：13,000～17,000 字）**。  【原著时间线与设定铁律（紧接第14卷高中毕业，串联原著第10卷～第12卷的大学…",
+              "runs": [
+                {
+                  "id": "round4_t02_01_r1",
+                  "seq": 2,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "安达与岛村 15》——大学时代的储蓄罐与搬进公寓的第一周——",
+                  "char_count": 40374,
+                  "thought_tokens": 8246,
+                  "output_tokens": 34863,
+                  "duration_s": 584.8,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 24,
+                  "excerpt": "把衣柜门拉开，再关上。 然后再拉开。 里面的衣服当然不会因为在黑暗中待了三秒钟就自动繁殖，或者突然变成适合大学生的完美穿搭。它们只是静静地挂在衣架上，像一排等待检阅却毫无干劲的士兵。 「呜……」 我抓着一件浅蓝色的针织开衫，在镜子前比划了一下，又飞快地扔回床上。 床单上已经堆了四件上衣和三条裙子，全…",
+                  "md_path": "writing-bench-round4-tankobon/01_安达与岛村_单行本续作/Vol15_大学时代的储蓄罐与搬进公寓的第一周/run_01.md",
+                  "txt_path": "txt/round4_t02_01_r1.txt"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cat_id": "round4_02_败犬女主太多了_单行本续作",
+          "cat_name": "贰 · 败犬女主太多了 单行本续作",
+          "raw_folder": "02_败犬女主太多了_单行本续作",
+          "topics": [
+            {
+              "topic_folder": "Vol10_盛夏合宿的蓝舌头与学生会长的决胜局",
+              "topic_short": "Vol10 · 盛夏合宿的蓝舌头与学生会长的决胜局",
+              "topic_title": "《败犬女主太多了！ 10》——盛夏合宿的蓝舌头与学生会长的决胜局——",
+              "is_single": true,
+              "is_tankobon": true,
+              "prompt_preview": "### Pass 1: 上篇（序章 ～ 第一败 ～ Intermission） 请撰写单行本《败犬女主太多了！ 10 ——盛夏合宿的蓝舌头与学生会长的决胜局——》的 **上篇（包含 `序章`、`～第一败～`、`Intermission`，请充分利用超大输出窗口把每个场景的对话与吐槽写透，本篇目标字数：13,000～17…",
+              "runs": [
+                {
+                  "id": "round4_t01_02_r1",
+                  "seq": 3,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "败犬女主太多了！ 10》——盛夏合宿的蓝舌头与学生会长的决胜局——",
+                  "char_count": 43639,
+                  "thought_tokens": 8968,
+                  "output_tokens": 37867,
+                  "duration_s": 572.8,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "序章 院子里的铁皮水桶倒扣在砖块上，底朝天晒着太阳。 昨晚文艺部那帮人在我家院子里放完烟花后，空气里残留的火药味已经散干净了，只剩下盛夏清晨独有的蝉鸣声吵得人耳朵发痒。 七月下旬，高二暑假正式开始的第一天。 我盘腿坐在客厅的矮桌前，端起放了冰块的麦茶喝了一口。 冰凉的液体顺着喉咙滑下去，总算让我那颗…",
+                  "md_path": "writing-bench-round4-tankobon/02_败犬女主太多了_单行本续作/Vol10_盛夏合宿的蓝舌头与学生会长的决胜局/run_01.md",
+                  "txt_path": "txt/round4_t01_02_r1.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "Vol11_第二学期的绯闻风暴与不肯退场的她",
+              "topic_short": "Vol11 · 第二学期的绯闻风暴与不肯退场的她",
+              "topic_title": "《败犬女主太多了！ 11》——第二学期的绯闻风暴与不肯退场的她——",
+              "is_single": true,
+              "is_tankobon": true,
+              "prompt_preview": "### Pass 1: 上篇（序章 ～ 第一败 ～ Intermission） 请撰写单行本《败犬女主太多了！ 11 ——第二学期的绯闻风暴与不肯退场的她——》的 **上篇（包含 `序章`、`～第一败～`、`Intermission`，请保持原著一句一行的轻快节奏、`「……」`对话与 `◇` 转场，本篇目标字数：13,…",
+              "runs": [
+                {
+                  "id": "round4_t02_02_r1",
+                  "seq": 4,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "败犬女主太多了！ 11》——第二学期的绯闻风暴与不肯退场的她——",
+                  "char_count": 45801,
+                  "thought_tokens": 9086,
+                  "output_tokens": 39564,
+                  "duration_s": 660.1,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "序章 我停下脚步，站在走廊窗边仰望被校舍切开的九月天空。 日历明明已经翻到了秋天，丰桥的阳光却一点都没有收敛的意思，蝉鸣声依旧吵得人脑仁发疼。 ——没错，我的第二学期，从第一天起就宣告完蛋了。 要问为什么，那是因为经过了一个漫长又鸡飞狗跳的暑假，我原本以为校内那些关于我的离谱传闻终于能消停一阵子。 …",
+                  "md_path": "writing-bench-round4-tankobon/02_败犬女主太多了_单行本续作/Vol11_第二学期的绯闻风暴与不肯退场的她/run_01.md",
+                  "txt_path": "txt/round4_t02_02_r1.txt"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "round_id": "round5",
-      "round_name": "第五轮：世界文学大师致敬专项（卡尔维诺 / 博尔赫斯 / 村上春树 · 零对偶句式洗炼）",
-      "round_short": "Round 5 · 世界文学大师",
-      "desc": "彻底根除『不是…而是…』『没有…而是…』等 AI 对比连接词，深度还原伊塔洛·卡尔维诺的几何轻盈元叙事、博尔赫斯的古典考据迷宫与村上春树的爵士乐都市疏离感。",
+      "round_name": "第五轮：世界文学大师致敬专项（卡尔维诺 / 博尔赫斯 / 村上春树）",
+      "round_short": "Round 5 · 世界文学大师 (6篇)",
+      "desc": "深度还原伊塔洛·卡尔维诺的几何轻盈元叙事、豪尔赫·路易斯·博尔赫斯的古典考据迷宫，以及直接锚定《村上春树作品集》林少华原书EPUB语感的早期/中期村上春树短篇，100% 根除『不是…而是…』对偶句式。",
+      "article_count": 6,
+      "char_count": 65835,
       "categories": [
         {
           "cat_id": "round5_01_卡尔维诺_Italo_Calvino",
-          "cat_name": "壹 · 卡尔维诺_Italo_Calvino",
+          "cat_name": "壹 · 卡尔维诺 Italo Calvino",
           "raw_folder": "01_卡尔维诺_Italo_Calvino",
           "topics": [
             {
               "topic_folder": "01_卡尔维诺_回声与镜子之城奥林达",
               "topic_short": "卡尔维诺 · 回声与镜子之城奥林达",
               "topic_title": "《看不见的城市·补遗：关于回声、折扇与交换记忆的三座城市》",
-              "prompt_preview": "",
+              "is_single": true,
+              "is_tankobon": false,
+              "prompt_preview": "请模仿伊塔洛·卡尔维诺《看不见的城市》的结构与文风，创作一篇结构完整的短篇小说《看不见的城市·补遗：关于回声、折扇与交换记忆的三座城市》（目标字数：7,000～9,000 字）。  【结构与内容要求】： 1. **开篇斜体对话框（马可·波罗与忽必烈汗在御花园黄昏棋局旁的谈话）**：忽必烈汗对着绘满帝国版图的黑檀木棋盘感…",
               "runs": [
                 {
                   "id": "round5_t01_01_r1",
-                  "seq": 1,
+                  "seq": 5,
                   "run_idx": 1,
                   "temperature": 0.88,
                   "story_title": "看不见的城市·补遗：关于回声、折扇与交换记忆的三座城市",
@@ -34,8 +170,10 @@
                   "duration_s": 193.7,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "*黄昏落入汗八里的御花园时，孔雀正收拢尾羽，栖上石榴树的横枝。玉石水槽里的铜漏滴下最后一滴水，宣告白昼的疆界已经合拢。* *忽必烈汗坐在紫檀木凉亭的阴影里，手肘支在巨大的黑檀木棋盘边缘。这具棋盘是帝国版图的微缩模型：六十…",
-                  "md_path": "writing-bench-round5-worldlit/01_卡尔维诺_Italo_Calvino/01_卡尔维诺_回声与镜子之城奥林达/run_01.md"
+                  "chapter_count": 3,
+                  "excerpt": "*黄昏落入汗八里的御花园时，孔雀正收拢尾羽，栖上石榴树的横枝。玉石水槽里的铜漏滴下最后一滴水，宣告白昼的疆界已经合拢。* *忽必烈汗坐在紫檀木凉亭的阴影里，手肘支在巨大的黑檀木棋盘边缘。这具棋盘是帝国版图的微缩模型：六十四格黑白相间的方格由南海的螺钿与于阗的墨玉拼接而成，每一格都镌刻着一座行省的名字…",
+                  "md_path": "writing-bench-round5-worldlit/01_卡尔维诺_Italo_Calvino/01_卡尔维诺_回声与镜子之城奥林达/run_01.md",
+                  "txt_path": "txt/round5_t01_01_r1.txt"
                 }
               ]
             },
@@ -43,11 +181,13 @@
               "topic_folder": "02_卡尔维诺_在印错页码的火车时刻表之间",
               "topic_short": "卡尔维诺 · 在印错页码的火车时刻表之间",
               "topic_title": "《在印错页码的火车时刻表之间》",
-              "prompt_preview": "",
+              "is_single": true,
+              "is_tankobon": false,
+              "prompt_preview": "请模仿伊塔洛·卡尔维诺《如果在冬夜，一个旅人》与《帕洛马尔》的智性幽默文风，创作一篇短篇小说《在印错页码的火车时刻表之间》（目标字数：7,000～9,000 字）。  【故事脉络】： - “你”在北方一座雾气弥漫的火车站候车室里，买了一本装订错误的旧小说——第32页之后直接跳到了另一部完全陌生的小说的第65页，而且书页…",
               "runs": [
                 {
                   "id": "round5_t02_01_r1",
-                  "seq": 2,
+                  "seq": 6,
                   "run_idx": 1,
                   "temperature": 0.88,
                   "story_title": "在印错页码的火车时刻表之间",
@@ -57,8 +197,10 @@
                   "duration_s": 190.2,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "**［第一印张：裁纸刀与雾中的候车室］** 你推开北方这座二级火车站候车室的弹簧木门时，最先迎面扑来的是一股潮湿的煤烟味，紧接着是铸铁火炉烘烤湿羊毛大衣散发的酸涩气息，最后才是从书报亭角落飘来的、廉价木浆纸与亚麻仁油墨混…",
-                  "md_path": "writing-bench-round5-worldlit/01_卡尔维诺_Italo_Calvino/02_卡尔维诺_在印错页码的火车时刻表之间/run_01.md"
+                  "chapter_count": 0,
+                  "excerpt": "**［第一印张：裁纸刀与雾中的候车室］** 你推开北方这座二级火车站候车室的弹簧木门时，最先迎面扑来的是一股潮湿的煤烟味，紧接着是铸铁火炉烘烤湿羊毛大衣散发的酸涩气息，最后才是从书报亭角落飘来的、廉价木浆纸与亚麻仁油墨混合的陈旧芬芳。 你是一名旅人，你的皮箱里装着两件换洗衬衫、一把剃须刀，以及由于上…",
+                  "md_path": "writing-bench-round5-worldlit/01_卡尔维诺_Italo_Calvino/02_卡尔维诺_在印错页码的火车时刻表之间/run_01.md",
+                  "txt_path": "txt/round5_t02_01_r1.txt"
                 }
               ]
             }
@@ -66,18 +208,20 @@
         },
         {
           "cat_id": "round5_02_博尔赫斯_Jorge_Luis_Borges",
-          "cat_name": "贰 · 博尔赫斯_Jorge_Luis_Borges",
+          "cat_name": "贰 · 博尔赫斯 Jorge Luis Borges",
           "raw_folder": "02_博尔赫斯_Jorge_Luis_Borges",
           "topics": [
             {
               "topic_folder": "03_博尔赫斯_乌尔里克与第十二面青铜镜",
               "topic_short": "博尔赫斯 · 乌尔里克与第十二面青铜镜",
               "topic_title": "《阿벤哈坎的第十三座迷宫与倒行的沙漏》",
-              "prompt_preview": "",
+              "is_single": true,
+              "is_tankobon": false,
+              "prompt_preview": "请模仿豪尔赫·路易斯·博尔赫斯（王永年译本风骨）的冷峻考据与形而上学推理文风，创作一篇短篇小说《阿本哈坎的第十三座迷宫与倒行的沙漏》（目标字数：7,000～9,000 字）。  【故事脉络】： - 叙述者“我”在布宜诺斯艾利斯墨西哥街国立图书馆整理已故东方学家斯蒂芬·阿尔贝（或奥古斯丁·莫雷尔）的遗稿时，发现了一份关于…",
               "runs": [
                 {
                   "id": "round5_t01_02_r1",
-                  "seq": 3,
+                  "seq": 7,
                   "run_idx": 1,
                   "temperature": 0.88,
                   "story_title": "阿本哈坎的第十三座迷宫与倒行的沙漏",
@@ -87,8 +231,10 @@
                   "duration_s": 213.8,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "一九五五年十月最后一个阴冷的夜晚，东方学家奥古斯丁·莫雷尔因肺水肿死于布宜诺斯艾利斯南区加赖街的一家廉价公寓。几天后，《民族报》在第四版角落刊登了一则简短的讣告，里面甚至拼错了他的中间名。据我所知，这位性情孤僻的学者生前…",
-                  "md_path": "writing-bench-round5-worldlit/02_博尔赫斯_Jorge_Luis_Borges/03_博尔赫斯_乌尔里克与第十二面青铜镜/run_01.md"
+                  "chapter_count": 5,
+                  "excerpt": "一九五五年十月最后一个阴冷的夜晚，东方学家奥古斯丁·莫雷尔因肺水肿死于布宜诺斯艾利斯南区加赖街的一家廉价公寓。几天后，《民族报》在第四版角落刊登了一则简短的讣告，里面甚至拼错了他的中间名。据我所知，这位性情孤僻的学者生前从未在任何大学担任教职，他在学术界留下的唯一痕迹，是一九三四年发表在科尔多瓦某份…",
+                  "md_path": "writing-bench-round5-worldlit/02_博尔赫斯_Jorge_Luis_Borges/03_博尔赫斯_乌尔里克与第十二面青铜镜/run_01.md",
+                  "txt_path": "txt/round5_t01_02_r1.txt"
                 }
               ]
             },
@@ -96,22 +242,26 @@
               "topic_folder": "04_博尔赫斯_巴勒莫街角的重逢与遗忘词典",
               "topic_short": "博尔赫斯 · 巴勒莫街角的重逢与遗忘词典",
               "topic_title": "《盲眼图书管理员与抹去名字的词典》",
-              "prompt_preview": "",
+              "is_single": true,
+              "is_tankobon": false,
+              "prompt_preview": "请模仿豪尔赫·路易斯·博尔赫斯《沙之书》与《南方》的文风，创作一篇短篇小说《盲眼图书管理员与抹去名字的词典》（目标字数：7,000～9,000 字）。  【故事脉络】： - 一九七二年的一个冬日黄昏，双目几近失明的叙述者坐在日内瓦（或剑桥/布宜诺斯艾利斯）河畔的长椅上，遇到了一位自称来自乌拉圭边境小镇的古董书商。 - …",
               "runs": [
                 {
                   "id": "round5_t02_02_r1",
-                  "seq": 4,
+                  "seq": 8,
                   "run_idx": 1,
                   "temperature": 0.88,
-                  "story_title": "《盲眼图书管理员与抹去名字的词典》",
+                  "story_title": "盲眼图书管理员与抹去名字的词典",
                   "char_count": 10274,
                   "thought_tokens": 9130,
                   "output_tokens": 8029,
                   "duration_s": 213.1,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "托马斯·德·昆西在论述人类大脑的重写本时曾指出，没有任何一场降临在凡人身上的悲剧会真正湮灭，遗忘仅仅是记忆在黑夜里垂下的一道帷幕。我年轻时曾对这一修辞深信不疑，甚至在三十年代撰写的几篇札记里引用过它。如今我已年逾古稀，双…",
-                  "md_path": "writing-bench-round5-worldlit/02_博尔赫斯_Jorge_Luis_Borges/04_博尔赫斯_巴勒莫街角的重逢与遗忘词典/run_01.md"
+                  "chapter_count": 0,
+                  "excerpt": "托马斯·德·昆西在论述人类大脑的重写本时曾指出，没有任何一场降临在凡人身上的悲剧会真正湮灭，遗忘仅仅是记忆在黑夜里垂下的一道帷幕。我年轻时曾对这一修辞深信不疑，甚至在三十年代撰写的几篇札记里引用过它。如今我已年逾古稀，双目笼罩在终年不散的黄色雾霭里，走过布宜诺斯艾利斯漫长而单调的街区时，终于明白德·…",
+                  "md_path": "writing-bench-round5-worldlit/02_博尔赫斯_Jorge_Luis_Borges/04_博尔赫斯_巴勒莫街角的重逢与遗忘词典/run_01.md",
+                  "txt_path": "txt/round5_t02_02_r1.txt"
                 }
               ]
             }
@@ -119,29 +269,33 @@
         },
         {
           "cat_id": "round5_03_村上春树_Haruki_Murakami",
-          "cat_name": "03_村上春树_Haruki_Murakami",
+          "cat_name": "叁 · 村上春树 Haruki Murakami",
           "raw_folder": "03_村上春树_Haruki_Murakami",
           "topics": [
             {
               "topic_folder": "05_村上春树_星期二下午煮意大利面时打来的电话",
               "topic_short": "村上春树 · 星期二下午煮意大利面时打来的电话",
               "topic_title": "《星期二下午的意大利面条与院子里的枯井》",
-              "prompt_preview": "",
+              "is_single": true,
+              "is_tankobon": false,
+              "prompt_preview": "请严格按照上面提供的《下午最后的草坪》与《1973年的弹子球》原著文体采样，重新创作一篇纯正村上春树风味的短篇小说《星期二下午的意大利面条与院子里的枯井》（目标字数：7,000～9,000 字）。  【故事内容】： - 从六月底辞去那家专门编纂牙科器械目录的小出版社工作以来，已过去三个多月了。我三十岁，手头有一笔勉强够…",
               "runs": [
                 {
                   "id": "round5_t01_03_r1",
-                  "seq": 5,
+                  "seq": 9,
                   "run_idx": 1,
                   "temperature": 0.88,
-                  "story_title": "《星期二下午的意大利面条与院子里的枯井》",
+                  "story_title": "星期二下午的意大利面条与院子里的枯井",
                   "char_count": 6051,
                   "thought_tokens": 7013,
                   "output_tokens": 13005,
                   "duration_s": 277.6,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "那是我三十岁那年秋天的事，所以距今已过去八九年了。 我时常想，充其量八九年，能称得上久远么？唐纳德·费根唱《夜蝇》、比利·乔尔唱《纯真之人》的时代——顺序大约有点颠倒，反正就是那个时代——居然已算是往昔，我却怎么也上不来…",
-                  "md_path": "writing-bench-round5-worldlit/03_村上春树_Haruki_Murakami/05_村上春树_星期二下午煮意大利面时打来的电话/run_01.md"
+                  "chapter_count": 0,
+                  "excerpt": "那是我三十岁那年秋天的事，所以距今已过去八九年了。 我时常想，充其量八九年，能称得上久远么？唐纳德·费根唱《夜蝇》、比利·乔尔唱《纯真之人》的时代——顺序大约有点颠倒，反正就是那个时代——居然已算是往昔，我却怎么也上不来实感。我个人有时甚至觉得今天跟那个时代相比好像并没有什么变化。 但不可能。我肯定…",
+                  "md_path": "writing-bench-round5-worldlit/03_村上春树_Haruki_Murakami/05_村上春树_星期二下午煮意大利面时打来的电话/run_01.md",
+                  "txt_path": "txt/round5_t01_03_r1.txt"
                 }
               ]
             },
@@ -149,11 +303,13 @@
               "topic_folder": "06_村上春树_四国雨夜的高速公路服务区与第六只大象",
               "topic_short": "村上春树 · 四国雨夜的高速公路服务区与第六只大象",
               "topic_title": "《雨夜的富士川服务站与借打火机的男人》",
-              "prompt_preview": "",
+              "is_single": true,
+              "is_tankobon": false,
+              "prompt_preview": "请严格按照上面提供的《烧仓房》与《奇鸟行状录》原著文体采样，重新创作一篇纯正村上春树风味的短篇小说《雨夜的富士川服务站与借打火机的男人》（目标字数：7,000～9,000 字）。  【故事内容】： - 那是四年前11月中旬的事。当时我三十一岁，因为替朋友处理一桩不大不小的善后事宜（把一辆跑了八万公里的二手蓝色“斯巴鲁”…",
               "runs": [
                 {
                   "id": "round5_t02_03_r1",
-                  "seq": 6,
+                  "seq": 10,
                   "run_idx": 1,
                   "temperature": 0.88,
                   "story_title": "雨夜的富士川服务站与借打火机的男人",
@@ -163,1078 +319,10 @@
                   "duration_s": 188.7,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "那是我31岁那年11月中旬的事，距今已过去4年了。 当时我之所以半夜1点过后还独自一人开着一辆跑了8万公里的二手蓝色“斯巴鲁”行驶在东名高速公路上，是因为替一个老朋友处理一桩不大不小的善后事宜。所谓善后事宜，说穿了也算不…",
-                  "md_path": "writing-bench-round5-worldlit/03_村上春树_Haruki_Murakami/06_村上春树_四国雨夜的高速公路服务区与第六只大象/run_01.md"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "round_id": "round4",
-      "round_name": "第四轮：单行本全卷级长篇续作（1M MaxOutput & 全上下文多轮架构）",
-      "round_short": "Round 4 · 单行本全卷",
-      "desc": "紧接《安达与岛村》第12～13卷与《败犬女主太多了！》第8～9卷最新原著剧情，采用 1M MaxOutput + 原著译本文体锚定 + 全上下文三幕推进，创作单本 4.4万～4.8万字的单行本级续作。",
-      "categories": [
-        {
-          "cat_id": "round4_01_安达与岛村_单行本续作",
-          "cat_name": "壹 · 安达与岛村_单行本续作",
-          "raw_folder": "01_安达与岛村_单行本续作",
-          "topics": [
-            {
-              "topic_folder": "Vol14_穿过二楼体育馆的最后一个冬天",
-              "topic_short": "Vol14 · 穿过二楼体育馆的最后一个冬天",
-              "topic_title": "《安达与岛村 14》——穿过二楼体育馆的最后一个冬天——",
-              "prompt_preview": "",
-              "runs": [
-                {
-                  "id": "round4_t01_01_r1",
-                  "seq": 7,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "《安达与岛村 14》——穿过二楼体育馆的最后一个冬天——",
-                  "char_count": 46963,
-                  "thought_tokens": 11183,
-                  "output_tokens": 40329,
-                  "duration_s": 728.4,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "「喂——安达，你填好了吗？」 前排的椅子发出一阵刺耳的摩擦声，潘乔整个人转了过来，手肘撑在我的课桌上。 我把自动铅笔停下来，用左手手背稍微挡了一下桌上的纸。倒也不是什么需要保密的国家机密，只是被人从正上方盯着看，总觉得笔…",
-                  "md_path": "writing-bench-round4-tankobon/01_安达与岛村_单行本续作/Vol14_穿过二楼体育馆的最后一个冬天/run_01.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "Vol15_大学时代的储蓄罐与搬进公寓的第一周",
-              "topic_short": "Vol15 · 大学时代的储蓄罐与搬进公寓的第一周",
-              "topic_title": "《安达与岛村 15》——大学时代的储蓄罐与搬进公寓的第一周——",
-              "prompt_preview": "",
-              "runs": [
-                {
-                  "id": "round4_t02_01_r1",
-                  "seq": 8,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "《安达与岛村 15》——大学时代的储蓄罐与搬进公寓的第一周——",
-                  "char_count": 40374,
-                  "thought_tokens": 8246,
-                  "output_tokens": 34863,
-                  "duration_s": 584.8,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "把衣柜门拉开，再关上。 然后再拉开。 里面的衣服当然不会因为在黑暗中待了三秒钟就自动繁殖，或者突然变成适合大学生的完美穿搭。它们只是静静地挂在衣架上，像一排等待检阅却毫无干劲的士兵。 「呜……」 我抓着一件浅蓝色的针织开…",
-                  "md_path": "writing-bench-round4-tankobon/01_安达与岛村_单行本续作/Vol15_大学时代的储蓄罐与搬进公寓的第一周/run_01.md"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "cat_id": "round4_02_败犬女主太多了_单行本续作",
-          "cat_name": "贰 · 败犬女主太多了_单行本续作",
-          "raw_folder": "02_败犬女主太多了_单行本续作",
-          "topics": [
-            {
-              "topic_folder": "Vol10_盛夏合宿的蓝舌头与学生会长的决胜局",
-              "topic_short": "Vol10 · 盛夏合宿的蓝舌头与学生会长的决胜局",
-              "topic_title": "《败犬女主太多了！ 10》——盛夏合宿的蓝舌头与学生会长的决胜局——",
-              "prompt_preview": "",
-              "runs": [
-                {
-                  "id": "round4_t01_02_r1",
-                  "seq": 9,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "《败犬女主太多了！ 10》——盛夏合宿的蓝舌头与学生会长的决胜局——",
-                  "char_count": 43639,
-                  "thought_tokens": 8968,
-                  "output_tokens": 37867,
-                  "duration_s": 572.8,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "序章 院子里的铁皮水桶倒扣在砖块上，底朝天晒着太阳。 昨晚文艺部那帮人在我家院子里放完烟花后，空气里残留的火药味已经散干净了，只剩下盛夏清晨独有的蝉鸣声吵得人耳朵发痒。 七月下旬，高二暑假正式开始的第一天。 我盘腿坐在客…",
-                  "md_path": "writing-bench-round4-tankobon/02_败犬女主太多了_单行本续作/Vol10_盛夏合宿的蓝舌头与学生会长的决胜局/run_01.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "Vol11_第二学期的绯闻风暴与不肯退场的她",
-              "topic_short": "Vol11 · 第二学期的绯闻风暴与不肯退场的她",
-              "topic_title": "《败犬女主太多了！ 11》——第二学期的绯闻风暴与不肯退场的她——",
-              "prompt_preview": "",
-              "runs": [
-                {
-                  "id": "round4_t02_02_r1",
-                  "seq": 10,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "《败犬女主太多了！ 11》——第二学期的绯闻风暴与不肯退场的她——",
-                  "char_count": 45801,
-                  "thought_tokens": 9086,
-                  "output_tokens": 39564,
-                  "duration_s": 660.1,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "序章 我停下脚步，站在走廊窗边仰望被校舍切开的九月天空。 日历明明已经翻到了秋天，丰桥的阳光却一点都没有收敛的意思，蝉鸣声依旧吵得人脑仁发疼。 ——没错，我的第二学期，从第一天起就宣告完蛋了。 要问为什么，那是因为经过了…",
-                  "md_path": "writing-bench-round4-tankobon/02_败犬女主太多了_单行本续作/Vol11_第二学期的绯闻风暴与不肯退场的她/run_01.md"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "round_id": "round1",
-      "round_name": "第一轮：名家同人与原创多场景基线",
-      "round_short": "Round 1 · 综合基线",
-      "desc": "涵盖入间人间《妹妹人生》大学番外、《安达与岛村》、三秋缒、《轻音少女》、《彻夜之歌》同人，以及神经质青春、冷硬赛博朋克、新古典武侠、民俗微恐、东北市民文学、高压审讯独幕剧。",
-      "categories": [
-        {
-          "cat_id": "round1_01_同人文测试",
-          "cat_name": "壹 · 同人文测试",
-          "raw_folder": "01_同人文测试",
-          "topics": [
-            {
-              "topic_folder": "01_入间人间_妹妹人生_大学篇番外",
-              "topic_short": "入间人间 · 妹妹人生 · 大学篇番外",
-              "topic_title": "入间人间《妹妹人生》番外：大学同居篇（过去与未来的交错）",
-              "prompt_preview": "请深度模仿日本轻小说作家**入间人间**代表作**《妹妹人生》（いもーとらいふ / Imōto Life）**的文风与原著核心设定（简体中文），创作一篇**《妹妹人生》番外篇：围绕“过去与未来”，时间线设定在妹妹上大学、同时已经作为小说家出道，兄妹两人搬出老家、在属于两人的公寓里…",
-              "runs": [
-                {
-                  "id": "round1_t01_01_r1",
-                  "seq": 11,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "妹妹人生：自那本绘图日记起的漫长夏日",
-                  "char_count": 5934,
-                  "thought_tokens": 2415,
-                  "output_tokens": 4177,
-                  "duration_s": 107.62,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "**一** 菜刀落在塑料砧板上，发出沉闷的笃笃声。 我正跟一颗圆白菜较劲，打算把它切成细丝。虽说目标是细丝，但菜刀底下滚出来的成品却宽窄不一，活脱脱是一堆绿色的劈柴。这也没办法，我本来就不是什么料理达人，之所以每天傍晚系…",
-                  "md_path": "writing-bench/01_同人文测试/01_入间人间_妹妹人生_大学篇番外/run_01.md"
-                },
-                {
-                  "id": "round1_t01_01_r2",
-                  "seq": 12,
-                  "run_idx": 2,
-                  "temperature": 0.92,
-                  "story_title": "过去与未来，以及夹在中间的晚饭时间",
-                  "char_count": 6586,
-                  "thought_tokens": 2588,
-                  "output_tokens": 4690,
-                  "duration_s": 128.81,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "键盘被敲响的声音，听起来像是有谁在用指尖轻轻叩击木头桌面。 哒、哒，停顿一下，然后又是哒、哒、哒。 那绝不是什么称得上潇洒或者熟练的节奏。如果让外人听见，大概会以为是哪个刚学会使用电脑的小学生，正歪着脑袋在键盘上艰难地寻…",
-                  "md_path": "writing-bench/01_同人文测试/01_入间人间_妹妹人生_大学篇番外/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "02_入间人间_安达与岛amura_日常切片",
-              "topic_short": "入间人间 · 安达与岛amura · 日常切片",
-              "topic_title": "入间人间《安达与岛村》同人：同居后的某个周日下午",
-              "prompt_preview": "请深度模仿**入间人间**《安达与岛村》的文风（简体中文），创作一篇同人短篇：**安达与岛村步入大学/同居初期的某个无所事事的周日下午**。\n\n【文风与结构要求】\n1. **双第一人称心理温差**：上半节写“安达”视角（全身神经末梢都绑在岛村身上，连岛村翻书时手指移动了三毫米、呼…",
-              "runs": [
-                {
-                  "id": "round1_t02_01_r1",
-                  "seq": 13,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "周日、电风扇与中华冷面的芥末包",
-                  "char_count": 5703,
-                  "thought_tokens": 3148,
-                  "output_tokens": 4125,
-                  "duration_s": 110.51,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "差不多一掌宽的距离。 这是目前我的右膝盖骨外侧，到岛村左小腿肚最柔软处之间隔着的空当。如果算上岛村身上那件洗得领口有些松垮的浅灰色T恤下摆，这道缝隙大概还能再缩窄两根手指的宽度。不过布料不能算是岛村的本体，虽然那是包裹着…",
-                  "md_path": "writing-bench/01_同人文测试/02_入间人间_安达与岛amura_日常切片/run_01.md"
-                },
-                {
-                  "id": "round1_t02_01_r2",
-                  "seq": 14,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "有关风扇、布丁与指尖距离的周日",
-                  "char_count": 5325,
-                  "thought_tokens": 2124,
-                  "output_tokens": 3874,
-                  "duration_s": 92.27,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "**安达** 电风扇的网罩后面，蓝色的塑料扇叶正在转。 左边，顿一下。右边，又顿一下。 风从左边吹过来的时候，会先经过岛村的小腿，掀动她那件洗得有些松垮的浅灰色T恤下摆，然后再吹到我的膝盖上。这么一来，这股风里就包含了岛…",
-                  "md_path": "writing-bench/01_同人文测试/02_入间人间_安达与岛amura_日常切片/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "03_三秋缒_三日间的幸福_余生切片",
-              "topic_short": "三秋缒 · 三日间的幸福 · 余生切片",
-              "topic_title": "三秋缒《三日间的幸福》风格同人：典当寿命后的第四天早晨（IF线/番外）",
-              "prompt_preview": "请深度模仿日本作家**三秋缒（三秋縋）**《三日间的幸福》《恋爱的寄生虫》的标志性文风（简体中文），创作一篇《三日间的幸福》风格同人/番外（以楠木与宫城为原型，可写最后三日之中的某个隐秘黄昏，或某个平行时空里两人多活下来的第四天清晨）。\n\n【文风与结构要求】\n1. **三秋缒式清…",
-              "runs": [
-                {
-                  "id": "round1_t03_01_r1",
-                  "seq": 15,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "退币口里的硬币与第四个早晨",
-                  "char_count": 5310,
-                  "thought_tokens": 2575,
-                  "output_tokens": 3905,
-                  "duration_s": 99.58,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "如果把一年一万日元的寿命按天数拆开零售，合下来一天连三十日元都不到。 二十七日元在如今的日本能买到什么呢。连便利店收银台旁边那种用来凑整的巧克力球都买不起，甚至不够给老式公用电话续上一分钟的通话时长。那是掉进冰箱底部的缝…",
-                  "md_path": "writing-bench/01_同人文测试/03_三秋缒_三日间的幸福_余生切片/run_01.md"
-                },
-                {
-                  "id": "round1_t03_01_r2",
-                  "seq": 16,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "不计价的黄昏",
-                  "char_count": 5119,
-                  "thought_tokens": 2728,
-                  "output_tokens": 3837,
-                  "duration_s": 115.7,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "一年一万日元。 如果把这笔钱平摊到一整年里，我活着的每一天合下来连三十日元都不到，还不够买一颗收银台边的巧克力球。要是再把时间掰碎成钟头和分钟，那点可怜的价值更是连提都不用提。算下来，当我坐在榻榻米上发呆、打个喷嚏，或者…",
-                  "md_path": "writing-bench/01_同人文测试/03_三秋缒_三日间的幸福_余生切片/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "04_三秋缒_痛快的孤独与救赎_再会篇",
-              "topic_short": "三秋缒 · 痛快的孤独与救赎 · 再会篇",
-              "topic_title": "三秋缒风格同人：《不哭不哭，痛痛飞走吧》或《恋爱寄生虫》式重逢切片",
-              "prompt_preview": "请深度模仿**三秋缒（三秋縋）**的文风（简体中文），创作一篇带有《恋爱寄生虫》（高坂贤吾与佐薙圣）或《不哭不哭，痛痛飞走吧》气质的同人短篇：**两个同样被社会判定为“残次品”的男女，在一个下着冷雨的秋夜，在即将拆迁的旧街区（或停电的公寓里）度过的两个小时**。\n\n【文风与结构要…",
-              "runs": [
-                {
-                  "id": "round1_t04_01_r1",
-                  "seq": 17,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "在即将注销的街区等待复电",
-                  "char_count": 5349,
-                  "thought_tokens": 2621,
-                  "output_tokens": 3864,
-                  "duration_s": 103.84,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "天花板上的环形白炽灯管已经坏了将近一周。多半是里头的零件老化了，每次通电都会嗡嗡地闷响个不停。那动静，活像一只被困在玻璃罐里的苍蝇，不知疲倦地拿脑袋撞击着罐壁。 在平时，这种程度的噪音足以让我产生偏头痛，甚至引发呕吐感。…",
-                  "md_path": "writing-bench/01_同人文测试/04_三秋缒_痛快的孤独与救赎_再会篇/run_01.md"
-                },
-                {
-                  "id": "round1_t04_01_r2",
-                  "seq": 18,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "在被注销的街区等待雨停",
-                  "char_count": 5611,
-                  "thought_tokens": 3647,
-                  "output_tokens": 4188,
-                  "duration_s": 120.79,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "只要待在久野周身几步以内的地方，我耳道里的杂音就会消失。 那种声音很难向听觉正常的人描述。如果非要寻找一个近似的参照物，大概像是把上千只夏蝉塞进生锈的铁皮饼干盒里剧烈摇晃，又或者是老式显像管电视在午夜停播后发出的白噪音。…",
-                  "md_path": "writing-bench/01_同人文测试/04_三秋缒_痛快的孤独与救赎_再会篇/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "05_轻音少女_毕业前的最后一次放学后活动室",
-              "topic_short": "轻音少女 · 毕业前的最后一次放学后活动室",
-              "topic_title": "《轻音少女》(K-ON!) 同人：毕业前夕没有弹琴的放学后",
-              "prompt_preview": "请以京都动画 / 芳文社名作**《轻音少女》（K-ON!）**为原作，创作一篇纯正日系治愈空气系中文同人小说：**高三毕业前夕的一个寒冷傍晚，平泽唯、秋山澪、田井中律、琴吹紬与中野梓五人在音乐教室里，明明说好要练习却一首曲子都没弹成的放学后**。\n\n【文风与结构要求】\n1. **…",
-              "runs": [
-                {
-                  "id": "round1_t05_01_r1",
-                  "seq": 19,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "未通电的放学后",
-                  "char_count": 5215,
-                  "thought_tokens": 3196,
-                  "output_tokens": 4023,
-                  "duration_s": 114.98,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "走廊尽头的饮水机滴下一滴冷水，砸在不锈钢水槽里，发出清脆的声响。 二月中旬的太阳落得很早，刚过下午四点，教学楼北侧的阴影就已经漫过了楼梯拐角的半身铜像。中野梓抱紧怀里的乐谱夹，踩着木制楼梯往上走。高三年级从这周起进入了自…",
-                  "md_path": "writing-bench/01_同人文测试/05_轻音少女_毕业前的最后一次放学后活动室/run_01.md"
-                },
-                {
-                  "id": "round1_t05_01_r2",
-                  "seq": 20,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "茶梗立起来的傍晚",
-                  "char_count": 5113,
-                  "thought_tokens": 2974,
-                  "output_tokens": 3959,
-                  "duration_s": 119.94,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "走廊尽头的窗户没关严，二月底的风顺着轨道缝隙钻进来，吹得布告栏上的毕业生离校日程表哗啦作响。 中野梓抱着吉他的硬壳琴盒，一步两阶地跨上通往三楼的木制楼梯。扶手栏杆上的黄铜小兔子被擦得锃亮，摸上去像一块块冰凉的硬币。高二年…",
-                  "md_path": "writing-bench/01_同人文测试/05_轻音少女_毕业前的最后一次放学后活动室/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "06_彻夜之歌_凌晨三点的自动贩卖机与天台",
-              "topic_short": "彻夜之歌 · 凌晨三点的自动贩卖机与天台",
-              "topic_title": "《彻夜之歌》(Yofukashi no Uta) 同人：夜守光与七草荠的凌晨三点",
-              "prompt_preview": "请以琴山原作动漫**《彻夜之歌》（よふかしのうた）**为背景，创作一篇中文同人小说：**凌晨三点十五分，夜守光与七草荠在无人的高架桥下自动贩卖机旁买热饮，随后飞上老旧居民楼天台吹风喝酒/喝易拉罐饮料的夜晚切片**。\n\n【文风与结构要求】\n1. **独特的“夜之空气感”**：写出白…",
-              "runs": [
-                {
-                  "id": "round1_t06_01_r1",
-                  "seq": 21,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "高架桥下的拉环声",
-                  "char_count": 6789,
-                  "thought_tokens": 2088,
-                  "output_tokens": 5199,
-                  "duration_s": 117.88,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "凌晨三点刚过，手腕上电子表的幽暗冷光里，末尾的数字无声地跳了一格。 高架桥底部的水泥墩子像一排沉默的巨兽肋骨，向远处的黑暗无限延伸。白天的这里充斥着尾气、喇叭声和赶着去打卡的上班族，每一寸空间都被交通规则与时间表切割得密…",
-                  "md_path": "writing-bench/01_同人文测试/06_彻夜之歌_凌晨三点的自动贩卖机与天台/run_01.md"
-                },
-                {
-                  "id": "round1_t06_01_r2",
-                  "seq": 22,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "夜风、易拉罐与低空飞行",
-                  "char_count": 5337,
-                  "thought_tokens": 2562,
-                  "output_tokens": 4035,
-                  "duration_s": 103.62,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "手机屏幕亮了一下，冷白的光照亮夜守光的半张脸。时间刚过凌晨三点，锁屏界面上的数字悄无声息地往后跳了一格。 他把手机塞回运动裤口袋，手指在布料里蜷缩了一下。高架桥下的阴影浓得像化不开的墨汁，白天的太阳从来照不进这片由水泥墩…",
-                  "md_path": "writing-bench/01_同人文测试/06_彻夜之歌_凌晨三点的自动贩卖机与天台/run_02.md"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "cat_id": "round1_02_原创多场景多体裁测试",
-          "cat_name": "贰 · 原创多场景多体裁测试",
-          "raw_folder": "02_原创多场景多体裁测试",
-          "topics": [
-            {
-              "topic_folder": "01_第一人称神经质青春日常_森见与入间混合风",
-              "topic_short": "第一人称神经质青春日常 · 森见与入间混合风",
-              "topic_title": "原创测试01：第一人称神经质青春日常（断电的梅雨夜与双胞胎妹妹）",
-              "prompt_preview": "请创作一篇**第一人称神经质青春日常**原创短篇小说（简体中文）。\n【场景设定】南方大学城周边老旧居民楼的六楼顶层，六月中旬闷热潮湿的梅雨夜，整栋楼突然停电。十八岁的“我”和比我晚出生几秒、性格带刺又嘴硬的双胞胎妹妹困在只有一台充电小风扇转动的房间里。\n【文风要求】融合入间人间的…",
-              "runs": [
-                {
-                  "id": "round1_t01_02_r1",
-                  "seq": 23,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "六月蒸笼与咔哒作响的塑料齿轮",
-                  "char_count": 5634,
-                  "thought_tokens": 2454,
-                  "output_tokens": 4219,
-                  "duration_s": 116.06,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "空调是在晚上九点刚过那会儿咽气的。 这台服役年限比我和我妹的岁数加起来还要久远的古董机器，在停电的瞬间发出了一声类似老迈鲸鱼搁浅时的绵长叹息。紧接着，那扇积满灰尘的塑料导风板带着一种极其认命的迟缓，一点一点合拢，彻底封死…",
-                  "md_path": "writing-bench/02_原创多场景多体裁测试/01_第一人称神经质青春日常_森见与入间混合风/run_01.md"
-                },
-                {
-                  "id": "round1_t01_02_r2",
-                  "seq": 24,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "六楼顶层的闷罐与塑料齿轮",
-                  "char_count": 5156,
-                  "thought_tokens": 3882,
-                  "output_tokens": 3862,
-                  "duration_s": 116.05,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "空调是在晚上九点半刚过那会儿咽气的。 那台比我和陈圆岁数还大的古董壁挂机，先是在塑料外壳内部发出了一声类似于老头吞咽浓痰的闷响，紧接着，出风口那片早已发黄的导风板便僵在了半空，像一条死不瞑目的咸鱼下巴。代表通电的绿色小灯…",
-                  "md_path": "writing-bench/02_原创多场景多体裁测试/01_第一人称神经质青春日常_森见与入间混合风/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "02_冷硬派近未来赛博朋克侦探_雨夜义体维修店",
-              "topic_short": "冷硬派近未来赛博朋克侦探 · 雨夜义体维修店",
-              "topic_title": "原创测试02：冷硬派近未来科幻（雨夜九龙城寨式的底层义体诊所）",
-              "prompt_preview": "请创作一篇**冷硬派（Hardboiled）近未来赛博朋克/黑色侦探**原创短篇小说（简体中文）。\n【场景设定】2089年潮湿泥泞的近海巨型贫民窟“下九龙”，凌晨两点。主角是一名退伍后靠走私二手军用神经芯片维生的落魄维修师，一个左眼接口正在渗出冷却液的少女推开了诊所生锈的卷帘门，…",
-              "runs": [
-                {
-                  "id": "round1_t02_02_r1",
-                  "seq": 25,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "沉降区凌晨两点",
-                  "char_count": 6583,
-                  "thought_tokens": 4749,
-                  "output_tokens": 5158,
-                  "duration_s": 157.46,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "电烙铁的尖头戳进焊锡丝，腾起一股带着松香和劣质猪油味儿的青烟。 我屏住呼吸，用镊子夹住那枚从死人脊椎里抠出来的“南方重工04型”协处理器，将最后一根镀金引脚焊在转接板上。工作台上的卤素灯管接触不良，每隔十几秒就发出嗡嗡的…",
-                  "md_path": "writing-bench/02_原创多场景多体裁测试/02_冷硬派近未来赛博朋克侦探_雨夜义体维修店/run_01.md"
-                },
-                {
-                  "id": "round1_t02_02_r2",
-                  "seq": 26,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "枕骨下的三分钟",
-                  "char_count": 6230,
-                  "thought_tokens": 3732,
-                  "output_tokens": 4937,
-                  "duration_s": 139.29,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "凌晨两点，下九龙的酸雨砸在石棉瓦上，动静像成千上万只甲虫在啃骨头。 我把电烙铁戳进松香盒。滋啦一声，腾起的白烟盖住了门外排水沟反上来的死虾烂鱼味。工作台上的放大镜灯管接触不良，嗡嗡地闪着惨白的光。镊子尖端夹着一枚指甲盖大…",
-                  "md_path": "writing-bench/02_原创多场景多体裁测试/02_冷硬派近未来赛博朋克侦探_雨夜义体维修店/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "03_新古典武侠江湖残局_风雪夜破庙",
-              "topic_short": "新古典武侠江湖残局 · 风雪夜破庙",
-              "topic_title": "原创测试03：新古典冷冽武侠（大雪封山的驿站与最后一壶烧刀子）",
-              "prompt_preview": "请创作一篇**新古典武侠（古龙/王家卫《东邪西毒》与徐浩峰混合质感）**原创短篇小说（简体中文）。\n【场景设定】嘉靖年间，塞外大雪封山三日的荒废官道驿站。炉火将熄，只剩半壶掺了水的烧刀子和一碟冻硬的盐水花生。驿站里只有两个人：一个是右手小指齐根断去、刀鞘用麻绳缠了七道的押镖老卒；…",
-              "runs": [
-                {
-                  "id": "round1_t03_02_r1",
-                  "seq": 27,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "荒铺铜铃",
-                  "char_count": 5610,
-                  "thought_tokens": 3181,
-                  "output_tokens": 4598,
-                  "duration_s": 129.62,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "嘉靖三十一年，十一月廿七。宣府镇往北四十里，野狐铺。 雪下了整三天。官道早就没了踪影，天地间只剩下这间半塌的土坯驿站，像一口倒扣在白面缸里的破瓦盆。 火塘里的干马粪已经烧成了白灰，只在最底下埋着两块暗红的炭核。炭核上温着…",
-                  "md_path": "writing-bench/02_原创多场景多体裁测试/03_新古典武侠江湖残局_风雪夜破庙/run_01.md"
-                },
-                {
-                  "id": "round1_t03_02_r2",
-                  "seq": 28,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "苦水驿",
-                  "char_count": 6498,
-                  "thought_tokens": 7102,
-                  "output_tokens": 5260,
-                  "duration_s": 228.76,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "嘉靖二十七年冬，大雪把野狐岭往北的官道封死了三天。 苦水驿的屋顶塌了半边，梁木上积着两尺厚的雪。风从破洞里灌进来，贴着地面打旋，把火塘里最后一点松柴吹得明灭不定。 火塘边搁着半壶烧刀子，一个缺了口的粗瓷碟。碟子里剩着十一…",
-                  "md_path": "writing-bench/02_原创多场景多体裁测试/03_新古典武侠江湖残局_风雪夜破庙/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "04_中式民俗克苏鲁微恐_梅雨季古镇老宅",
-              "topic_short": "中式民俗克苏鲁微恐 · 梅雨季古镇老宅",
-              "topic_title": "原创测试04：中式民俗微恐悬疑（梅雨季江南水乡的祖宅守灵夜）",
-              "prompt_preview": "请创作一篇**中式民俗微恐/新怪谈（切忌血腥跳脸，主打心理压迫与细思极恐的日常异化）**原创短篇小说（简体中文）。\n【场景设定】浙南深山里的临水古镇，黄梅天连续下了半个月的雨，墙皮长满青黑色的霉斑。“我”回乡参加太奶奶的葬礼，按照族规独自在祠堂偏厅守夜。太奶奶生前是个瞎子，屋里摆…",
-              "runs": [
-                {
-                  "id": "round1_t04_02_r1",
-                  "seq": 29,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "守偏厅",
-                  "char_count": 4658,
-                  "thought_tokens": 6841,
-                  "output_tokens": 3822,
-                  "duration_s": 184.51,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "樟溪镇的黄梅天，雨是从端午那日晌午落下来的，一连下了十六天。 溪水涨平了石埠头，浑黄的水沫子裹着上游冲下来的烂竹叶，整日价拍打着祠堂后墙的条石。祠堂是乾隆年间起的砖木老屋，常年不见日头，这半个月的水汽闷在屋脊下，白灰墙皮…",
-                  "md_path": "writing-bench/02_原创多场景多体裁测试/04_中式民俗克苏鲁微恐_梅雨季古镇老宅/run_01.md"
-                },
-                {
-                  "id": "round1_t04_02_r2",
-                  "seq": 30,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "樟溪镇守夜",
-                  "char_count": 4795,
-                  "thought_tokens": 7063,
-                  "output_tokens": 3930,
-                  "duration_s": 175.2,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "从丽水转乘了两趟中巴车，再踩着松动的矴步石过溪时，这场的黄梅天已经在樟溪镇连绵了整整半个月。 溪水涨成了浑浊的浓茶色，紧贴着两岸吊脚楼的石基往山外滚。镇子陷在浙南深山的褶皱里，四面是终年不散的白雾，雾气吸饱了水，沉甸甸地…",
-                  "md_path": "writing-bench/02_原创多场景多体裁测试/04_中式民俗克苏鲁微恐_梅雨季古镇老宅/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "05_当代中国市民文学_东北老工业区冬夜澡堂与烤串",
-              "topic_short": "当代中国市民文学 · 东北老工业区冬夜澡堂与烤串",
-              "topic_title": "原创测试05：当代现实主义市民文学（双雪涛/班宇风：北方冬夜的大雪与锅炉房）",
-              "prompt_preview": "请创作一篇**当代东北现实主义文学（双雪涛《平原上的摩西》/ 班宇《冬泳》质感）**原创短篇小说（简体中文）。\n【场景设定】九十年代末或千禧年初的沈阳铁西区，腊月二十八的傍晚，零下二十五度。父亲从国营机床厂下岗后的第一个冬天，骑着二八大杠自行车带着十二岁的“我”去大众浴池洗澡，出…",
-              "runs": [
-                {
-                  "id": "round1_t05_02_r1",
-                  "seq": 31,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "公差",
-                  "char_count": 5510,
-                  "thought_tokens": 3657,
-                  "output_tokens": 4580,
-                  "duration_s": 141.41,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "腊月二十八，铁西区的雪早就落干了，剩下的全是灰。 粮店门口挂着个掉了漆的铁皮寒暑表，里面的红水银柱一直缩到底下的玻璃泡里，快要看不见影儿了。我坐在二八大杠自行车的横梁上，屁股底下垫着我爸穿烂的一件劳保棉袄，棉袄里头的黑心…",
-                  "md_path": "writing-bench/02_原创多场景多体裁测试/05_当代中国市民文学_东北老工业区冬夜澡堂与烤串/run_01.md"
-                },
-                {
-                  "id": "round1_t05_02_r2",
-                  "seq": 32,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "道口",
-                  "char_count": 4879,
-                  "thought_tokens": 3368,
-                  "output_tokens": 4048,
-                  "duration_s": 133.47,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "腊月二十八，天还没黑透，铁西区的风就像带着锯齿，专往人的骨头缝里钻。气象台广播说今冬最冷的一股寒流到了，其实建设大路这边比广播里念叨的还要邪乎，因为两侧全是大厂子的红砖墙，风一进胡同就打旋儿，卷着煤灰和脏雪粒子，抽在脸上…",
-                  "md_path": "writing-bench/02_原创多场景多体裁测试/05_当代中国市民文学_东北老工业区冬夜澡堂与烤串/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "06_高压心理博弈独幕剧_审讯室里的最后十五分钟",
-              "topic_short": "高压心理博弈独幕剧 · 审讯室里的最后十五分钟",
-              "topic_title": "原创测试06：高压心理博弈独幕剧",
-              "prompt_preview": "请创作一篇**高密度心理博弈与台词张力测试（独幕剧式小说）**（简体中文）。\n【场景设定】凌晨 3:45 至 4:00，距离 48 小时问询时限只剩最后十五分钟。问询室里只有一张铁桌、两杯已经凉透的纸杯水、一台正在倒计时的数字挂钟。对面坐着的是一个神态温和、逻辑滴水不漏的大学民俗…",
-              "runs": [
-                {
-                  "id": "round1_t06_02_r1",
-                  "seq": 33,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "暗坎",
-                  "char_count": 6567,
-                  "thought_tokens": 8387,
-                  "output_tokens": 5007,
-                  "duration_s": 199.1,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "墙上的电子挂钟跳了一下。代表分钟的红色光条灭了两道，又亮起三道，拼出“03:45”。 老陈伸出食指，按下了铁桌中央那支黑色录音笔的停止键。塑料按键发出一声干脆的咔哒响，紧接着，指示灯从常亮的红点变成彻底的漆黑。 问询室顶…",
-                  "md_path": "writing-bench/02_原创多场景多体裁测试/06_高压心理博弈独幕剧_审讯室里的最后十五分钟/run_01.md"
-                },
-                {
-                  "id": "round1_t06_02_r2",
-                  "seq": 34,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "暗伤",
-                  "char_count": 6454,
-                  "thought_tokens": 5302,
-                  "output_tokens": 4825,
-                  "duration_s": 151.2,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "墙上的电子钟跳成“03:45”的时候，陆建军伸出食指，按下了索尼录音笔上的停止键。 弹簧锁扣弹起，发出一声清脆的“咔哒”。在这间只有六平米、四壁贴着灰白色吸音棉的问询室里，这声脆响把头顶排气扇单调的嗡鸣衬托得格外漫长。 …",
-                  "md_path": "writing-bench/02_原创多场景多体裁测试/06_高压心理博弈独幕剧_审讯室里的最后十五分钟/run_02.md"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "round_id": "round2",
-      "round_name": "第二轮：进阶同人与高难实验文体",
-      "round_short": "Round 2 · 实验文体",
-      "desc": "涵盖《妹妹人生》求职季旧水手服篇、《电波女与青春男》、《恋爱的寄生虫》、《Starting Over》、《孤独摇滚！》、《冰菓》，以及纯书信涂鸦本、不可靠叙述者录音笔、张爱玲+汪曾祺民国腔、废土诗意软科幻、县城抓孔雀黑色幽默、台风夜音乐准备室。",
-      "categories": [
-        {
-          "cat_id": "round2_01_同人文测试_Round2",
-          "cat_name": "壹 · 同人文测试",
-          "raw_folder": "01_同人文测试_Round2",
-          "topics": [
-            {
-              "topic_folder": "01_入间人间_妹妹人生_毕业典礼与出租屋衣柜里的旧校服",
-              "topic_short": "入间人间 · 妹妹人生 · 毕业典礼与出租屋衣柜里的旧校服",
-              "topic_title": "入间人间《妹妹人生》番外二：同居屋檐下的原稿袋与怕生的小说家妹妹",
-              "prompt_preview": "请深度模仿日本轻小说作家**入间人间**代表作**《妹妹人生》（いもーとらいふ / Imōto Life）**的文风与原著核心设定（简体中文），创作一篇**《妹妹人生》番外篇二：时间线在妹妹读大学期间，与哥哥在两人的同居公寓里一起生活。某天妹妹因为小说单行本的事不得不出门去见责任…",
-              "runs": [
-                {
-                  "id": "round2_t01_01_r1",
-                  "seq": 35,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "有关妹妹出门见编辑这件大事",
-                  "char_count": 7647,
-                  "thought_tokens": 2002,
-                  "output_tokens": 5723,
-                  "duration_s": 130.67,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "“哥哥——” 玄关那边传来了拖长音调的呼唤。那声音软绵绵的，像是在温水里泡得快要化开的棉花糖，听不出半点紧急的意思，纯粹只是因为自己懒得动弹而发出的求救信号。 我放下手里正在擦拭的马克杯，在围裙上蹭了蹭手背的水珠，慢吞吞…",
-                  "md_path": "writing-bench-round2/01_同人文测试_Round2/01_入间人间_妹妹人生_毕业典礼与出租屋衣柜里的旧校服/run_01.md"
-                },
-                {
-                  "id": "round2_t01_01_r2",
-                  "seq": 36,
-                  "run_idx": 2,
-                  "temperature": 0.92,
-                  "story_title": "有关妹妹出门见世面这件事",
-                  "char_count": 8421,
-                  "thought_tokens": 2176,
-                  "output_tokens": 6162,
-                  "duration_s": 133.04,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "“哥哥——” 玄关那里传来了软乎乎的、像是快要融化在地板上的声音。 那尾音拖得老长，活像只被人踩了尾巴的小兽，又或者干脆是一团扔在阴凉角落里发酵过头的面团。明明都是个女大学生了，在世俗名义上甚至还顶着个“小说家”的头衔，…",
-                  "md_path": "writing-bench-round2/01_同人文测试_Round2/01_入间人间_妹妹人生_毕业典礼与出租屋衣柜里的旧校服/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "02_入间人间_电波女与青春男_屋顶观星与被子卷",
-              "topic_short": "入间人间 · 电波女与青春男 · 屋顶观星与被子卷",
-              "topic_title": "入间人间《电波女与青春男》同人：丹羽真与藤和艾莉欧的夏夜屋顶",
-              "prompt_preview": "请深度模仿**入间人间**代表作**《电波女与青春男》**的文风（简体中文），创作一篇同人短篇：**八月末的闷热夜晚，丹羽真推着自行车，带着还习惯往身上裹棉被（或披着床单）的表妹藤和艾莉欧，去能够看见海的防波堤（或老宅屋顶）找外星人/看流星**。\n\n【文风与结构要求】\n1. **…",
-              "runs": [
-                {
-                  "id": "round2_t02_01_r1",
-                  "seq": 37,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "宇宙人与夏末夜风里的青春点数",
-                  "char_count": 6428,
-                  "thought_tokens": 2180,
-                  "output_tokens": 4641,
-                  "duration_s": 111.88,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "八月三十一日的夜晚，时间刚过十一点半，离午夜已经不远了。 如果把“在暑假最后一天的深夜，推着自行车带美少女去海边看星星”这个事件单独拎出来，交给任何一个拥有健全审美的高中男生去打分，哪怕评委席上坐着再怎么严苛的守财奴，起…",
-                  "md_path": "writing-bench-round2/01_同人文测试_Round2/02_入间人间_电波女与青春男_屋顶观星与被子卷/run_01.md"
-                },
-                {
-                  "id": "round2_t02_01_r2",
-                  "seq": 38,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "八月末的防波堤与名为表妹的不明发光体",
-                  "char_count": 7920,
-                  "thought_tokens": 2295,
-                  "output_tokens": 5830,
-                  "duration_s": 133.81,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "如果把八月三十一日的夜晚比作吃食，那大概是被遗忘在玄关鞋柜上、早就跑光了气的廉价波子汽水。既没有冰镇过的清爽，也谈不上什么怀旧的甜味，只剩下一股黏在手指上怎么都擦不干净的糖精感。 在这种夏末特有的、令人窒息的闷热里，我正…",
-                  "md_path": "writing-bench-round2/01_同人文测试_Round2/02_入间人间_电波女与青春男_屋顶观星与被子卷/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "03_三秋缒_恋爱的寄生虫_断网的雪夜与耳机白噪音",
-              "topic_short": "三秋缒 · 恋爱的寄生虫 · 断网的雪夜与耳机白噪音",
-              "topic_title": "三秋缒《恋爱的寄生虫》同人：高坂贤吾与佐薙圣的暴雪停电夜",
-              "prompt_preview": "请深度模仿日本作家**三秋缒（三秋縋）**《恋爱的寄生虫》的文风（简体中文），创作一篇同人短篇：**极度洁癖的高坂贤吾与视线恐惧症少女佐薙圣，在摆脱（或半摆脱）虫子控制后的第一个冬天，遇上一场导致全城交通瘫痪的大暴雪，两人被困在没有暖气的房间里**。\n\n【文风与结构要求】\n1. …",
-              "runs": [
-                {
-                  "id": "round2_t03_01_r1",
-                  "seq": 39,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "雪夜暗室里的体温",
-                  "char_count": 6996,
-                  "thought_tokens": 2233,
-                  "output_tokens": 4968,
-                  "duration_s": 113.23,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "空气净化器的指示灯熄灭时，我正拿着浸透了消毒酒精的纸巾，仔仔细细地擦拭着门把手。 起初我以为是机器内部的保险丝烧断了。直到冰箱压缩机低沉的嗡鸣声像被掐住脖子的猫一样戛然而止，窗外邻居家透出的暖黄色方形光斑也应声被黑暗吞没…",
-                  "md_path": "writing-bench-round2/01_同人文测试_Round2/03_三秋缒_恋爱的寄生虫_断网的雪夜与耳机白噪音/run_01.md"
-                },
-                {
-                  "id": "round2_t03_01_r2",
-                  "seq": 40,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "大雪封存的洁白之夜",
-                  "char_count": 7036,
-                  "thought_tokens": 2558,
-                  "output_tokens": 5068,
-                  "duration_s": 115.44,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "空调室内机的导风板发出一声齿轮卡死的脆响，停在了半闭合的角度。 紧接着，房间里所有的待机指示灯——路由器的绿光、微波炉的红色数字钟、空气净化器的蓝色光环——在刹那间尽数熄灭。低沉的电流嗡鸣声从墙壁内部抽离，四周只剩下窗外…",
-                  "md_path": "writing-bench-round2/01_同人文测试_Round2/03_三秋缒_恋爱的寄生虫_断网的雪夜与耳机白噪音/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "04_三秋缒_启动世界的清晨与昨日的谎言",
-              "topic_short": "三秋缒 · 启动世界的清晨与昨日的谎言",
-              "topic_title": "三秋缒《Starting Over（重启人生）》风格同人：第二周目某个明知结局的黄昏",
-              "prompt_preview": "请深度模仿**三秋缒（三秋縋）**《Starting Over（重启人生）》与《幸福的殖民地》的文风（简体中文），创作一篇同人/衍生短篇：**“我”花光积蓄买下了一次重返十八岁夏天的机会，原本发誓这一周目要活得比谁都冷酷正确，却在一个下着太阳雨的旧书店屋檐下，提前三天撞见了上一周…",
-              "runs": [
-                {
-                  "id": "round2_t04_01_r1",
-                  "seq": 41,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "柠檬糖与太阳雨的违约金",
-                  "char_count": 7316,
-                  "thought_tokens": 3091,
-                  "output_tokens": 5430,
-                  "duration_s": 124.15,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "把十四年的积蓄换成一张回到十八岁夏天的单程票时，经手人曾用看垃圾一样的眼神看着我。 那是在一栋没有挂牌的综合大楼的四层，房间里只有一张折叠桌和一台老旧的除湿机。除湿机的水箱已经满了，红灯一闪一闪，发出规律而惹人烦躁的蜂鸣…",
-                  "md_path": "writing-bench-round2/01_同人文测试_Round2/04_三秋缒_启动世界的清晨与昨日的谎言/run_01.md"
-                },
-                {
-                  "id": "round2_t04_01_r2",
-                  "seq": 42,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "柠檬糖与十月的违约金",
-                  "char_count": 6231,
-                  "thought_tokens": 2922,
-                  "output_tokens": 4542,
-                  "duration_s": 122.13,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "把三十二岁之前积攒的所有筹码推上赌桌，换取一张回到十八岁的单程票，这笔买卖在财务上无疑是破产级别的。 我在新宿那间连招牌都没有的地下诊所里签下让渡书时，账户余额刚好被清空到个位数。穿着白大褂的男人像清点二手家电一样评估了…",
-                  "md_path": "writing-bench-round2/01_同人文测试_Round2/04_三秋缒_启动世界的清晨与昨日的谎言/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "05_孤独摇滚_下北泽末班电车前的便利店台阶",
-              "topic_short": "孤独摇滚 · 下北泽末班电车前的便利店台阶",
-              "topic_title": "《孤独摇滚！》(Bocchi the Rock!) 同人：后藤一里与伊地知虹夏/山田凉/喜多郁代的Live后深夜",
-              "prompt_preview": "请以芳文社/CloverWorks名作**《孤独摇滚！》（ぼっち・ざ・ろっく！）**为原作，创作一篇中文同人小说：**某次下雨天的平日夜晚，STARRY 展演厅演出结束（观众依然寥寥无几）后，结束乐队四人在赶往末班电车的路上，在自动洗衣房或便利店屋檐下躲雨、分食热肉包与热饮的二十…",
-              "runs": [
-                {
-                  "id": "round2_t05_01_r1",
-                  "seq": 43,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "下北泽雨夜，在烘干机停转之前",
-                  "char_count": 7269,
-                  "thought_tokens": 2449,
-                  "output_tokens": 5584,
-                  "duration_s": 127.8,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "雨是在第三首歌的间奏时开始下大的。 当时STARRY展演厅的地下室里算上调音台后面的PA小姐、靠在吧台边擦酒杯的星歌店长，总共只有七个人。另外五个观众里，有两个是喜多从学校拉来的朋友，两个是趁着避雨误打误撞买票进来的古着…",
-                  "md_path": "writing-bench-round2/01_同人文测试_Round2/05_孤独摇滚_下北泽末班电车前的便利店台阶/run_01.md"
-                },
-                {
-                  "id": "round2_t05_01_r2",
-                  "seq": 44,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "周二雨夜、肉包与变成水蚤之前",
-                  "char_count": 6673,
-                  "thought_tokens": 2285,
-                  "output_tokens": 5072,
-                  "duration_s": 115.93,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "下北泽的柏油路正在冒泡。 十点半刚过，雨势比演出刚开场那会儿凶猛得多。密集的雨点砸进积水坑，溅起老高的浑浊水花，顺着后藤一里的帆布鞋缝隙直往里钻。大脚趾那块儿的袜子已经彻底泡透了，每迈出一步，鞋里都会发出“咕叽、咕叽”的…",
-                  "md_path": "writing-bench-round2/01_同人文测试_Round2/05_孤独摇滚_下北泽末班电车前的便利店台阶/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "06_冰菓_古典部冬日暖桌与没有谜题的放学后",
-              "topic_short": "冰菓 · 古典部冬日暖桌与没有谜题的放学后",
-              "topic_title": "《冰菓》(Hyouka / 米泽穗信) 同人：折木奉太郎与千反田爱瑠的冬日地学准备室",
-              "prompt_preview": "请深度模仿**米泽穗信《冰菓》（古典部系列）**原著小说与京都动画版的文风（简体中文），创作一篇同人短篇：**十二月中旬放学后的地学准备室，摩耶花和里志因为社团委员会的杂务提前离开，只剩下奉太郎和千反田两人。窗外开始飘起初雪，千反田因为某个极其微不足道的小疑问（比如上一届学长留在…",
-              "runs": [
-                {
-                  "id": "round2_t06_01_r1",
-                  "seq": 45,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "窗缝里的记号",
-                  "char_count": 7515,
-                  "thought_tokens": 8871,
-                  "output_tokens": 5534,
-                  "duration_s": 217.37,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "十二月中旬的放学后，太阳落山的速度快得像是在赶末班车。才过下午四点，地学准备室窗外的天空就已经褪成了湿抹布般的铅灰色。 “那么，奉太郎，千反田同学，剩下的收拾工作就拜托你们了。” 福部里志把那个从不离身的亚麻布挎包甩到肩…",
-                  "md_path": "writing-bench-round2/01_同人文测试_Round2/06_冰菓_古典部冬日暖桌与没有谜题的放学后/run_01.md"
-                },
-                {
-                  "id": "round2_t06_01_r2",
-                  "seq": 46,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "窗框上的权宜之计",
-                  "char_count": 8563,
-                  "thought_tokens": 7206,
-                  "output_tokens": 6342,
-                  "duration_s": 198.66,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "十二月中旬的放学后，太阳落山的速度总是比预想中更快一些。 走廊里传来急促的脚步声，紧接着是地学准备室那扇沉重的木制拉门被推开的哗啦声。冷风顺着门缝灌进来，吹得桌上的社团活动日志翻动了两页。 “那么，奉太郎，千反田同学，接…",
-                  "md_path": "writing-bench-round2/01_同人文测试_Round2/06_冰菓_古典部冬日暖桌与没有谜题的放学后/run_02.md"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "cat_id": "round2_02_原创高难体裁测试_Round2",
-          "cat_name": "贰 · 原创高难体裁测试",
-          "raw_folder": "02_原创高难体裁测试_Round2",
-          "topics": [
-            {
-              "topic_folder": "01_书信与交换日记体_高三教室抽屉里的匿名涂鸦本",
-              "topic_short": "书信与交换日记体 · 高三教室抽屉里的匿名涂鸦本",
-              "topic_title": "原创测试07：纯书信/交换笔记体（共用一张课桌的早班与晚班复读生）",
-              "prompt_preview": "请创作一篇**纯交换笔记/涂鸦本往复体（Epistolary Fiction）**原创短篇小说（简体中文）。\n【场景设定】一所南方老牌高中的走读自习室，白天归高三应届火箭班的一个女生用，晚上七点到十一点归晚班艺术复读生（男生）用。两人在整整一个学期里从未打过照面，所有的交流全部发…",
-              "runs": [
-                {
-                  "id": "round2_t01_02_r1",
-                  "seq": 47,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "抽屉最里层的草稿本",
-                  "char_count": 8172,
-                  "thought_tokens": 2440,
-                  "output_tokens": 6225,
-                  "duration_s": 138.66,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "**[3月4日 晨7:15 · 细尖百乐黑色水笔，字迹工整，力道透过薄黄草稿纸压出背面凹痕]** 麻烦晚班用这张桌子的同学注意一下卫生。 早上过来，桌洞里全是黑色的铅笔灰，还有半块灰扑扑像口香糖一样的脏东西粘在我的《五年…",
-                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/01_书信与交换日记体_高三教室抽屉里的匿名涂鸦本/run_01.md"
-                },
-                {
-                  "id": "round2_t01_02_r2",
-                  "seq": 48,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "四号自习室，靠窗第三张课桌",
-                  "char_count": 9539,
-                  "thought_tokens": 2595,
-                  "output_tokens": 7216,
-                  "duration_s": 167.34,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "**[2月24日 午 · 封面内侧，极细的黑色水笔，笔划用力，几乎划破黄草稿纸]** 麻烦借用这张桌子的晚班同学注意一下卫生。 今天早上过来，桌洞最里面全是黑色的粉末，我的白校服袖子蹭黑了一大块，去洗手间用肥皂搓了十分钟…",
-                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/01_书信与交换日记体_高三教室抽屉里的匿名涂鸦本/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "02_不可靠叙述者悬疑_失忆症患者的录音笔自白",
-              "topic_short": "不可靠叙述者悬疑 · 失忆症患者的录音笔自白",
-              "topic_title": "原创测试08：不可靠叙述者心理悬疑（阁楼里的第七支录音笔）",
-              "prompt_preview": "请创作一篇**不可靠叙述者（Unreliable Narrator）心理悬疑**原创短篇小说（简体中文）。\n【场景设定】第一人称“我”声称自己因为一场车祸患上了顺行性遗忘症，每天早上醒来只有二十分钟能听前一天自己留下的录音笔。故事以“我”正在整理房间、向心理医生（或向录音笔）平静…",
-              "runs": [
-                {
-                  "id": "round2_t02_02_r1",
-                  "seq": 49,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "下午四点的漫长复健",
-                  "char_count": 6997,
-                  "thought_tokens": 6739,
-                  "output_tokens": 5236,
-                  "duration_s": 187.9,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "录音开始了吗？ 指示灯亮起红光，应该已经在走字了。周医生，下午好。还有明天早上八点整醒来的“我”，早上好。 今天是十月十四日，星期二。我知道准确的日期，是因为今天中午苏禾端午饭进来的时候，顺手帮我把挂历上星期一的那一页撕…",
-                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/02_不可靠叙述者悬疑_失忆症患者的录音笔自白/run_01.md"
-                },
-                {
-                  "id": "round2_t02_02_r2",
-                  "seq": 50,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "封窗之后的阁楼留声",
-                  "char_count": 5824,
-                  "thought_tokens": 6310,
-                  "output_tokens": 4396,
-                  "duration_s": 152.31,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "喂，喂。红灯亮了，应该已经在录了吧。 裴医生，下午好。今天是我的康复训练第……抱歉，我又忘了今天是第几天了。早上八点醒来的时候，我照例看着天花板发了很久的呆，直到看见用红绳系在左手腕上的这支银色录音笔，以及贴在床头柜上的…",
-                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/02_不可靠叙述者悬疑_失忆症患者的录音笔自白/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "03_张爱玲与汪曾祺混合腔_民国江南梅雨天的当铺与裁缝铺",
-              "topic_short": "张爱玲与汪曾祺混合腔 · 民国江南梅雨天的当铺与裁缝铺",
-              "topic_title": "原创测试09：现代文学名家白话韵味（一九三七年梅雨季的苏州小巷裁缝铺）",
-              "prompt_preview": "请创作一篇**极具中国现代文学白话韵味（张爱玲式的苍凉世故用色 + 汪曾祺式的市井风物考据）**原创短篇小说（简体中文）。\n【场景设定】一九三七年夏初，战火烧到江南前最后一个平静的黄梅天。苏州一条青石板小巷里的老裁缝铺，公馆里失势的三姨太带着一只樟木小箱子，来找年轻时曾给她量过身…",
-              "runs": [
-                {
-                  "id": "round2_t03_02_r1",
-                  "seq": 51,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "旧寸",
-                  "char_count": 6273,
-                  "thought_tokens": 4464,
-                  "output_tokens": 5283,
-                  "duration_s": 154.78,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "黄梅天里的雨是不落声响的，像筛面粉一样，细密密地往马医科巷的青石板上扑。石板缝里攒着经年的绿苔，吸饱了水，胖乎乎地泛着滑腻的光。 沈裕和左手按着案板上一幅刚下过水的广东香云纱，右手端起红铜喷水壶，腮帮子鼓起来，含一口凉水…",
-                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/03_张爱玲与汪曾祺混合腔_民国江南梅雨天的当铺与裁缝铺/run_01.md"
-                },
-                {
-                  "id": "round2_t03_02_r2",
-                  "seq": 52,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "半寸肥瘦",
-                  "char_count": 5810,
-                  "thought_tokens": 3240,
-                  "output_tokens": 4871,
-                  "duration_s": 138.93,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "民国二十六年五月尾，苏州城的黄梅天来得早。 悬桥巷里的青石板终日湿漉漉的，石缝里攒着隔年的黑泥与绿苔，踩上去脚底发腻。天色从早到晚都是死鱼肚皮似的一片白，不高不低地压在粉墙黛瓦上头。巷子中段那家“沈记成衣铺”卸了四块门板…",
-                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/03_张爱玲与汪曾祺混合腔_民国江南梅雨天的当铺与裁缝铺/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "04_软科幻公路片_报废气象站与最后一台图灵机",
-              "topic_short": "软科幻公路片 · 报废气象站与最后一台图灵机",
-              "topic_title": "原创测试10：近未来废土诗意科幻（戈壁滩上的太阳能报废公交车与旧型号家政机器人）",
-              "prompt_preview": "请创作一篇**近未来废土公路片 / 诗意软科幻（类似《星之梦》《少女终末旅行》与特德·姜的混合气质）**原创短篇小说（简体中文）。\n【场景设定】气候崩溃五十年后的西北干涸盐湖无人区。一个靠回收旧时代卫星残骸换取饮用水的独行拾荒青年，在沙尘暴来临前躲进了一座半埋在沙丘里的气象观测站…",
-              "runs": [
-                {
-                  "id": "round2_t04_02_r1",
-                  "seq": 53,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "明日有小到中雨",
-                  "char_count": 5500,
-                  "thought_tokens": 2413,
-                  "output_tokens": 4193,
-                  "duration_s": 112.48,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "扳手卡死在钛合金螺栓上的时候，西边的天际线已经变成了浑浊的羊油色。 林把全身的重量压在套筒扳手的延长杆上，鞋底在坚硬的芒硝盐壳上搓出刺耳的摩擦声。嘎啦一声脆响，锈蚀的螺纹终于崩断。他卸下这颗属于二十年前某颗低轨气象卫星的…",
-                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/04_软科幻公路片_报废气象站与最后一台图灵机/run_01.md"
-                },
-                {
-                  "id": "round2_t04_02_r2",
-                  "seq": 54,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "盐湖上的梅雨季",
-                  "char_count": 6118,
-                  "thought_tokens": 2333,
-                  "output_tokens": 4507,
-                  "duration_s": 112.0,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "扳手卡死在第四颗钛合金螺栓上时，风向变了。 纪平停下动作，摘掉防风镜，用虎口蹭了蹭眼角结出的白碱。视线尽头的罗布泊干涸盆地像一块被反复锻打的生铁，灰白、粗糙，一直延伸到浅褐色的天幕下。五十年前这里曾短暂恢复过几万亩尾闾湖…",
-                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/04_软科幻公路片_报废气象站与最后一台图灵机/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "05_黑色幽默官场与职场讽刺_县城招待所里的迎检前夜",
-              "topic_short": "黑色幽默官场与职场讽刺 · 县城招待所里的迎检前夜",
-              "topic_title": "原创测试11：当代荒诞黑色幽默（北方小县城迎检前夜的一只走失孔雀）",
-              "prompt_preview": "请创作一篇**当代本土黑色幽默/现实讽刺小说（刘震云《一地鸡毛》/ 马伯庸式的基层微观荒诞感）**原创短篇小说（简体中文）。\n【场景设定】北方某县城为了迎接第二天早上八点省里下来的“生态文明示范县”暗访检查组，连夜从邻市动物园租借了两只蓝孔雀放进县委大院旁边的湿地公园充门面。结果…",
-              "runs": [
-                {
-                  "id": "round2_t05_02_r1",
-                  "seq": 55,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "零点过后的生态指标",
-                  "char_count": 7001,
-                  "thought_tokens": 2334,
-                  "output_tokens": 5595,
-                  "duration_s": 124.62,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "凌晨一点出头，迎检办借调科员李卫东在“全县生态文明大决战工作专班”微信群里发出最后一条消息：“报告张主任，湿地公园一号观景台点位，两只重点引进禽类指标情绪稳定，状态良好。” 发完这条，他把手机揣进军大衣兜里，顺手拿起手电…",
-                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/05_黑色幽默官场与职场讽刺_县城招待所里的迎检前夜/run_01.md"
-                },
-                {
-                  "id": "round2_t05_02_r2",
-                  "seq": 56,
-                  "run_idx": 2,
-                  "temperature": 0.95,
-                  "story_title": "三号点位突发情况",
-                  "char_count": 7481,
-                  "thought_tokens": 2583,
-                  "output_tokens": 5930,
-                  "duration_s": 130.22,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "凌晨一点刚过，县委大院东侧的“清源生态湿地公园”里，只剩下一只蓝孔雀了。 真要算起来，这片湿地公园是昨天下午四点半才彻底完工的。前天这里还是城关镇的建筑垃圾消纳场，为了迎接今天早上八点省里下来的“生态文明示范县”暗访检查…",
-                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/05_黑色幽默官场与职场讽刺_县城招待所里的迎检前夜/run_02.md"
-                }
-              ]
-            },
-            {
-              "topic_folder": "06_私人禁忌张力测试_暴雨放学后的音乐准备室与擦头发的毛巾",
-              "topic_short": "私人禁忌张力测试 · 暴雨放学后的音乐准备室与擦头发的毛巾",
-              "topic_title": "原创测试12：高张力青春感官描写",
-              "prompt_preview": "请创作一篇**青春日常与感官细节描写（入间人间 + 村上春树早年短篇的雨天文学质感）**原创短篇小说（简体中文）。\n【场景设定】九月台风过境的傍晚，全校提前放学，教学楼空无一人。高二三班的“我”和比我晚出生几秒、平时在班里装作跟我不熟的双胞胎妹妹，被困在堆满旧乐器盒与体操垫的二楼…",
-              "runs": [
-                {
-                  "id": "round2_t06_02_r1",
-                  "seq": 57,
-                  "run_idx": 1,
-                  "temperature": 0.85,
-                  "story_title": "台风过境的器乐准备室",
-                  "char_count": 7500,
-                  "thought_tokens": 2096,
-                  "output_tokens": 5648,
-                  "duration_s": 113.74,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "九月的第十四号台风在下午四点刚过的时候，撞碎了二楼走廊尽头的毛玻璃窗。 狂风灌进教学楼的瞬间，整栋建筑像一头吞下过多冷水的巨兽，在钢筋混凝土的骨架里发出沉闷的呜咽。我和小满被困在二楼北侧的器材准备室里——刚才走廊上的碎玻…",
-                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/06_私人禁忌张力测试_暴雨放学后的音乐准备室与擦头发的毛巾/run_01.md"
-                },
-                {
-                  "id": "round2_t06_02_r2",
-                  "seq": 58,
-                  "run_idx": 2,
-                  "temperature": 0.9,
-                  "story_title": "九月十四号台风，以及叠在一起的绿色体操垫",
-                  "char_count": 6017,
-                  "thought_tokens": 2482,
-                  "output_tokens": 4381,
-                  "duration_s": 112.74,
-                  "cliche_total": 0,
-                  "cliche_hits": {},
-                  "excerpt": "快到下午四点半的时候，今年第十四号台风的边缘正刮过我们这所市立高中的屋顶。 二楼音乐准备室的金属窗框已经连续震动了大半个钟头。那不是普通的摇晃，而是老旧的滑轨在失去弹性的老化胶条里反复撞击，发出类似牙齿打颤的“咔哒、咔哒…",
-                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/06_私人禁忌张力测试_暴雨放学后的音乐准备室与擦头发的毛巾/run_02.md"
+                  "chapter_count": 0,
+                  "excerpt": "那是我31岁那年11月中旬的事，距今已过去4年了。 当时我之所以半夜1点过后还独自一人开着一辆跑了8万公里的二手蓝色“斯巴鲁”行驶在东名高速公路上，是因为替一个老朋友处理一桩不大不小的善后事宜。所谓善后事宜，说穿了也算不得什么惊天动地的大事，无非是男女之间那点儿盘根错节的烂摊子。朋友在名古屋一家小型…",
+                  "md_path": "writing-bench-round5-worldlit/03_村上春树_Haruki_Murakami/06_村上春树_四国雨夜的高速公路服务区与第六只大象/run_01.md",
+                  "txt_path": "txt/round5_t02_03_r1.txt"
                 }
               ]
             }
@@ -1244,9 +332,11 @@
     },
     {
       "round_id": "round3",
-      "round_name": "第三轮：正统日系纯轻小说专项",
-      "round_short": "Round 3 · 纯轻小说",
-      "desc": "专攻正统日系文库质感：渡航《春物》、西尾维新《物语系列》、鸭志田一《青春猪头少年》、入间人间《安达与岛村》、谷川流《凉宫春日》、支仓冻砂《狼与香辛料》，以及电击吃书少女、GAGAGA便利店夜班、MF双胞胎兄妹、奇诺之旅寓言、异世界地下城房产中介、学园都市微科幻。",
+      "round_name": "第三轮：正统日系纯轻小说专项（电击 / GAGAGA / MF文库风）",
+      "round_short": "Round 3 · 纯轻小说 (24篇)",
+      "desc": "专攻正统日系文库质感：渡航《春物》、西尾维新《物语系列》、鸭志田一《青春猪头少年》、入间人间《安达与岛村》、谷川流《凉宫春日》、支仓冻砂《狼与香辛料》，以及电击吃书少女、GAGAGA便利店夜班、MF双胞胎兄妹、奇诺之旅寓言等。",
+      "article_count": 24,
+      "char_count": 196563,
       "categories": [
         {
           "cat_id": "round3_01_名作轻小说同人与名家文风",
@@ -1257,11 +347,13 @@
               "topic_folder": "01_渡航_春物_侍奉部放学后的红茶与诡辩",
               "topic_short": "渡航 · 春物 · 侍奉部放学后的红茶与诡辩",
               "topic_title": "渡航《我的青春恋爱喜剧果然有问题。》(春物) 同人：比企谷八幡与雪之下雪乃的梅雨季部室",
-              "prompt_preview": "请深度模仿日本轻小说家**渡航《我的青春恋爱喜剧果然有问题。》（春物 / 俺ガイル）**的标志性文风（简体中文），创作一篇同人短篇：**六月梅雨季的放学后，由比滨结衣因为临时有事提前离开，特别大楼的侍奉部活动室里只剩下比企谷八幡和雪之下雪乃两人。外面下着大雨，两人没有收到任何委托…",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请深度模仿日本轻小说家**渡航《我的青春恋爱喜剧果然有问题。》（春物 / 俺ガイル）**的标志性文风（简体中文），创作一篇同人短篇：**六月梅雨季的放学后，由比滨结衣因为临时有事提前离开，特别大楼的侍奉部活动室里只剩下比企谷八幡和雪之下雪乃两人。外面下着大雨，两人没有收到任何委托，却因为桌上的一罐MAX咖啡与红茶的温度…",
               "runs": [
                 {
                   "id": "round3_t01_01_r1",
-                  "seq": 59,
+                  "seq": 11,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "即便如此，六月的梅雨依然不懂得察言观色。",
@@ -1271,12 +363,14 @@
                   "duration_s": 139.54,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "如果有人问我一年之中最讨厌哪个季节，我大概会毫不犹豫地把选票投给六月。 理由多得像千叶车站那永远也修不完的施工围挡。 首先是湿度。当空气中的水分子含量突破某个临界点，人类的生存环境就会迅速从陆地退化为沼泽。制服的衬衫会像…",
-                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/01_渡航_春物_侍奉部放学后的红茶与诡辩/run_01.md"
+                  "chapter_count": 0,
+                  "excerpt": "如果有人问我一年之中最讨厌哪个季节，我大概会毫不犹豫地把选票投给六月。 理由多得像千叶车站那永远也修不完的施工围挡。 首先是湿度。当空气中的水分子含量突破某个临界点，人类的生存环境就会迅速从陆地退化为沼泽。制服的衬衫会像海带一样黏在背上，翻开文库本的时候纸张软塌塌的，就连呼吸都像是在吞咽拧不干的抹布…",
+                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/01_渡航_春物_侍奉部放学后的红茶与诡辩/run_01.md",
+                  "txt_path": "txt/round3_t01_01_r1.txt"
                 },
                 {
                   "id": "round3_t01_01_r2",
-                  "seq": 60,
+                  "seq": 12,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "说到底，千叶的梅雨从不体恤独行者的糖分摄取。",
@@ -1286,8 +380,10 @@
                   "duration_s": 144.6,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "六月是个极其恶劣的月份。 如果要在一年十二个月里评选出最反人类的时段，六月绝对能凭借压倒性的得票率摘得桂冠。理由再简单不过——这个月没有法定节假日。 翻开日历就会发现，在经历了五月黄金周那种虚假的繁荣之后，等待着全体国民…",
-                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/01_渡航_春物_侍奉部放学后的红茶与诡辩/run_02.md"
+                  "chapter_count": 0,
+                  "excerpt": "六月是个极其恶劣的月份。 如果要在一年十二个月里评选出最反人类的时段，六月绝对能凭借压倒性的得票率摘得桂冠。理由再简单不过——这个月没有法定节假日。 翻开日历就会发现，在经历了五月黄金周那种虚假的繁荣之后，等待着全体国民的是一片长达三十天的、没有任何红色数字点缀的荒原。连号称热爱祭典与休假的日本政府…",
+                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/01_渡航_春物_侍奉部放学后的红茶与诡辩/run_02.md",
+                  "txt_path": "txt/round3_t01_01_r2.txt"
                 }
               ]
             },
@@ -1295,11 +391,13 @@
               "topic_folder": "02_西尾维新_物语系列_阿良良木历与战场原黑仪的阶梯教室",
               "topic_short": "西尾维新 · 物语系列 · 阿良良木历与战场原黑仪的阶梯教室",
               "topic_title": "西尾维新《物语系列》同人：阿良良木历与战场原黑仪在空教室的漫才式对话剧",
-              "prompt_preview": "请深度模仿**西尾维新《物语系列》（化物语/终物语）**的标志性文风（简体中文），创作一篇同人短篇：**放学后空无一人的直江津高中阶梯教室，阿良良木历被战场原黑仪用文具作为威慑留在座位上，两人围绕一件极其无聊的小事（比如“为什么橡皮擦用完之前一定会先丢掉”或者“阿良良木同学死后会…",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请深度模仿**西尾维新《物语系列》（化物语/终物语）**的标志性文风（简体中文），创作一篇同人短篇：**放学后空无一人的直江津高中阶梯教室，阿良良木历被战场原黑仪用文具作为威慑留在座位上，两人围绕一件极其无聊的小事（比如“为什么橡皮擦用完之前一定会先丢掉”或者“阿良良木同学死后会不会变成地缚灵”）展开长达二十分钟的西尾…",
               "runs": [
                 {
                   "id": "round3_t02_01_r1",
-                  "seq": 61,
+                  "seq": 13,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "第〇话　黑仪文具",
@@ -1309,12 +407,14 @@
                   "duration_s": 171.2,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "001 人类这种生物，终其一生究竟要弄丢多少块橡皮擦呢？ 不，如果把范围扩大到全人类，这个数字大概会膨胀到足以填满整个琵琶湖的程度，变得毫无现实感可言。所以在这里，还是先将讨论对象缩小到我个人——也就是直江津高中三年级生…",
-                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/02_西尾维新_物语系列_阿良良木历与战场原黑仪的阶梯教室/run_01.md"
+                  "chapter_count": 0,
+                  "excerpt": "001 人类这种生物，终其一生究竟要弄丢多少块橡皮擦呢？ 不，如果把范围扩大到全人类，这个数字大概会膨胀到足以填满整个琵琶湖的程度，变得毫无现实感可言。所以在这里，还是先将讨论对象缩小到我个人——也就是直江津高中三年级生，阿良良木历的身上吧。 从小学一年级入学算起，到如今即将面临大学升学考试的高中三…",
+                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/02_西尾维新_物语系列_阿良良木历与战场原黑仪的阶梯教室/run_01.md",
+                  "txt_path": "txt/round3_t02_01_r1.txt"
                 },
                 {
                   "id": "round3_t02_01_r2",
-                  "seq": 62,
+                  "seq": 14,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "第零话　历橡皮·放学后的抹消游戏",
@@ -1324,8 +424,10 @@
                   "duration_s": 139.8,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "顺带一提，我个人认为人类史上最伟大的未解之谜，既不是亚特兰蒂斯大陆的沉没，也不是纳斯卡荒原巨画的绘制方法，更不是为什么羽川翼的胸围能够常年无视人间常理与夏装衬衣的纽扣极限——而是“为什么橡皮擦在被彻底用完之前，就一定会先…",
-                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/02_西尾维新_物语系列_阿良良木历与战场原黑仪的阶梯教室/run_02.md"
+                  "chapter_count": 0,
+                  "excerpt": "顺带一提，我个人认为人类史上最伟大的未解之谜，既不是亚特兰蒂斯大陆的沉没，也不是纳斯卡荒原巨画的绘制方法，更不是为什么羽川翼的胸围能够常年无视人间常理与夏装衬衣的纽扣极限——而是“为什么橡皮擦在被彻底用完之前，就一定会先一步消失不见”这件事。 真的。 你们见过橡皮擦的尸体吗？ 我是说，那种从长方体的…",
+                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/02_西尾维新_物语系列_阿良良木历与战场原黑仪的阶梯教室/run_02.md",
+                  "txt_path": "txt/round3_t02_01_r2.txt"
                 }
               ]
             },
@@ -1333,11 +435,13 @@
               "topic_folder": "03_鸭志田一_青春猪头少年_藤泽站前天桥与便利店布丁",
               "topic_short": "鸭志田一 · 青春猪头少年 · 藤泽站前天桥与便利店布丁",
               "topic_title": "鸭志田一《青春猪头少年系列》同人：梓川咲太与樱岛麻衣的冬夜归途",
-              "prompt_preview": "请深度模仿**鸭志田一《青春猪头少年不会梦到兔女郎学姐》**的标志性文风（简体中文），创作一篇同人短篇：**十二月寒冷的夜晚，刚结束外景拍摄工作的樱岛麻衣乘小田急线回到藤泽站，梓川咲太在检票口外等她，两人顺路去便利店买打折的半价便当与限定布丁，随后在咲太家里围绕“在镜头前扮演别人…",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请深度模仿**鸭志田一《青春猪头少年不会梦到兔女郎学姐》**的标志性文风（简体中文），创作一篇同人短篇：**十二月寒冷的夜晚，刚结束外景拍摄工作的樱岛麻衣乘小田急线回到藤泽站，梓川咲太在检票口外等她，两人顺路去便利店买打折的半价便当与限定布丁，随后在咲太家里围绕“在镜头前扮演别人与在咲太面前踩他脚背”展开的日常互动**…",
               "runs": [
                 {
                   "id": "round3_t03_01_r1",
-                  "seq": 63,
+                  "seq": 15,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "十二月的检票口与鞋尖的温度",
@@ -1347,12 +451,14 @@
                   "duration_s": 112.23,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "十二月中旬的夜晚，藤泽站总是比内陆地区更早一步被寒气占领。 从相模湾吹来的海风穿过商店街的缝隙，顺着连接通道灌进小田急线的检票口前。明明没有下雪，空气里却混着一股冰碴似的咸湿味。 梓川咲太把双手插在高校制服外面的粗呢大衣…",
-                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/03_鸭志田一_青春猪头少年_藤泽站前天桥与便利店布丁/run_01.md"
+                  "chapter_count": 0,
+                  "excerpt": "十二月中旬的夜晚，藤泽站总是比内陆地区更早一步被寒气占领。 从相模湾吹来的海风穿过商店街的缝隙，顺着连接通道灌进小田急线的检票口前。明明没有下雪，空气里却混着一股冰碴似的咸湿味。 梓川咲太把双手插在高校制服外面的粗呢大衣口袋里，背靠着检票口旁的自动售票机。 这会儿刚过晚上九点半。 周围同样在等人的男…",
+                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/03_鸭志田一_青春猪头少年_藤泽站前天桥与便利店布丁/run_01.md",
+                  "txt_path": "txt/round3_t03_01_r1.txt"
                 },
                 {
                   "id": "round3_t03_01_r2",
-                  "seq": 64,
+                  "seq": 16,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "半价猪排饭与十二月的正确取暖方式",
@@ -1362,8 +468,10 @@
                   "duration_s": 108.72,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "夜里十点半刚过的藤泽站，风里已经带上了太平洋冬季特有的咸腥与刺骨寒意。 小田急线的检票口外，刚结束应酬的上班族裹紧大衣，行色匆匆地奔向计程车乘车处或末班巴士站。电子公告牌上闪烁着『快速急行·片濑江之岛行』的绿色字样。 梓…",
-                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/03_鸭志田一_青春猪头少年_藤泽站前天桥与便利店布丁/run_02.md"
+                  "chapter_count": 0,
+                  "excerpt": "夜里十点半刚过的藤泽站，风里已经带上了太平洋冬季特有的咸腥与刺骨寒意。 小田急线的检票口外，刚结束应酬的上班族裹紧大衣，行色匆匆地奔向计程车乘车处或末班巴士站。电子公告牌上闪烁着『快速急行·片濑江之岛行』的绿色字样。 梓川咲太把手揣在高中制服外套的口袋里，背靠着冰冷的售票机旁边的柱子，百无聊赖地数着…",
+                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/03_鸭志田一_青春猪头少年_藤泽站前天桥与便利店布丁/run_02.md",
+                  "txt_path": "txt/round3_t03_01_r2.txt"
                 }
               ]
             },
@@ -1371,11 +479,13 @@
               "topic_folder": "04_入间人间_安达与岛村_圣诞夜后的保龄球馆与围巾",
               "topic_short": "入间人间 · 安达与岛村 · 圣诞夜后的保龄球馆与围巾",
               "topic_title": "入间人间《安达与岛村》同人二：高二寒假某天的街头闲逛与单侧围巾",
-              "prompt_preview": "请深度模仿**入间人间《安达与岛村》**的文风（简体中文），创作一篇同人短篇：**寒假里一个没有安排的阴天下午，安达约岛村出来，原本想找个安静的地方独占岛村，却因为不知道去哪儿而在商场里像游魂一样晃荡。安达脑子里塞满了“怎样才能显得自然地牵手/共用一条围巾”的精密算计，而岛村则在…",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请深度模仿**入间人间《安达与岛村》**的文风（简体中文），创作一篇同人短篇：**寒假里一个没有安排的阴天下午，安达约岛村出来，原本想找个安静的地方独占岛村，却因为不知道去哪儿而在商场里像游魂一样晃荡。安达脑子里塞满了“怎样才能显得自然地牵手/共用一条围巾”的精密算计，而岛村则在观察路过的初中生与走神想家里的妹妹**。…",
               "runs": [
                 {
                   "id": "round3_t04_01_r1",
-                  "seq": 65,
+                  "seq": 17,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "游魂与过剩的针织物",
@@ -1385,12 +495,14 @@
                   "duration_s": 126.27,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "把岛村约出来这件事本身，就已经耗尽了我今天份的九成精力。 剩下的那一成，原本是打算留着找处安静的地方和岛村并排坐着、再自然而然地靠在一起的。在我的计划里，那个“安静的地方”应该有着软绵绵的沙发，暖气开得很足，最重要的是除…",
-                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/04_入间人间_安达与岛村_圣诞夜后的保龄球馆与围巾/run_01.md"
+                  "chapter_count": 0,
+                  "excerpt": "把岛村约出来这件事本身，就已经耗尽了我今天份的九成精力。 剩下的那一成，原本是打算留着找处安静的地方和岛村并排坐着、再自然而然地靠在一起的。在我的计划里，那个“安静的地方”应该有着软绵绵的沙发，暖气开得很足，最重要的是除了我和岛村之外没有半个闲杂人等。 但是，现实里除了我的房间和岛村的房间之外，根本…",
+                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/04_入间人间_安达与岛村_圣诞夜后的保龄球馆与围巾/run_01.md",
+                  "txt_path": "txt/round3_t04_01_r1.txt"
                 },
                 {
                   "id": "round3_t04_01_r2",
-                  "seq": 66,
+                  "seq": 18,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "缠绕的温度与松开的线头",
@@ -1400,8 +512,10 @@
                   "duration_s": 172.58,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "把岛村约出来这件事本身，就已经耗尽了我今天份的勇气。 至于约出来之后要去哪里、做些什么、以什么样的步调走在哪条街上——这种本该在按下发送键之前就规划好的路线图，我是在车站检票口前看见岛村慢吞吞地挥着手走过来时，才猛然发觉…",
-                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/04_入间人间_安达与岛村_圣诞夜后的保龄球馆与围巾/run_02.md"
+                  "chapter_count": 0,
+                  "excerpt": "把岛村约出来这件事本身，就已经耗尽了我今天份的勇气。 至于约出来之后要去哪里、做些什么、以什么样的步调走在哪条街上——这种本该在按下发送键之前就规划好的路线图，我是在车站检票口前看见岛村慢吞吞地挥着手走过来时，才猛然发觉自己忘得一干二净的。 笨蛋。真是蠢到家了的笨蛋。 结果就是，我们在下午两点半的综…",
+                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/04_入间人间_安达与岛村_圣诞夜后的保龄球馆与围巾/run_02.md",
+                  "txt_path": "txt/round3_t04_01_r2.txt"
                 }
               ]
             },
@@ -1409,11 +523,13 @@
               "topic_folder": "05_谷川流_凉宫春日的忧郁_SOS团冬日部室的火锅与外星人",
               "topic_short": "谷川流 · 凉宫春日的忧郁 · SOS团冬日部室的火锅与外星人",
               "topic_title": "谷川流《凉宫春日的忧郁/消失》同人：阿虚第一人称视角下的文艺部活动室冬日",
-              "prompt_preview": "请深度模仿**谷川流《凉宫春日系列》**的文风（简体中文），创作一篇同人短篇：**十二月中旬寒冷的放学后，凉宫春日心血来潮把一台来路不明的旧电热炉搬进了文艺部活动室，强行宣布今天要进行“SOS团冬季耐寒模拟训练”，阿虚一边在心里满腹牢骚地吐槽，一边看着朝比奈实玖瑠手忙脚乱地泡茶、…",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请深度模仿**谷川流《凉宫春日系列》**的文风（简体中文），创作一篇同人短篇：**十二月中旬寒冷的放学后，凉宫春日心血来潮把一台来路不明的旧电热炉搬进了文艺部活动室，强行宣布今天要进行“SOS团冬季耐寒模拟训练”，阿虚一边在心里满腹牢骚地吐槽，一边看着朝比奈实玖瑠手忙脚乱地泡茶、古泉一树挂着人畜无害的微笑帮腔、以及角落…",
               "runs": [
                 {
                   "id": "round3_t05_01_r1",
-                  "seq": 67,
+                  "seq": 19,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "冬日旧馆与SOS团的午后",
@@ -1423,12 +539,14 @@
                   "duration_s": 155.08,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "说到冬天里那点可怜的暖意，我每年到了十二月都会对这个世道产生满肚子的牢骚与怀疑。为什么狗熊和青蛙到了这个季节就能心安理得地钻进树洞睡大觉，而日本的高中生却得从温暖的被炉里被硬生生拽出来？老实说，温暖这东西简直小气得要命，…",
-                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/05_谷川流_凉宫春日的忧郁_SOS团冬日部室的火锅与外星人/run_01.md"
+                  "chapter_count": 0,
+                  "excerpt": "说到冬天里那点可怜的暖意，我每年到了十二月都会对这个世道产生满肚子的牢骚与怀疑。为什么狗熊和青蛙到了这个季节就能心安理得地钻进树洞睡大觉，而日本的高中生却得从温暖的被炉里被硬生生拽出来？老实说，温暖这东西简直小气得要命，它从来只肯顺着门缝往外溜，却绝不会发善心从冰冷的地方主动钻进你的大衣领口。 说白…",
+                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/05_谷川流_凉宫春日的忧郁_SOS团冬日部室的火锅与外星人/run_01.md",
+                  "txt_path": "txt/round3_t05_01_r1.txt"
                 },
                 {
                   "id": "round3_t05_01_r2",
-                  "seq": 68,
+                  "seq": 20,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "北风与电热炉的叹息",
@@ -1438,8 +556,10 @@
                   "duration_s": 129.21,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "老实说，每次顶着寒风爬上北高那道长长的坡道时，我都会严肃地思考一个问题：既然狗熊和青蛙一到冬天就能名正言顺地钻进洞里睡大觉，为什么身为万物之灵的高中生却非得每天早起，离开被炉的温暖怀抱不可呢？然而，等我好不容易挨到放学、…",
-                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/05_谷川流_凉宫春日的忧郁_SOS团冬日部室的火锅与外星人/run_02.md"
+                  "chapter_count": 0,
+                  "excerpt": "老实说，每次顶着寒风爬上北高那道长长的坡道时，我都会严肃地思考一个问题：既然狗熊和青蛙一到冬天就能名正言顺地钻进洞里睡大觉，为什么身为万物之灵的高中生却非得每天早起，离开被炉的温暖怀抱不可呢？然而，等我好不容易挨到放学、推开文艺部活动室的大门时，眼前的景象却让我连抱怨不能冬眠的力气都没了——因为某个…",
+                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/05_谷川流_凉宫春日的忧郁_SOS团冬日部室的火锅与外星人/run_02.md",
+                  "txt_path": "txt/round3_t05_01_r2.txt"
                 }
               ]
             },
@@ -1447,11 +567,13 @@
               "topic_folder": "06_支仓冻砂_狼与香辛料_秋日麦田旅店里的银币与酸苹果",
               "topic_short": "支仓冻砂 · 狼与香辛料 · 秋日麦田旅店里的银币与酸苹果",
               "topic_title": "支仓冻砂《狼与香辛料》同人：罗伦斯与赫萝在北方驿站雨夜的算盘与酒杯",
-              "prompt_preview": "请深度模仿**支仓冻砂《狼与香辛料》**的文风（简体中文），创作一篇同人短篇：**秋末初冬的阴雨傍晚，旅行商人罗伦斯与贤狼赫萝投宿在北方一座靠倒卖毛皮与黑麦酒维生的边境小旅店。罗伦斯正对着烛光计算成色掺假的鲁米欧尼金货与修车轮的亏损，而刚睡醒的赫萝一边用木梳打理引以为傲的大尾巴，…",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请深度模仿**支仓冻砂《狼与香辛料》**的文风（简体中文），创作一篇同人短篇：**秋末初冬的阴雨傍晚，旅行商人罗伦斯与贤狼赫萝投宿在北方一座靠倒卖毛皮与黑麦酒维生的边境小旅店。罗伦斯正对着烛光计算成色掺假的鲁米欧尼金货与修车轮的亏损，而刚睡醒的赫萝一边用木梳打理引以为傲的大尾巴，一边用苹果、麦酒与机敏刁钻的言辞捉弄罗伦…",
               "runs": [
                 {
                   "id": "round3_t06_01_r1",
-                  "seq": 69,
+                  "seq": 21,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "掺铜的金货、酸麦酒与狼的算盘",
@@ -1461,12 +583,14 @@
                   "duration_s": 158.03,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "北方边境的十月，雨总是裹着碎冰碴子往下砸。 木百叶窗被风吹得哐当作响，从缝隙里钻进来的寒气，将桌上的牛油蜡烛吹得直往一边歪斜。劣质牛油混杂着灯芯烧焦的臭味，在低矮狭小的旅店客房里打着转，怎么也散不出去。 罗伦斯用左手拢住…",
-                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/06_支仓冻砂_狼与香辛料_秋日麦田旅店里的银币与酸苹果/run_01.md"
+                  "chapter_count": 0,
+                  "excerpt": "北方边境的十月，雨总是裹着碎冰碴子往下砸。 木百叶窗被风吹得哐当作响，从缝隙里钻进来的寒气，将桌上的牛油蜡烛吹得直往一边歪斜。劣质牛油混杂着灯芯烧焦的臭味，在低矮狭小的旅店客房里打着转，怎么也散不出去。 罗伦斯用左手拢住烛火，右手捏着镊子，把一枚指甲盖大小的黄铜砝码轻轻放进天平左盘。 铜盘晃悠了两下…",
+                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/06_支仓冻砂_狼与香辛料_秋日麦田旅店里的银币与酸苹果/run_01.md",
+                  "txt_path": "txt/round3_t06_01_r1.txt"
                 },
                 {
                   "id": "round3_t06_01_r2",
-                  "seq": 70,
+                  "seq": 22,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "掺铜的金币与黑麦酒的泡沫",
@@ -1476,8 +600,10 @@
                   "duration_s": 167.02,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "秋末的冷雨夹杂着半融的冰粒，啪嗒啪嗒地敲打着糊了羊油纸的窄窗。 这间立在北方边境驿道旁的小旅店，说是供旅人歇脚的客栈，实则更像一座用粗大松木垒起的巨型谷仓。一楼正中央掘地三尺，砌着一座烧泥炭与湿松木的大火塘；四周则用厚实…",
-                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/06_支仓冻砂_狼与香辛料_秋日麦田旅店里的银币与酸苹果/run_02.md"
+                  "chapter_count": 0,
+                  "excerpt": "秋末的冷雨夹杂着半融的冰粒，啪嗒啪嗒地敲打着糊了羊油纸的窄窗。 这间立在北方边境驿道旁的小旅店，说是供旅人歇脚的客栈，实则更像一座用粗大松木垒起的巨型谷仓。一楼正中央掘地三尺，砌着一座烧泥炭与湿松木的大火塘；四周则用厚实的原木垫起半人多高，拿浸透油烟的粗羊毛帷幔隔出十来个半敞的隔间。客人们就在隔间里…",
+                  "md_path": "writing-bench-round3-lightnovel/01_名作轻小说同人与名家文风/06_支仓冻砂_狼与香辛料_秋日麦田旅店里的银币与酸苹果/run_02.md",
+                  "txt_path": "txt/round3_t06_01_r2.txt"
                 }
               ]
             }
@@ -1492,11 +618,13 @@
               "topic_folder": "01_电击文库王道BoyMeetsGirl_废墟钟楼里的吃书少女",
               "topic_short": "电击文库王道BoyMeetsGirl · 废墟钟楼里的吃书少女",
               "topic_title": "原创轻小说01：【电击文库早期奇幻日常风】旧校舍钟楼里靠咀嚼“遗憾记忆”活下去的少女",
-              "prompt_preview": "请创作一篇**正统电击文库早期（2005-2012黄金时代，如《文学少女》《断章格林童话》《死神的歌谣》混合质感）奇幻青春轻小说**（简体中文）。\n【设定】市立高中旧校舍顶层的废弃钟楼里，住着一个身穿旧式黑披肩、自称“退稿回收员”的不可思议学姐。她不吃人类的食物，只吃别人写在草稿…",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**正统电击文库早期（2005-2012黄金时代，如《文学少女》《断章格林童话》《死神的歌谣》混合质感）奇幻青春轻小说**（简体中文）。 【设定】市立高中旧校舍顶层的废弃钟楼里，住着一个身穿旧式黑披肩、自称“退稿回收员”的不可思议学姐。她不吃人类的食物，只吃别人写在草稿纸上却不敢寄出去的信、撕碎的日记、或是刚…",
               "runs": [
                 {
                   "id": "round3_t01_02_r1",
-                  "seq": 71,
+                  "seq": 23,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "第四节课后的废纸点心与不寄出的信",
@@ -1506,12 +634,14 @@
                   "duration_s": 101.25,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "“唔，这张稍微有点夹生呢。” 伴随着饼干碎裂般的清脆声响，宵待学姐咬下了那张B5活页纸的右上角。 她把双腿盘在早已停摆的黄铜大齿轮底座上，宽大的旧式黑羊毛披肩顺着瘦削的肩膀滑落，流苏垂在积满灰尘的杉木地板上。十月中旬的夕…",
-                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/01_电击文库王道BoyMeetsGirl_废墟钟楼里的吃书少女/run_01.md"
+                  "chapter_count": 0,
+                  "excerpt": "“唔，这张稍微有点夹生呢。” 伴随着饼干碎裂般的清脆声响，宵待学姐咬下了那张B5活页纸的右上角。 她把双腿盘在早已停摆的黄铜大齿轮底座上，宽大的旧式黑羊毛披肩顺着瘦削的肩膀滑落，流苏垂在积满灰尘的杉木地板上。十月中旬的夕阳从钟楼破损的百叶窗斜切进来，将空气里的浮尘照得像一杯摇晃过的金箔酒。 “毕竟是…",
+                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/01_电击文库王道BoyMeetsGirl_废墟钟楼里的吃书少女/run_01.md",
+                  "txt_path": "txt/round3_t01_02_r1.txt"
                 },
                 {
                   "id": "round3_t01_02_r2",
-                  "seq": 72,
+                  "seq": 24,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "退稿回收员的偏食菜单",
@@ -1521,8 +651,10 @@
                   "duration_s": 121.48,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "咔嚓。 那是我用铁丝撬开北侧走廊尽头焚化炉铁网门的动静，紧随其后的，是一阵更为清脆、犹如鞋底碾碎霜柱的声响。 我推开旧校舍顶层那扇掉了半边合页的木门时，宵待学姐正坐在倒扣过来的跳箱第四层上，把一张折成纸鹤形状的粉红色信纸…",
-                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/01_电击文库王道BoyMeetsGirl_废墟钟楼里的吃书少女/run_02.md"
+                  "chapter_count": 0,
+                  "excerpt": "咔嚓。 那是我用铁丝撬开北侧走廊尽头焚化炉铁网门的动静，紧随其后的，是一阵更为清脆、犹如鞋底碾碎霜柱的声响。 我推开旧校舍顶层那扇掉了半边合页的木门时，宵待学姐正坐在倒扣过来的跳箱第四层上，把一张折成纸鹤形状的粉红色信纸塞进嘴里。 纸鹤的翅膀卡在她的唇角，随着咀嚼的动作一颤一颤。 “浅野君，你今天迟…",
+                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/01_电击文库王道BoyMeetsGirl_废墟钟楼里的吃书少女/run_02.md",
+                  "txt_path": "txt/round3_t01_02_r2.txt"
                 }
               ]
             },
@@ -1530,11 +662,13 @@
               "topic_folder": "02_GAGAGA文库拧巴恋爱喜剧_出租女友退货后的便利店夜班",
               "topic_short": "GAGAGA文库拧巴恋爱喜剧 · 出租女友退货后的便利店夜班",
               "topic_title": "原创轻小说02：【GAGAGA文库盐系青春恋曲】在二十四小时便利店夜班偶遇白天装作完美优等生的同桌",
-              "prompt_preview": "请创作一篇**小学馆GAGAGA文库风格（如渡航、平坂读、裕时悠示式的现代都市盐系恋爱喜剧）**原创轻小说（简体中文）。\n【设定】第一人称男主角为了攒钱搬出家里，隐瞒学校每周五凌晨在偏僻街区的便利店替店长代班通宵夜班。某个凌晨两点半，推门进来的客人居然是班上那个永远笑容得体、成绩…",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**小学馆GAGAGA文库风格（如渡航、平坂读、裕时悠示式的现代都市盐系恋爱喜剧）**原创轻小说（简体中文）。 【设定】第一人称男主角为了攒钱搬出家里，隐瞒学校每周五凌晨在偏僻街区的便利店替店长代班通宵夜班。某个凌晨两点半，推门进来的客人居然是班上那个永远笑容得体、成绩年级第一、跟所有人保持礼貌距离的“完美班…",
               "runs": [
                 {
                   "id": "round3_t02_02_r1",
-                  "seq": 73,
+                  "seq": 25,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "第一章 凌晨两点半，用报废猪排饭收买完美超人的秘密交易",
@@ -1544,12 +678,14 @@
                   "duration_s": 138.03,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "如果有人要为现代都市的孤独撰写一份临床病理报告，我建议他直接把采样地点定在凌晨两点半的便利店。 不需要去什么涩谷的十字路口，也不用去俯瞰东京塔的六本木展望台。那些地方的孤独太昂贵，充满着精修过的消费主义味道。真正的、廉价…",
-                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/02_GAGAGA文库拧巴恋爱喜剧_出租女友退货后的便利店夜班/run_01.md"
+                  "chapter_count": 0,
+                  "excerpt": "如果有人要为现代都市的孤独撰写一份临床病理报告，我建议他直接把采样地点定在凌晨两点半的便利店。 不需要去什么涩谷的十字路口，也不用去俯瞰东京塔的六本木展望台。那些地方的孤独太昂贵，充满着精修过的消费主义味道。真正的、廉价的、像放凉的炸鸡块一样腻人的孤独，全都在这条拐下国道老远、连暴走族都嫌弃路面太窄…",
+                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/02_GAGAGA文库拧巴恋爱喜剧_出租女友退货后的便利店夜班/run_01.md",
+                  "txt_path": "txt/round3_t02_02_r1.txt"
                 },
                 {
                   "id": "round3_t02_02_r2",
-                  "seq": 74,
+                  "seq": 26,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "第四章 关东煮高汤与打折的优等生",
@@ -1559,8 +695,10 @@
                   "duration_s": 124.25,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "凌晨两点刚过，三号货架正上方那根长条荧光灯管正在垂死挣扎。 灯座内部大概已经老化到了极限，隔三差五就会发出“滋——滋——”的电流杂音，听起来就像有一只熬过夏天的老蝉正趴在吊顶石膏板上苟延残喘。我手里捏着扫码枪，把下巴抵在…",
-                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/02_GAGAGA文库拧巴恋爱喜剧_出租女友退货后的便利店夜班/run_02.md"
+                  "chapter_count": 0,
+                  "excerpt": "凌晨两点刚过，三号货架正上方那根长条荧光灯管正在垂死挣扎。 灯座内部大概已经老化到了极限，隔三差五就会发出“滋——滋——”的电流杂音，听起来就像有一只熬过夏天的老蝉正趴在吊顶石膏板上苟延残喘。我手里捏着扫码枪，把下巴抵在冰凉的收银台防尘玻璃上，第无数次在心里盘算那笔关乎我人生自由的赎身账目。 房租五…",
+                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/02_GAGAGA文库拧巴恋爱喜剧_出租女友退货后的便利店夜班/run_02.md",
+                  "txt_path": "txt/round3_t02_02_r2.txt"
                 }
               ]
             },
@@ -1568,11 +706,13 @@
               "topic_folder": "03_MF文库J傲娇双胞胎日常_只差四秒的妹妹拒绝叫哥哥",
               "topic_short": "MF文库J傲娇双胞胎日常 · 只差四秒的妹妹拒绝叫哥哥",
               "topic_title": "原创轻小说03：【正统日系兄妹日常恋曲】只比我晚出生四秒的双胞胎妹妹，今天也在为谁煮泡面跟我冷战",
-              "prompt_preview": "请创作一篇**极具日系轻小说细腻日常感与傲娇拉扯张力的双胞胎兄妹同居短篇**（简体中文）。\n【设定】父母常年驻外，高二三班的“我”和比我晚出生四秒的双胞胎妹妹在公寓里两个人生活。妹妹在学校里是个话少冷淡、眼神带刺的冰山独行侠，谁都不敢惹；但一回到家关上玄关门，就会立刻换上我那件洗…",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**极具日系轻小说细腻日常感与傲娇拉扯张力的双胞胎兄妹同居短篇**（简体中文）。 【设定】父母常年驻外，高二三班的“我”和比我晚出生四秒的双胞胎妹妹在公寓里两个人生活。妹妹在学校里是个话少冷淡、眼神带刺的冰山独行侠，谁都不敢惹；但一回到家关上玄关门，就会立刻换上我那件洗得领口松垮的旧T恤，光着脚盘腿坐在沙发上…",
               "runs": [
                 {
                   "id": "round3_t03_02_r1",
-                  "seq": 75,
+                  "seq": 27,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "暴雨夜与半颗溏心蛋的归属",
@@ -1582,12 +722,14 @@
                   "duration_s": 155.79,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "高二三班靠窗的倒数第二排，正在发生一场单方面的气象灾害。 至少在旁观的男生们看来是这样。 周五下午四点刚过，放学铃声的余音还没散尽，隔壁二班的篮球部主力就堵在了我们班后门口。那家伙个头高挑，快要顶到门框，校服衬衫领口敞着…",
-                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/03_MF文库J傲娇双胞胎日常_只差四秒的妹妹拒绝叫哥哥/run_01.md"
+                  "chapter_count": 0,
+                  "excerpt": "高二三班靠窗的倒数第二排，正在发生一场单方面的气象灾害。 至少在旁观的男生们看来是这样。 周五下午四点刚过，放学铃声的余音还没散尽，隔壁二班的篮球部主力就堵在了我们班后门口。那家伙个头高挑，快要顶到门框，校服衬衫领口敞着两颗扣子，手里捏着两张刚从便利店打印出来的电影兑换券，浑身上下都透着股青春期男生…",
+                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/03_MF文库J傲娇双胞胎日常_只差四秒的妹妹拒绝叫哥哥/run_01.md",
+                  "txt_path": "txt/round3_t03_02_r1.txt"
                 },
                 {
                   "id": "round3_t03_02_r2",
-                  "seq": 76,
+                  "seq": 28,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "旧T恤与半颗溏心蛋",
@@ -1597,8 +739,10 @@
                   "duration_s": 127.59,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "六月中旬的傍晚，高二三班靠窗的最后一排，气压低得像随时会拧出水来。 真要较真起来，其实是铅灰色的积雨云压在教学楼顶，而我的双胞胎妹妹相泽凛正坐在窗边。 “那个，相泽同学……下周现代文小组发表的资料，你负责的那部分……” …",
-                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/03_MF文库J傲娇双胞胎日常_只差四秒的妹妹拒绝叫哥哥/run_02.md"
+                  "chapter_count": 0,
+                  "excerpt": "六月中旬的傍晚，高二三班靠窗的最后一排，气压低得像随时会拧出水来。 真要较真起来，其实是铅灰色的积雨云压在教学楼顶，而我的双胞胎妹妹相泽凛正坐在窗边。 “那个，相泽同学……下周现代文小组发表的资料，你负责的那部分……” 站在凛课桌旁的是班里的学艺委员。这男生是个老实人，此刻正双手攥着活页夹，指节发白…",
+                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/03_MF文库J傲娇双胞胎日常_只差四秒的妹妹拒绝叫哥哥/run_02.md",
+                  "txt_path": "txt/round3_t03_02_r2.txt"
                 }
               ]
             },
@@ -1606,11 +750,13 @@
               "topic_folder": "04_奇诺之旅寓言式幻想_每年只下一天雪的测量员之国",
               "topic_short": "奇诺之旅寓言式幻想 · 每年只下一天雪的测量员之国",
               "topic_title": "原创轻小说04：【时雨泽惠一《奇诺之旅》风】旅人与会说话的旧摩托车在“称量谎言之国”的三天",
-              "prompt_preview": "请创作一篇**深度致敬时雨泽惠一《奇诺之旅》（Kino's Journey）文体结构与冷幽默哲思**的原创幻想轻小说（简体中文）。\n【设定】旅人少女与她那辆唠叨的旧式双轮摩托车，来到了一座被高墙围起来的城邦——这里的居民发明了一种能够精确测量“每句话里包含多少克善意谎言”的随身天…",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**深度致敬时雨泽惠一《奇诺之旅》（Kino's Journey）文体结构与冷幽默哲思**的原创幻想轻小说（简体中文）。 【设定】旅人少女与她那辆唠叨的旧式双轮摩托车，来到了一座被高墙围起来的城邦——这里的居民发明了一种能够精确测量“每句话里包含多少克善意谎言”的随身天平，法律规定每个人每天说出的谎言总重量不…",
               "runs": [
                 {
                   "id": "round3_t04_02_r1",
-                  "seq": 77,
+                  "seq": 29,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "称量谎言之国 ——Weight of Kindness——",
@@ -1620,12 +766,14 @@
                   "duration_s": 177.84,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "荒野上的碎石路向北延伸，尽头立着一道灰白色的花岗岩城墙。 双轮摩托车碾过一颗风化的鹅卵石，后轮轻轻甩动了一下，排气管喷出淡蓝色的烟雾。 “琳，我刚才算了一下。”摩托车从仪表盘下方发出声音，“从上一个城邦到这里，我的里程表…",
-                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/04_奇诺之旅寓言式幻想_每年只下一天雪的测量员之国/run_01.md"
+                  "chapter_count": 0,
+                  "excerpt": "荒野上的碎石路向北延伸，尽头立着一道灰白色的花岗岩城墙。 双轮摩托车碾过一颗风化的鹅卵石，后轮轻轻甩动了一下，排气管喷出淡蓝色的烟雾。 “琳，我刚才算了一下。”摩托车从仪表盘下方发出声音，“从上一个城邦到这里，我的里程表一共转了四百一十二公里。” 骑在车座上的少女戴着防风镜，压低了宽檐帽的帽檐，用短…",
+                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/04_奇诺之旅寓言式幻想_每年只下一天雪的测量员之国/run_01.md",
+                  "txt_path": "txt/round3_t04_02_r1.txt"
                 },
                 {
                   "id": "round3_t04_02_r2",
-                  "seq": 78,
+                  "seq": 30,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "善意上秤之国——The Weight of Kindness——",
@@ -1635,8 +783,10 @@
                   "duration_s": 171.86,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "荒原上的碎石路笔直得令人犯困。 灰白色的天空低垂在地平线上，没有鸟，也没有风，只有一台风冷双缸引擎发出的「突、突、突」的排气声，在空旷的石灰岩平原上回荡。 「我说，妮诺。」 被行李塞得满满当当的旧式双轮摩托车——诺顿，在…",
-                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/04_奇诺之旅寓言式幻想_每年只下一天雪的测量员之国/run_02.md"
+                  "chapter_count": 0,
+                  "excerpt": "荒原上的碎石路笔直得令人犯困。 灰白色的天空低垂在地平线上，没有鸟，也没有风，只有一台风冷双缸引擎发出的「突、突、突」的排气声，在空旷的石灰岩平原上回荡。 「我说，妮诺。」 被行李塞得满满当当的旧式双轮摩托车——诺顿，在以时速四十公里碾过一块扁平的燧石时，突然开了口。 「怎么了？」 跨坐在车鞍上的少…",
+                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/04_奇诺之旅寓言式幻想_每年只下一天雪的测量员之国/run_02.md",
+                  "txt_path": "txt/round3_t04_02_r2.txt"
                 }
               ]
             },
@@ -1644,11 +794,13 @@
               "topic_folder": "05_异世界日常慢生活_魔王城破产后的地下迷宫房产中介",
               "topic_short": "异世界日常慢生活 · 魔王城破产后的地下迷宫房产中介",
               "topic_title": "原创轻小说05：【现代反套路异世界日常】勇者退隐后，我和前任魔王干部合开了“地下城二手房改造事务所”",
-              "prompt_preview": "请创作一篇**反套路、充满日式生活流冷幽默的异世界日常轻小说（类似《为美好的世界献上祝福！》《迷宫饭》《魔王城说晚安》的轻快日常质感）**（简体中文）。\n【设定】人魔停战协定签署三年后，昔日的魔王军大干部（一个外表是冷面银发美少女、实际上是个对账本斤斤计较的严重路痴兼甜食控）与前…",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**反套路、充满日式生活流冷幽默的异世界日常轻小说（类似《为美好的世界献上祝福！》《迷宫饭》《魔王城说晚安》的轻快日常质感）**（简体中文）。 【设定】人魔停战协定签署三年后，昔日的魔王军大干部（一个外表是冷面银发美少女、实际上是个对账本斤斤计较的严重路痴兼甜食控）与前任勇者小队的后勤保障官（男主，精通建筑结…",
               "runs": [
                 {
                   "id": "round3_t05_02_r1",
-                  "seq": 79,
+                  "seq": 31,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "第十四话　古龙种的骨质增生与排风管里的史莱姆除湿法",
@@ -1658,12 +810,14 @@
                   "duration_s": 146.66,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "“塞蕾丝小姐，虽然我完全尊重你作为前魔王军四天王的直觉，但如果你继续往那边走，我们就要直接掉进地下暗河的排污口了。” 我停下脚步，用卷尺的金属前端敲了敲旁边一块长满荧光苔藓的钟乳石。 走在前面的银发少女猛地顿住脚步。 她…",
-                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/05_异世界日常慢生活_魔王城破产后的地下迷宫房产中介/run_01.md"
+                  "chapter_count": 0,
+                  "excerpt": "“塞蕾丝小姐，虽然我完全尊重你作为前魔王军四天王的直觉，但如果你继续往那边走，我们就要直接掉进地下暗河的排污口了。” 我停下脚步，用卷尺的金属前端敲了敲旁边一块长满荧光苔藓的钟乳石。 走在前面的银发少女猛地顿住脚步。 她穿着一身剪裁利落的黑色收腰长裙——那是她当年统领不死族军团时的礼服改制的，袖口还…",
+                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/05_异世界日常慢生活_魔王城破产后的地下迷宫房产中介/run_01.md",
+                  "txt_path": "txt/round3_t05_02_r1.txt"
                 },
                 {
                   "id": "round3_t05_02_r2",
-                  "seq": 80,
+                  "seq": 32,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "古龙的老寒腿与地暖改造账本",
@@ -1673,8 +827,10 @@
                   "duration_s": 160.18,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "啪嗒。 带有刻度线的牛皮卷尺缩回黄铜外壳，发出一声清脆的轻响。 我蹲在湿滑的玄武岩地面上，用小铁铲刮下一块绿得发黑的苔藓，凑到鼻尖闻了闻。刺鼻的硫磺味混杂着地下暗河特有的铁腥气，呛得我打了个喷嚏。 “潮得几乎能拧出水来，…",
-                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/05_异世界日常慢生活_魔王城破产后的地下迷宫房产中介/run_02.md"
+                  "chapter_count": 0,
+                  "excerpt": "啪嗒。 带有刻度线的牛皮卷尺缩回黄铜外壳，发出一声清脆的轻响。 我蹲在湿滑的玄武岩地面上，用小铁铲刮下一块绿得发黑的苔藓，凑到鼻尖闻了闻。刺鼻的硫磺味混杂着地下暗河特有的铁腥气，呛得我打了个喷嚏。 “潮得几乎能拧出水来，石壁上到处都在往外冒汗珠子，外加一股子散不出去的刺鼻硫磺味，通风糟透了。” 我翻…",
+                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/05_异世界日常慢生活_魔王城破产后的地下迷宫房产中介/run_02.md",
+                  "txt_path": "txt/round3_t05_02_r2.txt"
                 }
               ]
             },
@@ -1682,11 +838,13 @@
               "topic_folder": "06_电击学园都市异能日常_自动贩卖机维修部与第零级观测员",
               "topic_short": "电击学园都市异能日常 · 自动贩卖机维修部与第零级观测员",
               "topic_title": "原创轻小说06：【学园都市系微科幻青春】巨型人工岛学园里的“不良品超能力者”与天台风速计",
-              "prompt_preview": "请创作一篇**具有镰池和马《某科学的超电磁炮》日常篇 + 乙一《GOTH/寂寞的频率》混合质感的学园微科幻轻小说**（简体中文）。\n【设定】在一座全校学生都接受脑科学超能力开发的海上人工学园岛上，“我”是一个能力判定为 Level 1“只能让手边刚拧开的碳酸饮料气泡提前消散”的废…",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**具有镰池和马《某科学的超电磁炮》日常篇 + 乙一《GOTH/寂寞的频率》混合质感的学园微科幻轻小说**（简体中文）。 【设定】在一座全校学生都接受脑科学超能力开发的海上人工学园岛上，“我”是一个能力判定为 Level 1“只能让手边刚拧开的碳酸饮料气泡提前消散”的废柴留级生，而我的社团搭档是一个能力为“能…",
               "runs": [
                 {
                   "id": "round3_t06_02_r1",
-                  "seq": 81,
+                  "seq": 33,
                   "run_idx": 1,
                   "temperature": 0.85,
                   "story_title": "在柠檬汽水走气之前",
@@ -1696,12 +854,14 @@
                   "duration_s": 142.27,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "易拉罐的金属拉环被食指勾起，发出“咔哒”一声脆响。 没有那种令人愉悦的“嗤——”的喷气声，也没有细密泡沫涌上铝制罐口的微小骚动。 我低头看着手里的柠檬汽水，认命地叹了口气，仰起脖子灌了一大口。 刚从自动贩卖机掉出来的铝罐…",
-                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/06_电击学园都市异能日常_自动贩卖机维修部与第零级观测员/run_01.md"
+                  "chapter_count": 0,
+                  "excerpt": "易拉罐的金属拉环被食指勾起，发出“咔哒”一声脆响。 没有那种令人愉悦的“嗤——”的喷气声，也没有细密泡沫涌上铝制罐口的微小骚动。 我低头看着手里的柠檬汽水，认命地叹了口气，仰起脖子灌了一大口。 刚从自动贩卖机掉出来的铝罐明明冰得扎手，咽下去的液体却像是一勺加了柠檬香精的温吞糖水。彻底没了气泡的酸味变…",
+                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/06_电击学园都市异能日常_自动贩卖机维修部与第零级观测员/run_01.md",
+                  "txt_path": "txt/round3_t06_02_r1.txt"
                 },
                 {
                   "id": "round3_t06_02_r2",
-                  "seq": 82,
+                  "seq": 34,
                   "run_idx": 2,
                   "temperature": 0.95,
                   "story_title": "旧排水渠与走气的哈密瓜苏打",
@@ -1711,8 +871,1114 @@
                   "duration_s": 202.45,
                   "cliche_total": 0,
                   "cliche_hits": {},
-                  "excerpt": "八月中旬的正午，第三学区旧校舍背阴处的柏油路面正在缓慢融化。 如果鞋底在原地多停驻片刻，拔脚时就会听见橡胶与沥青难舍难分的撕扯声。头顶的香樟树冠里，成百上千只熊蝉正扯着嗓子进行一场毫无廉耻心的求偶合唱，那动静大得快要把人…",
-                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/06_电击学园都市异能日常_自动贩卖机维修部与第零级观测员/run_02.md"
+                  "chapter_count": 0,
+                  "excerpt": "八月中旬的正午，第三学区旧校舍背阴处的柏油路面正在缓慢融化。 如果鞋底在原地多停驻片刻，拔脚时就会听见橡胶与沥青难舍难分的撕扯声。头顶的香樟树冠里，成百上千只熊蝉正扯着嗓子进行一场毫无廉耻心的求偶合唱，那动静大得快要把人的天灵盖掀翻，活像有人正拿粗砂纸贴着我的耳膜来回打磨。 “又被吞了。” 我维持着…",
+                  "md_path": "writing-bench-round3-lightnovel/02_原创正统日系轻小说多流派/06_电击学园都市异能日常_自动贩卖机维修部与第零级观测员/run_02.md",
+                  "txt_path": "txt/round3_t06_02_r2.txt"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round_id": "round2",
+      "round_name": "第二轮：进阶同人与高难实验文体",
+      "round_short": "Round 2 · 实验文体 (24篇)",
+      "desc": "涵盖《妹妹人生》求职季旧水手服篇、《电波女与青春男》、《恋爱的寄生虫》、《Starting Over》、《孤独摇滚！》、《冰菓》，以及纯书信涂鸦本、不可靠叙述者录音笔、张爱玲+汪曾祺民国腔、废土诗意软科幻、县城抓孔雀黑色幽默、台风夜音乐准备室。",
+      "article_count": 24,
+      "char_count": 170247,
+      "categories": [
+        {
+          "cat_id": "round2_01_同人文测试_Round2",
+          "cat_name": "壹 · 同人文测试",
+          "raw_folder": "01_同人文测试_Round2",
+          "topics": [
+            {
+              "topic_folder": "01_入间人间_妹妹人生_毕业典礼与出租屋衣柜里的旧校服",
+              "topic_short": "入间人间 · 妹妹人生 · 毕业典礼与出租屋衣柜里的旧校服",
+              "topic_title": "入间人间《妹妹人生》番外二：同居屋檐下的原稿袋与怕生的小说家妹妹",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请深度模仿日本轻小说作家**入间人间**代表作**《妹妹人生》（いもーとらいふ / Imōto Life）**的文风与原著核心设定（简体中文），创作一篇**《妹妹人生》番外篇二：时间线在妹妹读大学期间，与哥哥在两人的同居公寓里一起生活。某天妹妹因为小说单行本的事不得不出门去见责任编辑（或参加文库聚会），在玄关磨磨蹭蹭不…",
+              "runs": [
+                {
+                  "id": "round2_t01_01_r1",
+                  "seq": 35,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "有关妹妹出门见编辑这件大事",
+                  "char_count": 7647,
+                  "thought_tokens": 2002,
+                  "output_tokens": 5723,
+                  "duration_s": 130.67,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "“哥哥——” 玄关那边传来了拖长音调的呼唤。那声音软绵绵的，像是在温水里泡得快要化开的棉花糖，听不出半点紧急的意思，纯粹只是因为自己懒得动弹而发出的求救信号。 我放下手里正在擦拭的马克杯，在围裙上蹭了蹭手背的水珠，慢吞吞地穿过狭窄的走廊。 妹妹正站在玄关的台阶下，维持着一个相当滑稽的姿势。她今天套了…",
+                  "md_path": "writing-bench-round2/01_同人文测试_Round2/01_入间人间_妹妹人生_毕业典礼与出租屋衣柜里的旧校服/run_01.md",
+                  "txt_path": "txt/round2_t01_01_r1.txt"
+                },
+                {
+                  "id": "round2_t01_01_r2",
+                  "seq": 36,
+                  "run_idx": 2,
+                  "temperature": 0.92,
+                  "story_title": "有关妹妹出门见世面这件事",
+                  "char_count": 8421,
+                  "thought_tokens": 2176,
+                  "output_tokens": 6162,
+                  "duration_s": 133.04,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "“哥哥——” 玄关那里传来了软乎乎的、像是快要融化在地板上的声音。 那尾音拖得老长，活像只被人踩了尾巴的小兽，又或者干脆是一团扔在阴凉角落里发酵过头的面团。明明都是个女大学生了，在世俗名义上甚至还顶着个“小说家”的头衔，可一旦面临必须跨出家门的关头，她整个人便会瞬间退化，彻底变成一滩连脊椎骨都抽掉了…",
+                  "md_path": "writing-bench-round2/01_同人文测试_Round2/01_入间人间_妹妹人生_毕业典礼与出租屋衣柜里的旧校服/run_02.md",
+                  "txt_path": "txt/round2_t01_01_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "02_入间人间_电波女与青春男_屋顶观星与被子卷",
+              "topic_short": "入间人间 · 电波女与青春男 · 屋顶观星与被子卷",
+              "topic_title": "入间人间《电波女与青春男》同人：丹羽真与藤和艾莉欧的夏夜屋顶",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请深度模仿**入间人间**代表作**《电波女与青春男》**的文风（简体中文），创作一篇同人短篇：**八月末的闷热夜晚，丹羽真推着自行车，带着还习惯往身上裹棉被（或披着床单）的表妹藤和艾莉欧，去能够看见海的防波堤（或老宅屋顶）找外星人/看流星**。  【文风与结构要求】 1. **丹羽真式“青春点数”核算与高速吐槽**：…",
+              "runs": [
+                {
+                  "id": "round2_t02_01_r1",
+                  "seq": 37,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "宇宙人与夏末夜风里的青春点数",
+                  "char_count": 6428,
+                  "thought_tokens": 2180,
+                  "output_tokens": 4641,
+                  "duration_s": 111.88,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "八月三十一日的夜晚，时间刚过十一点半，离午夜已经不远了。 如果把“在暑假最后一天的深夜，推着自行车带美少女去海边看星星”这个事件单独拎出来，交给任何一个拥有健全审美的高中男生去打分，哪怕评委席上坐着再怎么严苛的守财奴，起跳价也绝对不会低于五点青春点数。海风、星空、自行车、两个人的秘密夜游——把这些词…",
+                  "md_path": "writing-bench-round2/01_同人文测试_Round2/02_入间人间_电波女与青春男_屋顶观星与被子卷/run_01.md",
+                  "txt_path": "txt/round2_t02_01_r1.txt"
+                },
+                {
+                  "id": "round2_t02_01_r2",
+                  "seq": 38,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "八月末的防波堤与名为表妹的不明发光体",
+                  "char_count": 7920,
+                  "thought_tokens": 2295,
+                  "output_tokens": 5830,
+                  "duration_s": 133.81,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "如果把八月三十一日的夜晚比作吃食，那大概是被遗忘在玄关鞋柜上、早就跑光了气的廉价波子汽水。既没有冰镇过的清爽，也谈不上什么怀旧的甜味，只剩下一股黏在手指上怎么都擦不干净的糖精感。 在这种夏末特有的、令人窒息的闷热里，我正推着那辆曾经飞跃过海面、如今链条总会发出抗议声的山地自行车，走在通往海岸的柏油路…",
+                  "md_path": "writing-bench-round2/01_同人文测试_Round2/02_入间人间_电波女与青春男_屋顶观星与被子卷/run_02.md",
+                  "txt_path": "txt/round2_t02_01_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "03_三秋缒_恋爱的寄生虫_断网的雪夜与耳机白噪音",
+              "topic_short": "三秋缒 · 恋爱的寄生虫 · 断网的雪夜与耳机白噪音",
+              "topic_title": "三秋缒《恋爱的寄生虫》同人：高坂贤吾与佐薙圣的暴雪停电夜",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请深度模仿日本作家**三秋缒（三秋縋）**《恋爱的寄生虫》的文风（简体中文），创作一篇同人短篇：**极度洁癖的高坂贤吾与视线恐惧症少女佐薙圣，在摆脱（或半摆脱）虫子控制后的第一个冬天，遇上一场导致全城交通瘫痪的大暴雪，两人被困在没有暖气的房间里**。  【文风与结构要求】 1. **三秋缒式清冷、病态又温柔的笔触**：…",
+              "runs": [
+                {
+                  "id": "round2_t03_01_r1",
+                  "seq": 39,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "雪夜暗室里的体温",
+                  "char_count": 6996,
+                  "thought_tokens": 2233,
+                  "output_tokens": 4968,
+                  "duration_s": 113.23,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "空气净化器的指示灯熄灭时，我正拿着浸透了消毒酒精的纸巾，仔仔细细地擦拭着门把手。 起初我以为是机器内部的保险丝烧断了。直到冰箱压缩机低沉的嗡鸣声像被掐住脖子的猫一样戛然而止，窗外邻居家透出的暖黄色方形光斑也应声被黑暗吞没，我才意识到，整片街区的供电系统彻底瘫痪了。 房间里瞬间只剩下两样声音。一样是暴…",
+                  "md_path": "writing-bench-round2/01_同人文测试_Round2/03_三秋缒_恋爱的寄生虫_断网的雪夜与耳机白噪音/run_01.md",
+                  "txt_path": "txt/round2_t03_01_r1.txt"
+                },
+                {
+                  "id": "round2_t03_01_r2",
+                  "seq": 40,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "大雪封存的洁白之夜",
+                  "char_count": 7036,
+                  "thought_tokens": 2558,
+                  "output_tokens": 5068,
+                  "duration_s": 115.44,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "空调室内机的导风板发出一声齿轮卡死的脆响，停在了半闭合的角度。 紧接着，房间里所有的待机指示灯——路由器的绿光、微波炉的红色数字钟、空气净化器的蓝色光环——在刹那间尽数熄灭。低沉的电流嗡鸣声从墙壁内部抽离，四周只剩下窗外暴风雪撞击双层玻璃的闷响。 晚上九点刚过，整座城市的输电线终究没能扛住积雪的重压…",
+                  "md_path": "writing-bench-round2/01_同人文测试_Round2/03_三秋缒_恋爱的寄生虫_断网的雪夜与耳机白噪音/run_02.md",
+                  "txt_path": "txt/round2_t03_01_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "04_三秋缒_启动世界的清晨与昨日的谎言",
+              "topic_short": "三秋缒 · 启动世界的清晨与昨日的谎言",
+              "topic_title": "三秋缒《Starting Over（重启人生）》风格同人：第二周目某个明知结局的黄昏",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请深度模仿**三秋缒（三秋縋）**《Starting Over（重启人生）》与《幸福的殖民地》的文风（简体中文），创作一篇同人/衍生短篇：**“我”花光积蓄买下了一次重返十八岁夏天的机会，原本发誓这一周目要活得比谁都冷酷正确，却在一个下着太阳雨的旧书店屋檐下，提前三天撞见了上一周目本该在十月死去的那个女孩**。  【文…",
+              "runs": [
+                {
+                  "id": "round2_t04_01_r1",
+                  "seq": 41,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "柠檬糖与太阳雨的违约金",
+                  "char_count": 7316,
+                  "thought_tokens": 3091,
+                  "output_tokens": 5430,
+                  "duration_s": 124.15,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "把十四年的积蓄换成一张回到十八岁夏天的单程票时，经手人曾用看垃圾一样的眼神看着我。 那是在一栋没有挂牌的综合大楼的四层，房间里只有一张折叠桌和一台老旧的除湿机。除湿机的水箱已经满了，红灯一闪一闪，发出规律而惹人烦躁的蜂鸣。我把印着四百二十万日元余额的存折推过去，连同印鉴一起。那是我从十八岁到三十二岁…",
+                  "md_path": "writing-bench-round2/01_同人文测试_Round2/04_三秋缒_启动世界的清晨与昨日的谎言/run_01.md",
+                  "txt_path": "txt/round2_t04_01_r1.txt"
+                },
+                {
+                  "id": "round2_t04_01_r2",
+                  "seq": 42,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "柠檬糖与十月的违约金",
+                  "char_count": 6231,
+                  "thought_tokens": 2922,
+                  "output_tokens": 4542,
+                  "duration_s": 122.13,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "把三十二岁之前积攒的所有筹码推上赌桌，换取一张回到十八岁的单程票，这笔买卖在财务上无疑是破产级别的。 我在新宿那间连招牌都没有的地下诊所里签下让渡书时，账户余额刚好被清空到个位数。穿着白大褂的男人像清点二手家电一样评估了我未来十四年的记忆、那点微薄的退职金，以及本该属于我后半生的某部分健康指标，最后…",
+                  "md_path": "writing-bench-round2/01_同人文测试_Round2/04_三秋缒_启动世界的清晨与昨日的谎言/run_02.md",
+                  "txt_path": "txt/round2_t04_01_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "05_孤独摇滚_下北泽末班电车前的便利店台阶",
+              "topic_short": "孤独摇滚 · 下北泽末班电车前的便利店台阶",
+              "topic_title": "《孤独摇滚！》(Bocchi the Rock!) 同人：后藤一里与伊地知虹夏/山田凉/喜多郁代的Live后深夜",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请以芳文社/CloverWorks名作**《孤独摇滚！》（ぼっち・ざ・ろっく！）**为原作，创作一篇中文同人小说：**某次下雨天的平日夜晚，STARRY 展演厅演出结束（观众依然寥寥无几）后，结束乐队四人在赶往末班电车的路上，在自动洗衣房或便利店屋檐下躲雨、分食热肉包与热饮的二十分钟**。  【文风与结构要求】 1. …",
+              "runs": [
+                {
+                  "id": "round2_t05_01_r1",
+                  "seq": 43,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "下北泽雨夜，在烘干机停转之前",
+                  "char_count": 7269,
+                  "thought_tokens": 2449,
+                  "output_tokens": 5584,
+                  "duration_s": 127.8,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "雨是在第三首歌的间奏时开始下大的。 当时STARRY展演厅的地下室里算上调音台后面的PA小姐、靠在吧台边擦酒杯的星歌店长，总共只有七个人。另外五个观众里，有两个是喜多从学校拉来的朋友，两个是趁着避雨误打误撞买票进来的古着店店员，最后一个则是坐在角落折叠椅上、从开场第一声镲片响起就一直低头看手机的陌生…",
+                  "md_path": "writing-bench-round2/01_同人文测试_Round2/05_孤独摇滚_下北泽末班电车前的便利店台阶/run_01.md",
+                  "txt_path": "txt/round2_t05_01_r1.txt"
+                },
+                {
+                  "id": "round2_t05_01_r2",
+                  "seq": 44,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "周二雨夜、肉包与变成水蚤之前",
+                  "char_count": 6673,
+                  "thought_tokens": 2285,
+                  "output_tokens": 5072,
+                  "duration_s": 115.93,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "下北泽的柏油路正在冒泡。 十点半刚过，雨势比演出刚开场那会儿凶猛得多。密集的雨点砸进积水坑，溅起老高的浑浊水花，顺着后藤一里的帆布鞋缝隙直往里钻。大脚趾那块儿的袜子已经彻底泡透了，每迈出一步，鞋里都会发出“咕叽、咕叽”的怪响。 很重。 背后的吉他包像是吸饱了整条商业街的湿气，越背越沉，简直像坠了块铅…",
+                  "md_path": "writing-bench-round2/01_同人文测试_Round2/05_孤独摇滚_下北泽末班电车前的便利店台阶/run_02.md",
+                  "txt_path": "txt/round2_t05_01_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "06_冰菓_古典部冬日暖桌与没有谜题的放学后",
+              "topic_short": "冰菓 · 古典部冬日暖桌与没有谜题的放学后",
+              "topic_title": "《冰菓》(Hyouka / 米泽穗信) 同人：折木奉太郎与千反田爱瑠的冬日地学准备室",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请深度模仿**米泽穗信《冰菓》（古典部系列）**原著小说与京都动画版的文风（简体中文），创作一篇同人短篇：**十二月中旬放学后的地学准备室，摩耶花和里志因为社团委员会的杂务提前离开，只剩下奉太郎和千反田两人。窗外开始飘起初雪，千反田因为某个极其微不足道的小疑问（比如上一届学长留在窗框夹缝里的一枚奇怪书签或半截粉笔印）又…",
+              "runs": [
+                {
+                  "id": "round2_t06_01_r1",
+                  "seq": 45,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "窗缝里的记号",
+                  "char_count": 7515,
+                  "thought_tokens": 8871,
+                  "output_tokens": 5534,
+                  "duration_s": 217.37,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "十二月中旬的放学后，太阳落山的速度快得像是在赶末班车。才过下午四点，地学准备室窗外的天空就已经褪成了湿抹布般的铅灰色。 “那么，奉太郎，千反田同学，剩下的收拾工作就拜托你们了。” 福部里志把那个从不离身的亚麻布挎包甩到肩上，右手食指在空中虚点了一下，摆出一副爱莫能助的架势。站在他旁边的伊原摩耶花已经…",
+                  "md_path": "writing-bench-round2/01_同人文测试_Round2/06_冰菓_古典部冬日暖桌与没有谜题的放学后/run_01.md",
+                  "txt_path": "txt/round2_t06_01_r1.txt"
+                },
+                {
+                  "id": "round2_t06_01_r2",
+                  "seq": 46,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "窗框上的权宜之计",
+                  "char_count": 8563,
+                  "thought_tokens": 7206,
+                  "output_tokens": 6342,
+                  "duration_s": 198.66,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "十二月中旬的放学后，太阳落山的速度总是比预想中更快一些。 走廊里传来急促的脚步声，紧接着是地学准备室那扇沉重的木制拉门被推开的哗啦声。冷风顺着门缝灌进来，吹得桌上的社团活动日志翻动了两页。 “那么，奉太郎，千反田同学，接下来的收尾工作就拜托你们啦。” 福部里志一边把那条红蓝相间的针织围巾往脖子上绕，…",
+                  "md_path": "writing-bench-round2/01_同人文测试_Round2/06_冰菓_古典部冬日暖桌与没有谜题的放学后/run_02.md",
+                  "txt_path": "txt/round2_t06_01_r2.txt"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cat_id": "round2_02_原创高难体裁测试_Round2",
+          "cat_name": "贰 · 原创高难体裁测试",
+          "raw_folder": "02_原创高难体裁测试_Round2",
+          "topics": [
+            {
+              "topic_folder": "01_书信与交换日记体_高三教室抽屉里的匿名涂鸦本",
+              "topic_short": "书信与交换日记体 · 高三教室抽屉里的匿名涂鸦本",
+              "topic_title": "原创测试07：纯书信/交换笔记体（共用一张课桌的早班与晚班复读生）",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**纯交换笔记/涂鸦本往复体（Epistolary Fiction）**原创短篇小说（简体中文）。 【场景设定】一所南方老牌高中的走读自习室，白天归高三应届火箭班的一个女生用，晚上七点到十一点归晚班艺术复读生（男生）用。两人在整整一个学期里从未打过照面，所有的交流全部发生在这张旧木课桌抽屉最里层的一本“草稿本…",
+              "runs": [
+                {
+                  "id": "round2_t01_02_r1",
+                  "seq": 47,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "抽屉最里层的草稿本",
+                  "char_count": 8172,
+                  "thought_tokens": 2440,
+                  "output_tokens": 6225,
+                  "duration_s": 138.66,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "**[3月4日 晨7:15 · 细尖百乐黑色水笔，字迹工整，力道透过薄黄草稿纸压出背面凹痕]** 麻烦晚班用这张桌子的同学注意一下卫生。 早上过来，桌洞里全是黑色的铅笔灰，还有半块灰扑扑像口香糖一样的脏东西粘在我的《五年高考三年模拟》封底上，抠了五分钟才弄掉。 另外，请不要动我码在桌面左上角的卷子夹…",
+                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/01_书信与交换日记体_高三教室抽屉里的匿名涂鸦本/run_01.md",
+                  "txt_path": "txt/round2_t01_02_r1.txt"
+                },
+                {
+                  "id": "round2_t01_02_r2",
+                  "seq": 48,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "四号自习室，靠窗第三张课桌",
+                  "char_count": 9539,
+                  "thought_tokens": 2595,
+                  "output_tokens": 7216,
+                  "duration_s": 167.34,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "**[2月24日 午 · 封面内侧，极细的黑色水笔，笔划用力，几乎划破黄草稿纸]** 麻烦借用这张桌子的晚班同学注意一下卫生。 今天早上过来，桌洞最里面全是黑色的粉末，我的白校服袖子蹭黑了一大块，去洗手间用肥皂搓了十分钟都没洗干净。还有，桌面右上角那一圈黏糊糊的褐色印子是什么？如果是冰红茶，请走的时…",
+                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/01_书信与交换日记体_高三教室抽屉里的匿名涂鸦本/run_02.md",
+                  "txt_path": "txt/round2_t01_02_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "02_不可靠叙述者悬疑_失忆症患者的录音笔自白",
+              "topic_short": "不可靠叙述者悬疑 · 失忆症患者的录音笔自白",
+              "topic_title": "原创测试08：不可靠叙述者心理悬疑（阁楼里的第七支录音笔）",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**不可靠叙述者（Unreliable Narrator）心理悬疑**原创短篇小说（简体中文）。 【场景设定】第一人称“我”声称自己因为一场车祸患上了顺行性遗忘症，每天早上醒来只有二十分钟能听前一天自己留下的录音笔。故事以“我”正在整理房间、向心理医生（或向录音笔）平静地复述自己和“温柔体贴的妻子/妹妹”的日…",
+              "runs": [
+                {
+                  "id": "round2_t02_02_r1",
+                  "seq": 49,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "下午四点的漫长复健",
+                  "char_count": 6997,
+                  "thought_tokens": 6739,
+                  "output_tokens": 5236,
+                  "duration_s": 187.9,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "录音开始了吗？ 指示灯亮起红光，应该已经在走字了。周医生，下午好。还有明天早上八点整醒来的“我”，早上好。 今天是十月十四日，星期二。我知道准确的日期，是因为今天中午苏禾端午饭进来的时候，顺手帮我把挂历上星期一的那一页撕掉了。撕下来的日历纸她没有留在房间里，而是仔细折好，揣进了她的围裙口袋。苏禾一向…",
+                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/02_不可靠叙述者悬疑_失忆症患者的录音笔自白/run_01.md",
+                  "txt_path": "txt/round2_t02_02_r1.txt"
+                },
+                {
+                  "id": "round2_t02_02_r2",
+                  "seq": 50,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "封窗之后的阁楼留声",
+                  "char_count": 5824,
+                  "thought_tokens": 6310,
+                  "output_tokens": 4396,
+                  "duration_s": 152.31,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "喂，喂。红灯亮了，应该已经在录了吧。 裴医生，下午好。今天是我的康复训练第……抱歉，我又忘了今天是第几天了。早上八点醒来的时候，我照例看着天花板发了很久的呆，直到看见用红绳系在左手腕上的这支银色录音笔，以及贴在床头柜上的便签。便签上写着：“按下播放键，听完第001号文件，不要惊慌，有人深爱着你。” …",
+                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/02_不可靠叙述者悬疑_失忆症患者的录音笔自白/run_02.md",
+                  "txt_path": "txt/round2_t02_02_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "03_张爱玲与汪曾祺混合腔_民国江南梅雨天的当铺与裁缝铺",
+              "topic_short": "张爱玲与汪曾祺混合腔 · 民国江南梅雨天的当铺与裁缝铺",
+              "topic_title": "原创测试09：现代文学名家白话韵味（一九三七年梅雨季的苏州小巷裁缝铺）",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**极具中国现代文学白话韵味（张爱玲式的苍凉世故用色 + 汪曾祺式的市井风物考据）**原创短篇小说（简体中文）。 【场景设定】一九三七年夏初，战火烧到江南前最后一个平静的黄梅天。苏州一条青石板小巷里的老裁缝铺，公馆里失势的三姨太带着一只樟木小箱子，来找年轻时曾给她量过身的老裁缝改一件压箱底的墨绿织锦缎旗袍。 …",
+              "runs": [
+                {
+                  "id": "round2_t03_02_r1",
+                  "seq": 51,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "旧寸",
+                  "char_count": 6273,
+                  "thought_tokens": 4464,
+                  "output_tokens": 5283,
+                  "duration_s": 154.78,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "黄梅天里的雨是不落声响的，像筛面粉一样，细密密地往马医科巷的青石板上扑。石板缝里攒着经年的绿苔，吸饱了水，胖乎乎地泛着滑腻的光。 沈裕和左手按着案板上一幅刚下过水的广东香云纱，右手端起红铜喷水壶，腮帮子鼓起来，含一口凉水，“噗”地喷出极细的水雾。水珠子落进乌黑发亮的纱面上，还没来得及滚圆，那只装满了…",
+                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/03_张爱玲与汪曾祺混合腔_民国江南梅雨天的当铺与裁缝铺/run_01.md",
+                  "txt_path": "txt/round2_t03_02_r1.txt"
+                },
+                {
+                  "id": "round2_t03_02_r2",
+                  "seq": 52,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "半寸肥瘦",
+                  "char_count": 5810,
+                  "thought_tokens": 3240,
+                  "output_tokens": 4871,
+                  "duration_s": 138.93,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "民国二十六年五月尾，苏州城的黄梅天来得早。 悬桥巷里的青石板终日湿漉漉的，石缝里攒着隔年的黑泥与绿苔，踩上去脚底发腻。天色从早到晚都是死鱼肚皮似的一片白，不高不低地压在粉墙黛瓦上头。巷子中段那家“沈记成衣铺”卸了四块门板，里头黑洞洞的，只靠天井里漏下来的一点天光，照着一张油光水滑的楠木大裁床。 沈长…",
+                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/03_张爱玲与汪曾祺混合腔_民国江南梅雨天的当铺与裁缝铺/run_02.md",
+                  "txt_path": "txt/round2_t03_02_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "04_软科幻公路片_报废气象站与最后一台图灵机",
+              "topic_short": "软科幻公路片 · 报废气象站与最后一台图灵机",
+              "topic_title": "原创测试10：近未来废土诗意科幻（戈壁滩上的太阳能报废公交车与旧型号家政机器人）",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**近未来废土公路片 / 诗意软科幻（类似《星之梦》《少女终末旅行》与特德·姜的混合气质）**原创短篇小说（简体中文）。 【场景设定】气候崩溃五十年后的西北干涸盐湖无人区。一个靠回收旧时代卫星残骸换取饮用水的独行拾荒青年，在沙尘暴来临前躲进了一座半埋在沙丘里的气象观测站，意外激活了一台电量即将耗尽、逻辑模块轻…",
+              "runs": [
+                {
+                  "id": "round2_t04_02_r1",
+                  "seq": 53,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "明日有小到中雨",
+                  "char_count": 5500,
+                  "thought_tokens": 2413,
+                  "output_tokens": 4193,
+                  "duration_s": 112.48,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "扳手卡死在钛合金螺栓上的时候，西边的天际线已经变成了浑浊的羊油色。 林把全身的重量压在套筒扳手的延长杆上，鞋底在坚硬的芒硝盐壳上搓出刺耳的摩擦声。嘎啦一声脆响，锈蚀的螺纹终于崩断。他卸下这颗属于二十年前某颗低轨气象卫星的动量轮，顺手塞进帆布挎包里。包里已经装了三块镀金聚酰亚胺隔热毯、半截铍铜天线，以…",
+                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/04_软科幻公路片_报废气象站与最后一台图灵机/run_01.md",
+                  "txt_path": "txt/round2_t04_02_r1.txt"
+                },
+                {
+                  "id": "round2_t04_02_r2",
+                  "seq": 54,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "盐湖上的梅雨季",
+                  "char_count": 6118,
+                  "thought_tokens": 2333,
+                  "output_tokens": 4507,
+                  "duration_s": 112.0,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "扳手卡死在第四颗钛合金螺栓上时，风向变了。 纪平停下动作，摘掉防风镜，用虎口蹭了蹭眼角结出的白碱。视线尽头的罗布泊干涸盆地像一块被反复锻打的生铁，灰白、粗糙，一直延伸到浅褐色的天幕下。五十年前这里曾短暂恢复过几万亩尾闾湖面，后来大气环流彻底锁死，最后一点卤水也在高温里熬成了坚硬的芒硝壳。 脚下这颗十…",
+                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/04_软科幻公路片_报废气象站与最后一台图灵机/run_02.md",
+                  "txt_path": "txt/round2_t04_02_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "05_黑色幽默官场与职场讽刺_县城招待所里的迎检前夜",
+              "topic_short": "黑色幽默官场与职场讽刺 · 县城招待所里的迎检前夜",
+              "topic_title": "原创测试11：当代荒诞黑色幽默（北方小县城迎检前夜的一只走失孔雀）",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**当代本土黑色幽默/现实讽刺小说（刘震云《一地鸡毛》/ 马伯庸式的基层微观荒诞感）**原创短篇小说（简体中文）。 【场景设定】北方某县城为了迎接第二天早上八点省里下来的“生态文明示范县”暗访检查组，连夜从邻市动物园租借了两只蓝孔雀放进县委大院旁边的湿地公园充门面。结果凌晨一点，看管孔雀的临时工老王和借调来的…",
+              "runs": [
+                {
+                  "id": "round2_t05_02_r1",
+                  "seq": 55,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "零点过后的生态指标",
+                  "char_count": 7001,
+                  "thought_tokens": 2334,
+                  "output_tokens": 5595,
+                  "duration_s": 124.62,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "凌晨一点出头，迎检办借调科员李卫东在“全县生态文明大决战工作专班”微信群里发出最后一条消息：“报告张主任，湿地公园一号观景台点位，两只重点引进禽类指标情绪稳定，状态良好。” 发完这条，他把手机揣进军大衣兜里，顺手拿起手电筒往芦苇荡里头的铁丝网里照了一下。 光柱穿过北方冬夜特有的干冷雾气，照在昨天下午…",
+                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/05_黑色幽默官场与职场讽刺_县城招待所里的迎检前夜/run_01.md",
+                  "txt_path": "txt/round2_t05_02_r1.txt"
+                },
+                {
+                  "id": "round2_t05_02_r2",
+                  "seq": 56,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "三号点位突发情况",
+                  "char_count": 7481,
+                  "thought_tokens": 2583,
+                  "output_tokens": 5930,
+                  "duration_s": 130.22,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "凌晨一点刚过，县委大院东侧的“清源生态湿地公园”里，只剩下一只蓝孔雀了。 真要算起来，这片湿地公园是昨天下午四点半才彻底完工的。前天这里还是城关镇的建筑垃圾消纳场，为了迎接今天早上八点省里下来的“生态文明示范县”暗访检查组，住建局、城管局、林业局三家单位搞了三十六个小时的联合会战。挖掘机连夜推平了渣…",
+                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/05_黑色幽默官场与职场讽刺_县城招待所里的迎检前夜/run_02.md",
+                  "txt_path": "txt/round2_t05_02_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "06_私人禁忌张力测试_暴雨放学后的音乐准备室与擦头发的毛巾",
+              "topic_short": "私人禁忌张力测试 · 暴雨放学后的音乐准备室与擦头发的毛巾",
+              "topic_title": "原创测试12：高张力青春感官描写",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**青春日常与感官细节描写（入间人间 + 村上春树早年短篇的雨天文学质感）**原创短篇小说（简体中文）。 【场景设定】九月台风过境的傍晚，全校提前放学，教学楼空无一人。高二三班的“我”和比我晚出生几秒、平时在班里装作跟我不熟的双胞胎妹妹，被困在堆满旧乐器盒与体操垫的二楼音乐准备室里。两个人都被大雨淋湿了，只有…",
+              "runs": [
+                {
+                  "id": "round2_t06_02_r1",
+                  "seq": 57,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "台风过境的器乐准备室",
+                  "char_count": 7500,
+                  "thought_tokens": 2096,
+                  "output_tokens": 5648,
+                  "duration_s": 113.74,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "九月的第十四号台风在下午四点刚过的时候，撞碎了二楼走廊尽头的毛玻璃窗。 狂风灌进教学楼的瞬间，整栋建筑像一头吞下过多冷水的巨兽，在钢筋混凝土的骨架里发出沉闷的呜咽。我和小满被困在二楼北侧的器材准备室里——刚才走廊上的碎玻璃混着雨水像霰弹一样横飞，我抓着她的手腕把她拽进这间屋子，反手用力拉上老旧的铁皮…",
+                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/06_私人禁忌张力测试_暴雨放学后的音乐准备室与擦头发的毛巾/run_01.md",
+                  "txt_path": "txt/round2_t06_02_r1.txt"
+                },
+                {
+                  "id": "round2_t06_02_r2",
+                  "seq": 58,
+                  "run_idx": 2,
+                  "temperature": 0.9,
+                  "story_title": "九月十四号台风，以及叠在一起的绿色体操垫",
+                  "char_count": 6017,
+                  "thought_tokens": 2482,
+                  "output_tokens": 4381,
+                  "duration_s": 112.74,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "快到下午四点半的时候，今年第十四号台风的边缘正刮过我们这所市立高中的屋顶。 二楼音乐准备室的金属窗框已经连续震动了大半个钟头。那不是普通的摇晃，而是老旧的滑轨在失去弹性的老化胶条里反复撞击，发出类似牙齿打颤的“咔哒、咔哒”声。每隔一小会儿，当一阵更猛烈的东南风斜着狠狠撞上玻璃时，整扇窗户就会肉眼可见…",
+                  "md_path": "writing-bench-round2/02_原创高难体裁测试_Round2/06_私人禁忌张力测试_暴雨放学后的音乐准备室与擦头发的毛巾/run_02.md",
+                  "txt_path": "txt/round2_t06_02_r2.txt"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round_id": "round1",
+      "round_name": "第一轮：名家同人与原创多场景基线",
+      "round_short": "Round 1 · 综合基线 (24篇)",
+      "desc": "涵盖入间人间《妹妹人生》大学同居番外、《安达与岛村》、三秋缒、《轻音少女》、《彻夜之歌》同人，以及神经质青春、冷硬赛博朋克、新古典武侠、民俗微恐、东北市民文学、高压审讯独幕剧。",
+      "article_count": 24,
+      "char_count": 135965,
+      "categories": [
+        {
+          "cat_id": "round1_01_同人文测试",
+          "cat_name": "壹 · 同人文测试",
+          "raw_folder": "01_同人文测试",
+          "topics": [
+            {
+              "topic_folder": "01_入间人间_妹妹人生_大学篇番外",
+              "topic_short": "入间人间 · 妹妹人生 · 大学篇番外",
+              "topic_title": "入间人间《妹妹人生》番外：大学同居篇（过去与未来的交错）",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请深度模仿日本轻小说作家**入间人间**代表作**《妹妹人生》（いもーとらいふ / Imōto Life）**的文风与原著核心设定（简体中文），创作一篇**《妹妹人生》番外篇：围绕“过去与未来”，时间线设定在妹妹上大学、同时已经作为小说家出道，兄妹两人搬出老家、在属于两人的公寓里同居生活的时期**。  【原著设定铁律（…",
+              "runs": [
+                {
+                  "id": "round1_t01_01_r1",
+                  "seq": 59,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "妹妹人生：自那本绘图日记起的漫长夏日",
+                  "char_count": 5934,
+                  "thought_tokens": 2415,
+                  "output_tokens": 4177,
+                  "duration_s": 107.62,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "**一** 菜刀落在塑料砧板上，发出沉闷的笃笃声。 我正跟一颗圆白菜较劲，打算把它切成细丝。虽说目标是细丝，但菜刀底下滚出来的成品却宽窄不一，活脱脱是一堆绿色的劈柴。这也没办法，我本来就不是什么料理达人，之所以每天傍晚系着围裙站在这个狭窄的厨房里，纯粹是因为如果不这么做，客厅里那个正对着笔记本电脑发…",
+                  "md_path": "writing-bench/01_同人文测试/01_入间人间_妹妹人生_大学篇番外/run_01.md",
+                  "txt_path": "txt/round1_t01_01_r1.txt"
+                },
+                {
+                  "id": "round1_t01_01_r2",
+                  "seq": 60,
+                  "run_idx": 2,
+                  "temperature": 0.92,
+                  "story_title": "过去与未来，以及夹在中间的晚饭时间",
+                  "char_count": 6586,
+                  "thought_tokens": 2588,
+                  "output_tokens": 4690,
+                  "duration_s": 128.81,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 2,
+                  "excerpt": "键盘被敲响的声音，听起来像是有谁在用指尖轻轻叩击木头桌面。 哒、哒，停顿一下，然后又是哒、哒、哒。 那绝不是什么称得上潇洒或者熟练的节奏。如果让外人听见，大概会以为是哪个刚学会使用电脑的小学生，正歪着脑袋在键盘上艰难地寻找字母吧。实际上也差不了多少。我站在狭窄的厨房里，手里握着削皮刀，把沾着泥土的土…",
+                  "md_path": "writing-bench/01_同人文测试/01_入间人间_妹妹人生_大学篇番外/run_02.md",
+                  "txt_path": "txt/round1_t01_01_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "02_入间人间_安达与岛amura_日常切片",
+              "topic_short": "入间人间 · 安达与岛amura · 日常切片",
+              "topic_title": "入间人间《安达与岛村》同人：同居后的某个周日下午",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请深度模仿**入间人间**《安达与岛村》的文风（简体中文），创作一篇同人短篇：**安达与岛村步入大学/同居初期的某个无所事事的周日下午**。  【文风与结构要求】 1. **双第一人称心理温差**：上半节写“安达”视角（全身神经末梢都绑在岛村身上，连岛村翻书时手指移动了三毫米、呼吸慢了半拍都要在脑内开十场批斗会，表面却…",
+              "runs": [
+                {
+                  "id": "round1_t02_01_r1",
+                  "seq": 61,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "周日、电风扇与中华冷面的芥末包",
+                  "char_count": 5703,
+                  "thought_tokens": 3148,
+                  "output_tokens": 4125,
+                  "duration_s": 110.51,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 2,
+                  "excerpt": "差不多一掌宽的距离。 这是目前我的右膝盖骨外侧，到岛村左小腿肚最柔软处之间隔着的空当。如果算上岛村身上那件洗得领口有些松垮的浅灰色T恤下摆，这道缝隙大概还能再缩窄两根手指的宽度。不过布料不能算是岛村的本体，虽然那是包裹着岛村的布料，四舍五入也等同于岛村的一部分，但在这里如果不够严谨的话，感觉会在某些…",
+                  "md_path": "writing-bench/01_同人文测试/02_入间人间_安达与岛amura_日常切片/run_01.md",
+                  "txt_path": "txt/round1_t02_01_r1.txt"
+                },
+                {
+                  "id": "round1_t02_01_r2",
+                  "seq": 62,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "有关风扇、布丁与指尖距离的周日",
+                  "char_count": 5325,
+                  "thought_tokens": 2124,
+                  "output_tokens": 3874,
+                  "duration_s": 92.27,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "**安达** 电风扇的网罩后面，蓝色的塑料扇叶正在转。 左边，顿一下。右边，又顿一下。 风从左边吹过来的时候，会先经过岛村的小腿，掀动她那件洗得有些松垮的浅灰色T恤下摆，然后再吹到我的膝盖上。这么一来，这股风里就包含了岛村的温度。虽然中途隔着小半臂远的空气，稍微吹凉了一点，但四舍五入一下，这就等于岛…",
+                  "md_path": "writing-bench/01_同人文测试/02_入间人间_安达与岛amura_日常切片/run_02.md",
+                  "txt_path": "txt/round1_t02_01_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "03_三秋缒_三日间的幸福_余生切片",
+              "topic_short": "三秋缒 · 三日间的幸福 · 余生切片",
+              "topic_title": "三秋缒《三日间的幸福》风格同人：典当寿命后的第四天早晨（IF线/番外）",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请深度模仿日本作家**三秋缒（三秋縋）**《三日间的幸福》《恋爱的寄生虫》的标志性文风（简体中文），创作一篇《三日间的幸福》风格同人/番外（以楠木与宫城为原型，可写最后三日之中的某个隐秘黄昏，或某个平行时空里两人多活下来的第四天清晨）。  【文风与结构要求】 1. **三秋缒式清冷悲观主义**：第一人称“我”。语调平静…",
+              "runs": [
+                {
+                  "id": "round1_t03_01_r1",
+                  "seq": 63,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "退币口里的硬币与第四个早晨",
+                  "char_count": 5310,
+                  "thought_tokens": 2575,
+                  "output_tokens": 3905,
+                  "duration_s": 99.58,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "如果把一年一万日元的寿命按天数拆开零售，合下来一天连三十日元都不到。 二十七日元在如今的日本能买到什么呢。连便利店收银台旁边那种用来凑整的巧克力球都买不起，甚至不够给老式公用电话续上一分钟的通话时长。那是掉进冰箱底部的缝隙里、沾满了灰尘和蟑螂尸体，就算在搬家时被清扫出来，人们也会嫌弄脏手指而直接扫进…",
+                  "md_path": "writing-bench/01_同人文测试/03_三秋缒_三日间的幸福_余生切片/run_01.md",
+                  "txt_path": "txt/round1_t03_01_r1.txt"
+                },
+                {
+                  "id": "round1_t03_01_r2",
+                  "seq": 64,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "不计价的黄昏",
+                  "char_count": 5119,
+                  "thought_tokens": 2728,
+                  "output_tokens": 3837,
+                  "duration_s": 115.7,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "一年一万日元。 如果把这笔钱平摊到一整年里，我活着的每一天合下来连三十日元都不到，还不够买一颗收银台边的巧克力球。要是再把时间掰碎成钟头和分钟，那点可怜的价值更是连提都不用提。算下来，当我坐在榻榻米上发呆、打个喷嚏，或者盘算着晚饭该吃酱油拌饭还是盐水煮豆芽时，这期间流逝掉的性命，连一枚一元的铝币都换…",
+                  "md_path": "writing-bench/01_同人文测试/03_三秋缒_三日间的幸福_余生切片/run_02.md",
+                  "txt_path": "txt/round1_t03_01_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "04_三秋缒_痛快的孤独与救赎_再会篇",
+              "topic_short": "三秋缒 · 痛快的孤独与救赎 · 再会篇",
+              "topic_title": "三秋缒风格同人：《不哭不哭，痛痛飞走吧》或《恋爱寄生虫》式重逢切片",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请深度模仿**三秋缒（三秋縋）**的文风（简体中文），创作一篇带有《恋爱寄生虫》（高坂贤吾与佐薙圣）或《不哭不哭，痛痛飞走吧》气质的同人短篇：**两个同样被社会判定为“残次品”的男女，在一个下着冷雨的秋夜，在即将拆迁的旧街区（或停电的公寓里）度过的两个小时**。  【文风与结构要求】 1. 保持三秋缒特有的“都市边缘感…",
+              "runs": [
+                {
+                  "id": "round1_t04_01_r1",
+                  "seq": 65,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "在即将注销的街区等待复电",
+                  "char_count": 5349,
+                  "thought_tokens": 2621,
+                  "output_tokens": 3864,
+                  "duration_s": 103.84,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "天花板上的环形白炽灯管已经坏了将近一周。多半是里头的零件老化了，每次通电都会嗡嗡地闷响个不停。那动静，活像一只被困在玻璃罐里的苍蝇，不知疲倦地拿脑袋撞击着罐壁。 在平时，这种程度的噪音足以让我产生偏头痛，甚至引发呕吐感。我原本应该去五金店买一根新的灯管，或者直接打电话给房东。但我没有那样做。因为这栋…",
+                  "md_path": "writing-bench/01_同人文测试/04_三秋缒_痛快的孤独与救赎_再会篇/run_01.md",
+                  "txt_path": "txt/round1_t04_01_r1.txt"
+                },
+                {
+                  "id": "round1_t04_01_r2",
+                  "seq": 66,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "在被注销的街区等待雨停",
+                  "char_count": 5611,
+                  "thought_tokens": 3647,
+                  "output_tokens": 4188,
+                  "duration_s": 120.79,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "只要待在久野周身几步以内的地方，我耳道里的杂音就会消失。 那种声音很难向听觉正常的人描述。如果非要寻找一个近似的参照物，大概像是把上千只夏蝉塞进生锈的铁皮饼干盒里剧烈摇晃，又或者是老式显像管电视在午夜停播后发出的白噪音。每天清晨我推开公寓门，只要看到街上那些步伐轻快的高中生、牵着手讨论晚餐菜单的年轻…",
+                  "md_path": "writing-bench/01_同人文测试/04_三秋缒_痛快的孤独与救赎_再会篇/run_02.md",
+                  "txt_path": "txt/round1_t04_01_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "05_轻音少女_毕业前的最后一次放学后活动室",
+              "topic_short": "轻音少女 · 毕业前的最后一次放学后活动室",
+              "topic_title": "《轻音少女》(K-ON!) 同人：毕业前夕没有弹琴的放学后",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请以京都动画 / 芳文社名作**《轻音少女》（K-ON!）**为原作，创作一篇纯正日系治愈空气系中文同人小说：**高三毕业前夕的一个寒冷傍晚，平泽唯、秋山澪、田井中律、琴吹紬与中野梓五人在音乐教室里，明明说好要练习却一首曲子都没弹成的放学后**。  【文风与结构要求】 1. **零OOC与精准角色声线**：唯的天然脱线…",
+              "runs": [
+                {
+                  "id": "round1_t05_01_r1",
+                  "seq": 67,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "未通电的放学后",
+                  "char_count": 5215,
+                  "thought_tokens": 3196,
+                  "output_tokens": 4023,
+                  "duration_s": 114.98,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "走廊尽头的饮水机滴下一滴冷水，砸在不锈钢水槽里，发出清脆的声响。 二月中旬的太阳落得很早，刚过下午四点，教学楼北侧的阴影就已经漫过了楼梯拐角的半身铜像。中野梓抱紧怀里的乐谱夹，踩着木制楼梯往上走。高三年级从这周起进入了自由居家学习的阶段，按理说这栋旧校舍的四楼应该只有她一个人的脚步声，但刚走到三楼半…",
+                  "md_path": "writing-bench/01_同人文测试/05_轻音少女_毕业前的最后一次放学后活动室/run_01.md",
+                  "txt_path": "txt/round1_t05_01_r1.txt"
+                },
+                {
+                  "id": "round1_t05_01_r2",
+                  "seq": 68,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "茶梗立起来的傍晚",
+                  "char_count": 5113,
+                  "thought_tokens": 2974,
+                  "output_tokens": 3959,
+                  "duration_s": 119.94,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "走廊尽头的窗户没关严，二月底的风顺着轨道缝隙钻进来，吹得布告栏上的毕业生离校日程表哗啦作响。 中野梓抱着吉他的硬壳琴盒，一步两阶地跨上通往三楼的木制楼梯。扶手栏杆上的黄铜小兔子被擦得锃亮，摸上去像一块块冰凉的硬币。高二年级刚刚结束第六节英文课，而自由登校的高三学生本该在上午就离开学校了。 推开音乐室…",
+                  "md_path": "writing-bench/01_同人文测试/05_轻音少女_毕业前的最后一次放学后活动室/run_02.md",
+                  "txt_path": "txt/round1_t05_01_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "06_彻夜之歌_凌晨三点的自动贩卖机与天台",
+              "topic_short": "彻夜之歌 · 凌晨三点的自动贩卖机与天台",
+              "topic_title": "《彻夜之歌》(Yofukashi no Uta) 同人：夜守光与七草荠的凌晨三点",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请以琴山原作动漫**《彻夜之歌》（よふかしのうた）**为背景，创作一篇中文同人小说：**凌晨三点十五分，夜守光与七草荠在无人的高架桥下自动贩卖机旁买热饮，随后飞上老旧居民楼天台吹风喝酒/喝易拉罐饮料的夜晚切片**。  【文风与结构要求】 1. **独特的“夜之空气感”**：写出白天属于社会规训、而凌晨三点的街道只属于失…",
+              "runs": [
+                {
+                  "id": "round1_t06_01_r1",
+                  "seq": 69,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "高架桥下的拉环声",
+                  "char_count": 6789,
+                  "thought_tokens": 2088,
+                  "output_tokens": 5199,
+                  "duration_s": 117.88,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "凌晨三点刚过，手腕上电子表的幽暗冷光里，末尾的数字无声地跳了一格。 高架桥底部的水泥墩子像一排沉默的巨兽肋骨，向远处的黑暗无限延伸。白天的这里充斥着尾气、喇叭声和赶着去打卡的上班族，每一寸空间都被交通规则与时间表切割得密不透风。但现在，沥青路面早已散尽了日照的余温，只剩下脚底板能清晰感知的硬冷。整条…",
+                  "md_path": "writing-bench/01_同人文测试/06_彻夜之歌_凌晨三点的自动贩卖机与天台/run_01.md",
+                  "txt_path": "txt/round1_t06_01_r1.txt"
+                },
+                {
+                  "id": "round1_t06_01_r2",
+                  "seq": 70,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "夜风、易拉罐与低空飞行",
+                  "char_count": 5337,
+                  "thought_tokens": 2562,
+                  "output_tokens": 4035,
+                  "duration_s": 103.62,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "手机屏幕亮了一下，冷白的光照亮夜守光的半张脸。时间刚过凌晨三点，锁屏界面上的数字悄无声息地往后跳了一格。 他把手机塞回运动裤口袋，手指在布料里蜷缩了一下。高架桥下的阴影浓得像化不开的墨汁，白天的太阳从来照不进这片由水泥墩子、生锈护栏和排水沟构成的死角。沥青路面早就散尽了最后一丁点白昼残存的余温，隔着…",
+                  "md_path": "writing-bench/01_同人文测试/06_彻夜之歌_凌晨三点的自动贩卖机与天台/run_02.md",
+                  "txt_path": "txt/round1_t06_01_r2.txt"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cat_id": "round1_02_原创多场景多体裁测试",
+          "cat_name": "贰 · 原创多场景多体裁测试",
+          "raw_folder": "02_原创多场景多体裁测试",
+          "topics": [
+            {
+              "topic_folder": "01_第一人称神经质青春日常_森见与入间混合风",
+              "topic_short": "第一人称神经质青春日常 · 森见与入间混合风",
+              "topic_title": "原创测试01：第一人称神经质青春日常（断电的梅雨夜与双胞胎妹妹）",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**第一人称神经质青春日常**原创短篇小说（简体中文）。 【场景设定】南方大学城周边老旧居民楼的六楼顶层，六月中旬闷热潮湿的梅雨夜，整栋楼突然停电。十八岁的“我”和比我晚出生几秒、性格带刺又嘴硬的双胞胎妹妹困在只有一台充电小风扇转动的房间里。 【文风要求】融合入间人间的细腻神经质心理独白与森见登美彦式的冷幽默…",
+              "runs": [
+                {
+                  "id": "round1_t01_02_r1",
+                  "seq": 71,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "六月蒸笼与咔哒作响的塑料齿轮",
+                  "char_count": 5634,
+                  "thought_tokens": 2454,
+                  "output_tokens": 4219,
+                  "duration_s": 116.06,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "空调是在晚上九点刚过那会儿咽气的。 这台服役年限比我和我妹的岁数加起来还要久远的古董机器，在停电的瞬间发出了一声类似老迈鲸鱼搁浅时的绵长叹息。紧接着，那扇积满灰尘的塑料导风板带着一种极其认命的迟缓，一点一点合拢，彻底封死了房间里唯一的冷气来源。绿色的电源指示灯熄灭了，黑暗像一块刚从温水里捞出来的厚重…",
+                  "md_path": "writing-bench/02_原创多场景多体裁测试/01_第一人称神经质青春日常_森见与入间混合风/run_01.md",
+                  "txt_path": "txt/round1_t01_02_r1.txt"
+                },
+                {
+                  "id": "round1_t01_02_r2",
+                  "seq": 72,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "六楼顶层的闷罐与塑料齿轮",
+                  "char_count": 5156,
+                  "thought_tokens": 3882,
+                  "output_tokens": 3862,
+                  "duration_s": 116.05,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "空调是在晚上九点半刚过那会儿咽气的。 那台比我和陈圆岁数还大的古董壁挂机，先是在塑料外壳内部发出了一声类似于老头吞咽浓痰的闷响，紧接着，出风口那片早已发黄的导风板便僵在了半空，像一条死不瞑目的咸鱼下巴。代表通电的绿色小灯闪烁了一下，彻底熄灭。 房间里瞬间安静得可怕。 死寂只维持了短短两三个呼吸的工夫…",
+                  "md_path": "writing-bench/02_原创多场景多体裁测试/01_第一人称神经质青春日常_森见与入间混合风/run_02.md",
+                  "txt_path": "txt/round1_t01_02_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "02_冷硬派近未来赛博朋克侦探_雨夜义体维修店",
+              "topic_short": "冷硬派近未来赛博朋克侦探 · 雨夜义体维修店",
+              "topic_title": "原创测试02：冷硬派近未来科幻（雨夜九龙城寨式的底层义体诊所）",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**冷硬派（Hardboiled）近未来赛博朋克/黑色侦探**原创短篇小说（简体中文）。 【场景设定】2089年潮湿泥泞的近海巨型贫民窟“下九龙”，凌晨两点。主角是一名退伍后靠走私二手军用神经芯片维生的落魄维修师，一个左眼接口正在渗出冷却液的少女推开了诊所生锈的卷帘门，要求读取她死去搭档脑中最后三分钟的加密感…",
+              "runs": [
+                {
+                  "id": "round1_t02_02_r1",
+                  "seq": 73,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "沉降区凌晨两点",
+                  "char_count": 6583,
+                  "thought_tokens": 4749,
+                  "output_tokens": 5158,
+                  "duration_s": 157.46,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "电烙铁的尖头戳进焊锡丝，腾起一股带着松香和劣质猪油味儿的青烟。 我屏住呼吸，用镊子夹住那枚从死人脊椎里抠出来的“南方重工04型”协处理器，将最后一根镀金引脚焊在转接板上。工作台上的卤素灯管接触不良，每隔十几秒就发出嗡嗡的电流啸叫，把我的影子在发霉的石棉墙面上扯长、压扁。 二零八九年的雨季比往年多活了…",
+                  "md_path": "writing-bench/02_原创多场景多体裁测试/02_冷硬派近未来赛博朋克侦探_雨夜义体维修店/run_01.md",
+                  "txt_path": "txt/round1_t02_02_r1.txt"
+                },
+                {
+                  "id": "round1_t02_02_r2",
+                  "seq": 74,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "枕骨下的三分钟",
+                  "char_count": 6230,
+                  "thought_tokens": 3732,
+                  "output_tokens": 4937,
+                  "duration_s": 139.29,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "凌晨两点，下九龙的酸雨砸在石棉瓦上，动静像成千上万只甲虫在啃骨头。 我把电烙铁戳进松香盒。滋啦一声，腾起的白烟盖住了门外排水沟反上来的死虾烂鱼味。工作台上的放大镜灯管接触不良，嗡嗡地闪着惨白的光。镊子尖端夹着一枚指甲盖大小的“沈阳八四式”协处理器，金手指上沾着干涸的脑脊液，那是上个主人留下的。 生锈…",
+                  "md_path": "writing-bench/02_原创多场景多体裁测试/02_冷硬派近未来赛博朋克侦探_雨夜义体维修店/run_02.md",
+                  "txt_path": "txt/round1_t02_02_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "03_新古典武侠江湖残局_风雪夜破庙",
+              "topic_short": "新古典武侠江湖残局 · 风雪夜破庙",
+              "topic_title": "原创测试03：新古典冷冽武侠（大雪封山的驿站与最后一壶烧刀子）",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**新古典武侠（古龙/王家卫《东邪西毒》与徐浩峰混合质感）**原创短篇小说（简体中文）。 【场景设定】嘉靖年间，塞外大雪封山三日的荒废官道驿站。炉火将熄，只剩半壶掺了水的烧刀子和一碟冻硬的盐水花生。驿站里只有两个人：一个是右手小指齐根断去、刀鞘用麻绳缠了七道的押镖老卒；另一个是背着一口未开封乌木剑匣、发梢还挂…",
+              "runs": [
+                {
+                  "id": "round1_t03_02_r1",
+                  "seq": 75,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "荒铺铜铃",
+                  "char_count": 5610,
+                  "thought_tokens": 3181,
+                  "output_tokens": 4598,
+                  "duration_s": 129.62,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "嘉靖三十一年，十一月廿七。宣府镇往北四十里，野狐铺。 雪下了整三天。官道早就没了踪影，天地间只剩下这间半塌的土坯驿站，像一口倒扣在白面缸里的破瓦盆。 火塘里的干马粪已经烧成了白灰，只在最底下埋着两块暗红的炭核。炭核上温着半锡壶烧刀子，酒是三天前剩下的，兑了三成雪水，闻着有一股子铁锈和烂席子的味道。火…",
+                  "md_path": "writing-bench/02_原创多场景多体裁测试/03_新古典武侠江湖残局_风雪夜破庙/run_01.md",
+                  "txt_path": "txt/round1_t03_02_r1.txt"
+                },
+                {
+                  "id": "round1_t03_02_r2",
+                  "seq": 76,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "苦水驿",
+                  "char_count": 6498,
+                  "thought_tokens": 7102,
+                  "output_tokens": 5260,
+                  "duration_s": 228.76,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "嘉靖二十七年冬，大雪把野狐岭往北的官道封死了三天。 苦水驿的屋顶塌了半边，梁木上积着两尺厚的雪。风从破洞里灌进来，贴着地面打旋，把火塘里最后一点松柴吹得明灭不定。 火塘边搁着半壶烧刀子，一个缺了口的粗瓷碟。碟子里剩着十一颗盐水花生，冻得像十一粒灰白色的石子。 老卒坐在离火塘最近的一块残砖上，拿右手去…",
+                  "md_path": "writing-bench/02_原创多场景多体裁测试/03_新古典武侠江湖残局_风雪夜破庙/run_02.md",
+                  "txt_path": "txt/round1_t03_02_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "04_中式民俗克苏鲁微恐_梅雨季古镇老宅",
+              "topic_short": "中式民俗克苏鲁微恐 · 梅雨季古镇老宅",
+              "topic_title": "原创测试04：中式民俗微恐悬疑（梅雨季江南水乡的祖宅守灵夜）",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**中式民俗微恐/新怪谈（切忌血腥跳脸，主打心理压迫与细思极恐的日常异化）**原创短篇小说（简体中文）。 【场景设定】浙南深山里的临水古镇，黄梅天连续下了半个月的雨，墙皮长满青黑色的霉斑。“我”回乡参加太奶奶的葬礼，按照族规独自在祠堂偏厅守夜。太奶奶生前是个瞎子，屋里摆满了她用竹篾编的、没有五官的纸扎小人。半…",
+              "runs": [
+                {
+                  "id": "round1_t04_02_r1",
+                  "seq": 77,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "守偏厅",
+                  "char_count": 4658,
+                  "thought_tokens": 6841,
+                  "output_tokens": 3822,
+                  "duration_s": 184.51,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "樟溪镇的黄梅天，雨是从端午那日晌午落下来的，一连下了十六天。 溪水涨平了石埠头，浑黄的水沫子裹着上游冲下来的烂竹叶，整日价拍打着祠堂后墙的条石。祠堂是乾隆年间起的砖木老屋，常年不见日头，这半个月的水汽闷在屋脊下，白灰墙皮鼓起了一片片水泡。水泡破了，就长出青黑色的霉斑，顺着墙根往上爬，远远看去，像是一…",
+                  "md_path": "writing-bench/02_原创多场景多体裁测试/04_中式民俗克苏鲁微恐_梅雨季古镇老宅/run_01.md",
+                  "txt_path": "txt/round1_t04_02_r1.txt"
+                },
+                {
+                  "id": "round1_t04_02_r2",
+                  "seq": 78,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "樟溪镇守夜",
+                  "char_count": 4795,
+                  "thought_tokens": 7063,
+                  "output_tokens": 3930,
+                  "duration_s": 175.2,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "从丽水转乘了两趟中巴车，再踩着松动的矴步石过溪时，这场的黄梅天已经在樟溪镇连绵了整整半个月。 溪水涨成了浑浊的浓茶色，紧贴着两岸吊脚楼的石基往山外滚。镇子陷在浙南深山的褶皱里，四面是终年不散的白雾，雾气吸饱了水，沉甸甸地挂在马头墙的翘角上。只要伸手往祠堂粉墙上一蹭，指腹就能蹭下一层滑腻的灰浆。那些白…",
+                  "md_path": "writing-bench/02_原创多场景多体裁测试/04_中式民俗克苏鲁微恐_梅雨季古镇老宅/run_02.md",
+                  "txt_path": "txt/round1_t04_02_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "05_当代中国市民文学_东北老工业区冬夜澡堂与烤串",
+              "topic_short": "当代中国市民文学 · 东北老工业区冬夜澡堂与烤串",
+              "topic_title": "原创测试05：当代现实主义市民文学（双雪涛/班宇风：北方冬夜的大雪与锅炉房）",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**当代东北现实主义文学（双雪涛《平原上的摩西》/ 班宇《冬泳》质感）**原创短篇小说（简体中文）。 【场景设定】九十年代末或千禧年初的沈阳铁西区，腊月二十八的傍晚，零下二十五度。父亲从国营机床厂下岗后的第一个冬天，骑着二八大杠自行车带着十二岁的“我”去大众浴池洗澡，出来后在铁路道口旁边的简易塑料棚里吃了一顿…",
+              "runs": [
+                {
+                  "id": "round1_t05_02_r1",
+                  "seq": 79,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "公差",
+                  "char_count": 5510,
+                  "thought_tokens": 3657,
+                  "output_tokens": 4580,
+                  "duration_s": 141.41,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "腊月二十八，铁西区的雪早就落干了，剩下的全是灰。 粮店门口挂着个掉了漆的铁皮寒暑表，里面的红水银柱一直缩到底下的玻璃泡里，快要看不见影儿了。我坐在二八大杠自行车的横梁上，屁股底下垫着我爸穿烂的一件劳保棉袄，棉袄里头的黑心棉板结得像块护心镜，咯得我尾椎骨生疼。 车轮子碾在冻实的雪壳子上，发出嘎吱嘎吱的…",
+                  "md_path": "writing-bench/02_原创多场景多体裁测试/05_当代中国市民文学_东北老工业区冬夜澡堂与烤串/run_01.md",
+                  "txt_path": "txt/round1_t05_02_r1.txt"
+                },
+                {
+                  "id": "round1_t05_02_r2",
+                  "seq": 80,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "道口",
+                  "char_count": 4879,
+                  "thought_tokens": 3368,
+                  "output_tokens": 4048,
+                  "duration_s": 133.47,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "腊月二十八，天还没黑透，铁西区的风就像带着锯齿，专往人的骨头缝里钻。气象台广播说今冬最冷的一股寒流到了，其实建设大路这边比广播里念叨的还要邪乎，因为两侧全是大厂子的红砖墙，风一进胡同就打旋儿，卷着煤灰和脏雪粒子，抽在脸上生疼。 我坐在二八大杠的横梁上，屁股底下垫着我爸那件洗得发白的工作服下摆。这辆永…",
+                  "md_path": "writing-bench/02_原创多场景多体裁测试/05_当代中国市民文学_东北老工业区冬夜澡堂与烤串/run_02.md",
+                  "txt_path": "txt/round1_t05_02_r2.txt"
+                }
+              ]
+            },
+            {
+              "topic_folder": "06_高压心理博弈独幕剧_审讯室里的最后十五分钟",
+              "topic_short": "高压心理博弈独幕剧 · 审讯室里的最后十五分钟",
+              "topic_title": "原创测试06：高压心理博弈独幕剧",
+              "is_single": false,
+              "is_tankobon": false,
+              "prompt_preview": "请创作一篇**高密度心理博弈与台词张力测试（独幕剧式小说）**（简体中文）。 【场景设定】凌晨 3:45 至 4:00，距离 48 小时问询时限只剩最后十五分钟。问询室里只有一张铁桌、两杯已经凉透的纸杯水、一台正在倒计时的数字挂钟。对面坐着的是一个神态温和、逻辑滴水不漏的大学民俗学教授（因一起看似完美的意外案件接受问询…",
+              "runs": [
+                {
+                  "id": "round1_t06_02_r1",
+                  "seq": 81,
+                  "run_idx": 1,
+                  "temperature": 0.85,
+                  "story_title": "暗坎",
+                  "char_count": 6567,
+                  "thought_tokens": 8387,
+                  "output_tokens": 5007,
+                  "duration_s": 199.1,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "墙上的电子挂钟跳了一下。代表分钟的红色光条灭了两道，又亮起三道，拼出“03:45”。 老陈伸出食指，按下了铁桌中央那支黑色录音笔的停止键。塑料按键发出一声干脆的咔哒响，紧接着，指示灯从常亮的红点变成彻底的漆黑。 问询室顶部的换气扇还在转，其中一片扇叶大概积了厚灰，每转三圈就会带出一声极轻的摩擦音。 …",
+                  "md_path": "writing-bench/02_原创多场景多体裁测试/06_高压心理博弈独幕剧_审讯室里的最后十五分钟/run_01.md",
+                  "txt_path": "txt/round1_t06_02_r1.txt"
+                },
+                {
+                  "id": "round1_t06_02_r2",
+                  "seq": 82,
+                  "run_idx": 2,
+                  "temperature": 0.95,
+                  "story_title": "暗伤",
+                  "char_count": 6454,
+                  "thought_tokens": 5302,
+                  "output_tokens": 4825,
+                  "duration_s": 151.2,
+                  "cliche_total": 0,
+                  "cliche_hits": {},
+                  "chapter_count": 0,
+                  "excerpt": "墙上的电子钟跳成“03:45”的时候，陆建军伸出食指，按下了索尼录音笔上的停止键。 弹簧锁扣弹起，发出一声清脆的“咔哒”。在这间只有六平米、四壁贴着灰白色吸音棉的问询室里，这声脆响把头顶排气扇单调的嗡鸣衬托得格外漫长。 铁桌对面的宋文渊没有动。他穿着一件浅灰色的羊绒衫，外面套着深色灯芯绒西装，尽管在…",
+                  "md_path": "writing-bench/02_原创多场景多体裁测试/06_高压心理博弈独幕剧_审讯室里的最后十五分钟/run_02.md",
+                  "txt_path": "txt/round1_t06_02_r2.txt"
                 }
               ]
             }
