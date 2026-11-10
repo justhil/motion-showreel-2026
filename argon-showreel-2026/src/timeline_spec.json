@@ -1,0 +1,79 @@
+{
+  "fps": 60,
+  "duration": 15,
+  "totalFrames": 900,
+  "bpm": 128,
+  "beatSec": 0.46875,
+  "acts": [
+    {
+      "id": "act1",
+      "code": "01 / KINETIC TYPE",
+      "title": "Aperture & Editorial Type",
+      "startBeat": 0,
+      "endBeat": 6,
+      "startFrame": 0,
+      "endFrame": 168,
+      "theme": "celadon"
+    },
+    {
+      "id": "act2",
+      "code": "02 / CURVE RIGGING",
+      "title": "Cubic-Bezier & Spring Dynamics",
+      "startBeat": 6,
+      "endBeat": 11,
+      "startFrame": 169,
+      "endFrame": 309,
+      "theme": "forest"
+    },
+    {
+      "id": "act3",
+      "code": "03 / SPATIAL 3D",
+      "title": "Isometric Mechanism & Depth",
+      "startBeat": 11,
+      "endBeat": 17,
+      "startFrame": 310,
+      "endFrame": 478,
+      "theme": "swiss"
+    },
+    {
+      "id": "act4",
+      "code": "04 / INSTRUMENT UI",
+      "title": "Tactile Choreography & Telemetry",
+      "startBeat": 17,
+      "endBeat": 22,
+      "startFrame": 479,
+      "endFrame": 618,
+      "theme": "carbon"
+    },
+    {
+      "id": "act5",
+      "code": "05 / PROCEDURAL FIELD",
+      "title": "Generative Audio-Reactive Montage",
+      "startBeat": 22,
+      "endBeat": 27,
+      "startFrame": 619,
+      "endFrame": 759,
+      "theme": "montage"
+    },
+    {
+      "id": "act6",
+      "code": "06 / SHOWREEL '26",
+      "title": "Principal Motion Designer Slate",
+      "startBeat": 27,
+      "endBeat": 32,
+      "startFrame": 760,
+      "endFrame": 899,
+      "theme": "celadon"
+    }
+  ],
+  "cuts": [
+    0,
+    169,
+    310,
+    479,
+    619,
+    661,
+    703,
+    760
+  ]
+}

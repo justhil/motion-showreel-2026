@@ -1,0 +1,993 @@
+/* ==========================================================================
+   ARGON MOTION STUDIO — 2026 SHOWREEL
+   1920x1080 @ 60fps Deterministic Hybrid Stage + Interactive Studio Deck
+   ========================================================================== */
+
+:root {
+  --celadon-bg: #E6EFE9;
+  --celadon-surface: #DAE6DE;
+  --forest-ink: #0B1D17;
+  --forest-deep: #081510;
+  --forest-mid: #1D4437;
+  --sage-muted: #537466;
+  --vermilion: #E03E24;
+  --cobalt: #1847F0;
+  --swiss-bg: #F4F6F9;
+  --aluminum: #D4D7DC;
+  --carbon-bg: #141517;
+  --carbon-surface: #1D2024;
+  --amber: #FF5A1F;
+  --mint: #8FE3B8;
+
+  --font-display: 'Syne', 'Space Grotesk', 'Bahnschrift', sans-serif;
+  --font-grotesk: 'Space Grotesk', 'Bahnschrift', sans-serif;
+  --font-serif: 'Instrument Serif', 'Palatino Linotype', 'Georgia', serif;
+  --font-mono: 'MapleMonoLocal', 'Consolas', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #0B120F;
+  color: #E6EFE9;
+  font-family: var(--font-grotesk);
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Render Mode (?render=1): exact 1920x1080 full-viewport lock */
+body.render-mode {
+  background: transparent;
+}
+body.render-mode #app-shell {
+  padding: 0;
+  width: 1920px;
+  height: 1080px;
+  display: block;
+}
+body.render-mode #stage-wrapper {
+  width: 1920px;
+  height: 1080px;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+body.render-mode #studio-controls {
+  display: none !important;
+}
+
+/* Interactive Studio Preview Mode */
+#app-shell {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 18px 24px;
+  background: radial-gradient(circle at 50% 25%, #14241E 0%, #09100D 100%);
+}
+
+#stage-wrapper {
+  position: relative;
+  width: min(calc((100vh - 96px) * 16 / 9), calc(100vw - 48px));
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(230, 239, 233, 0.16);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+  background: var(--celadon-bg);
+}
+
+/* Fixed 1920x1080 internal coordinate stage scaled via CSS transform in preview */
+#stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  transform-origin: 0 0;
+  overflow: hidden;
+  background: var(--celadon-bg);
+}
+
+.stage-layer {
+  position: absolute;
+  inset: 0;
+  width: 1920px;
+  height: 1080px;
+  pointer-events: none;
+}
+
+#bg-layer {
+  z-index: 1;
+  background: var(--celadon-bg);
+}
+
+#bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(11, 29, 23, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 29, 23, 0.055) 1px, transparent 1px);
+  background-size: 120px 120px;
+  background-position: 0 0;
+}
+
+#back-type-layer {
+  z-index: 2;
+  overflow: hidden;
+}
+
+#webgl-canvas {
+  z-index: 3;
+  display: block;
+}
+
+#canvas-2d {
+  z-index: 4;
+  display: block;
+}
+
+#front-dom-layer {
+  z-index: 5;
+  overflow: hidden;
+}
+
+#wipe-canvas {
+  z-index: 6;
+  display: block;
+}
+
+#vernier-hud {
+  z-index: 7;
+}
+
+#grain-overlay {
+  z-index: 8;
+  opacity: 0.038;
+  mix-blend-mode: overlay;
+  background-size: 180px 180px;
+}
+
+/* ==========================================================================
+   PERIPHERAL VERNIER STUDIO HUD (Minimal, Razor-Thin, Polarity-Adaptive)
+   ========================================================================== */
+#vernier-hud {
+  --hud-ink: #0B1D17;
+  --hud-muted: rgba(11, 29, 23, 0.54);
+  --hud-line: rgba(11, 29, 23, 0.16);
+  --hud-accent: #E03E24;
+  color: var(--hud-ink);
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.hud-bar-top,
+.hud-bar-bottom {
+  position: absolute;
+  left: 56px;
+  right: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hud-bar-top {
+  top: 38px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--hud-line);
+}
+
+.hud-bar-bottom {
+  bottom: 36px;
+  padding-top: 16px;
+  border-top: 1px solid var(--hud-line);
+}
+
+.hud-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+}
+
+.hud-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--hud-accent);
+  display: inline-block;
+}
+
+.hud-meta {
+  color: var(--hud-muted);
+  font-weight: 500;
+}
+
+.hud-progress-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1.5px;
+  height: 2px;
+  background: transparent;
+}
+
+#hud-progress-fill {
+  height: 2px;
+  width: 0%;
+  background: var(--hud-accent);
+}
+
+/* Corner precision crop marks */
+.crop-mark {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--hud-ink);
+  opacity: 0.45;
+}
+.crop-tl { top: 22px; left: 22px; border-top: 1.5px solid; border-left: 1.5px solid; }
+.crop-tr { top: 22px; right: 22px; border-top: 1.5px solid; border-right: 1.5px solid; }
+.crop-bl { bottom: 22px; left: 22px; border-bottom: 1.5px solid; border-left: 1.5px solid; }
+.crop-br { bottom: 22px; right: 22px; border-bottom: 1.5px solid; border-right: 1.5px solid; }
+
+/* ==========================================================================
+   ACT 1: KINETIC TYPOGRAPHY & APERTURE IGNITION (Celadon #E6EFE9 + Forest #0B1D17)
+   ========================================================================== */
+.act-scene {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+
+.line-mask {
+  overflow: hidden;
+  display: block;
+}
+
+#act1-dom {
+  color: var(--forest-ink);
+}
+
+.a1-kicker {
+  position: absolute;
+  left: 112px;
+  top: 138px;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--forest-mid);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  white-space: nowrap;
+}
+
+.a1-kicker-pill {
+  padding: 4px 10px;
+  border: 1px solid rgba(11, 29, 23, 0.35);
+  color: var(--forest-ink);
+  font-weight: 700;
+}
+
+.a1-hero-left {
+  position: absolute;
+  left: 108px;
+  top: 224px;
+}
+
+.a1-word-form {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 188px;
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+  color: var(--forest-ink);
+  white-space: nowrap;
+}
+
+.a1-hero-row2 {
+  position: absolute;
+  left: 112px;
+  top: 448px;
+  display: flex;
+  align-items: baseline;
+  gap: 32px;
+  white-space: nowrap;
+}
+
+.a1-word-in {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 184px;
+  line-height: 0.88;
+  color: var(--vermilion);
+  padding-right: 6px;
+}
+
+.a1-word-motion {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 176px;
+  line-height: 0.88;
+  letter-spacing: -0.05em;
+  color: var(--forest-ink);
+}
+
+/* Asymmetric Swiss Editorial Column on Right */
+.a1-spec-col {
+  position: absolute;
+  right: 112px;
+  top: 142px;
+  width: 440px;
+  border-left: 1.5px solid rgba(11, 29, 23, 0.22);
+  padding-left: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.a1-spec-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(11, 29, 23, 0.12);
+  padding-bottom: 10px;
+  white-space: nowrap;
+}
+
+.a1-spec-num {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--vermilion);
+  font-weight: 700;
+}
+
+.a1-spec-label {
+  font-family: var(--font-grotesk);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--forest-ink);
+}
+
+.a1-spec-val {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--sage-muted);
+}
+
+/* Kinetic Rhythm Strip at Bottom of Act 1 */
+.a1-kinetic-strip {
+  position: absolute;
+  left: 112px;
+  right: 112px;
+  bottom: 128px;
+  height: 136px;
+  border-top: 1.5px solid var(--forest-ink);
+  border-bottom: 1.5px solid var(--forest-ink);
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1.15fr 0.9fr;
+  align-items: center;
+}
+
+.a1-strip-cell {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 22px;
+  border-right: 1px solid rgba(11, 29, 23, 0.2);
+  overflow: hidden;
+}
+.a1-strip-cell:last-child {
+  border-right: none;
+}
+
+.a1-cell-tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--sage-muted);
+  white-space: nowrap;
+}
+
+.a1-cell-word {
+  font-family: var(--font-grotesk);
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   ACT 2: CUBIC-BEZIER GRAPH & HARMONIC PHYSICS (Deep Forest #0B1D17)
+   ========================================================================== */
+#act2-dom {
+  color: var(--celadon-bg);
+}
+
+.a2-header {
+  position: absolute;
+  left: 112px;
+  top: 116px;
+  display: flex;
+  align-items: baseline;
+  gap: 26px;
+  white-space: nowrap;
+}
+
+.a2-title-main {
+  font-family: var(--font-grotesk);
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  color: var(--celadon-bg);
+}
+
+.a2-title-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 72px;
+  font-weight: 400;
+  color: #8FB8A3;
+}
+
+.a2-curve-readout {
+  position: absolute;
+  left: 112px;
+  top: 204px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.a2-mode-badge {
+  background: var(--vermilion);
+  color: #FFF;
+  padding: 5px 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.a2-formula {
+  color: #A9C7B7;
+  padding: 5px 14px;
+  border: 1px solid rgba(230, 239, 233, 0.22);
+  background: rgba(230, 239, 233, 0.04);
+}
+
+.a2-right-caption {
+  position: absolute;
+  left: 1040px;
+  top: 126px;
+  width: 760px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(230, 239, 233, 0.18);
+  padding-bottom: 14px;
+  white-space: nowrap;
+}
+
+.a2-rig-label {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #8FB8A3;
+}
+
+.a2-rig-metric {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--celadon-bg);
+}
+
+/* ==========================================================================
+   ACT 3: SPATIAL 3D DEPTH INTERLEAVING (Back Layer + Front Outline Layer)
+   ========================================================================== */
+#act3-back {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #0B1D17;
+}
+
+.a3-giant-word {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 166px;
+  line-height: 0.86;
+  letter-spacing: -0.05em;
+  color: rgba(11, 29, 23, 0.92);
+  white-space: nowrap;
+}
+
+.a3-giant-word.accent-cobalt {
+  color: var(--cobalt);
+}
+
+#act3-dom {
+  color: #0B1D17;
+}
+
+/* Front Stroke-Outline Typography overlapping IN FRONT OF the 3D Sculpture! */
+.a3-front-outline-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.a3-giant-outline {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 166px;
+  line-height: 0.86;
+  letter-spacing: -0.05em;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(11, 29, 23, 0.58);
+  white-space: nowrap;
+}
+
+.a3-corner-spec {
+  position: absolute;
+  left: 108px;
+  bottom: 120px;
+  background: rgba(244, 246, 249, 0.88);
+  border: 1px solid rgba(11, 29, 23, 0.22);
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.a3-spec-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--cobalt);
+  font-weight: 700;
+}
+
+.a3-spec-headline {
+  font-family: var(--font-grotesk);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0B1D17;
+}
+
+/* Dynamic 3D-Projected SVG Callouts */
+#a3-callout-svg {
+  position: absolute;
+  inset: 0;
+  width: 1920px;
+  height: 1080px;
+}
+
+/* ==========================================================================
+   ACT 4: TACTILE INSTRUMENT UI & SEQUENCER (Leica Matte Carbon #141517)
+   ========================================================================== */
+#act4-dom {
+  color: #F2F4F7;
+}
+
+.a4-top-strip {
+  position: absolute;
+  left: 108px;
+  right: 108px;
+  top: 108px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  white-space: nowrap;
+}
+
+.a4-heading {
+  font-family: var(--font-grotesk);
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.a4-heading span {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--amber);
+  font-size: 58px;
+  margin-left: 10px;
+}
+
+.a4-status-pills {
+  display: flex;
+  gap: 14px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.a4-pill {
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #1B1E22;
+  color: #B9C0C9;
+}
+
+.a4-pill.active {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+/* ==========================================================================
+   ACT 5: GENERATIVE CLIMAX OVERLAYS
+   ========================================================================== */
+#act5-dom {
+  color: var(--forest-ink);
+}
+
+.a5-badge {
+  position: absolute;
+  left: 108px;
+  top: 112px;
+  padding: 8px 18px;
+  background: var(--forest-ink);
+  color: var(--celadon-bg);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+
+.a5c-center-ring-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #E6EFE9;
+  white-space: nowrap;
+}
+
+.a5c-big {
+  font-family: var(--font-display);
+  font-size: 116px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+}
+
+.a5c-sub {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 6px 18px;
+  background: rgba(8, 21, 16, 0.84);
+  border: 1px solid rgba(224, 62, 36, 0.55);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #FF6B52;
+}
+
+/* ==========================================================================
+   ACT 6: ASYMMETRIC SWISS RÉSUMÉ END-SLATE (Celadon #E6EFE9 + Forest #0B1D17)
+   ========================================================================== */
+#act6-dom {
+  color: var(--forest-ink);
+}
+
+.a6-grid {
+  position: absolute;
+  left: 112px;
+  right: 112px;
+  top: 132px;
+  bottom: 118px;
+  display: grid;
+  grid-template-columns: 1.48fr 1fr;
+  gap: 64px;
+}
+
+.a6-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1.5px solid rgba(11, 29, 23, 0.2);
+  padding-right: 56px;
+}
+
+.a6-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--vermilion);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.a6-name-block {
+  margin-top: 16px;
+}
+
+.a6-name-bold {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 172px;
+  line-height: 0.86;
+  letter-spacing: -0.055em;
+  color: var(--forest-ink);
+  white-space: nowrap;
+}
+
+.a6-name-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 138px;
+  line-height: 0.92;
+  letter-spacing: -0.015em;
+  color: var(--forest-mid);
+  white-space: nowrap;
+}
+
+.a6-role-line {
+  margin-top: 22px;
+  font-family: var(--font-grotesk);
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--forest-ink);
+  white-space: nowrap;
+}
+
+.a6-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(11, 29, 23, 0.16);
+}
+
+.a6-metric-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.a6-m-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--sage-muted);
+}
+
+.a6-m-val {
+  font-family: var(--font-grotesk);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--forest-ink);
+}
+
+.a6-m-sub {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--forest-mid);
+}
+
+.a6-availability {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1.5px solid var(--forest-ink);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.a6-avail-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 14px;
+  background: var(--forest-ink);
+  color: var(--celadon-bg);
+  font-weight: 700;
+}
+
+.a6-avail-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--vermilion);
+}
+
+.a6-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.a6-emblem-box {
+  height: 290px;
+  border: 1px solid rgba(11, 29, 23, 0.22);
+  background: rgba(255, 255, 255, 0.26);
+  position: relative;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.a6-emblem-meta {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--sage-muted);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.a6-disciplines {
+  display: flex;
+  flex-direction: column;
+}
+
+.a6-disc-header {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--sage-muted);
+  padding-bottom: 12px;
+  border-bottom: 1.5px solid var(--forest-ink);
+  white-space: nowrap;
+}
+
+.a6-disc-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(11, 29, 23, 0.16);
+  white-space: nowrap;
+}
+
+.a6-disc-left {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.a6-disc-idx {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--vermilion);
+}
+
+.a6-disc-name {
+  font-family: var(--font-grotesk);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--forest-ink);
+}
+
+.a6-disc-tech {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--sage-muted);
+}
+
+/* ==========================================================================
+   INTERACTIVE STUDIO TRANSPORT BAR (Preview Mode Only)
+   ========================================================================== */
+#studio-controls {
+  width: min(calc((100vh - 96px) * 16 / 9), calc(100vw - 48px));
+  height: 52px;
+  background: #121D18;
+  border: 1px solid rgba(230, 239, 233, 0.14);
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.ctrl-btn {
+  background: #1B2B24;
+  color: #E6EFE9;
+  border: 1px solid rgba(230, 239, 233, 0.2);
+  padding: 6px 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+.ctrl-btn:hover {
+  background: #253B31;
+  border-color: var(--vermilion);
+}
+.ctrl-btn.primary {
+  background: var(--vermilion);
+  border-color: var(--vermilion);
+  color: #FFF;
+  min-width: 84px;
+}
+
+#scrubber {
+  flex: 1;
+  accent-color: var(--vermilion);
+  cursor: pointer;
+  height: 4px;
+}
+
+.act-jumps {
+  display: flex;
+  gap: 4px;
+}
+
+.jump-pill {
+  background: transparent;
+  color: #8CA89B;
+  border: 1px solid rgba(230, 239, 233, 0.14);
+  padding: 4px 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  cursor: pointer;
+}
+.jump-pill.active,
+.jump-pill:hover {
+  color: #E6EFE9;
+  border-color: #E6EFE9;
+  background: rgba(230, 239, 233, 0.1);
+}
+
+#ctrl-readout {
+  color: #A6C1B4;
+  min-width: 195px;
+  text-align: right;
+  white-space: nowrap;
+}

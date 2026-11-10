@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARGON MOTION STUDIO — 2026 Showreel (15s · 60fps)</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="./assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="./src/styles.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./assets/vendor/three.module.min.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Dynamic Directional 180-deg Shutter Motion Blur SVG Filter -->
+  <svg width="0" height="0" style="position:absolute;pointer-events:none" aria-hidden="true">
+    <defs>
+      <filter id="shutter-blur-x" x="-25%" y="-25%" width="150%" height="150%">
+        <feGaussianBlur id="fe-blur-x" in="SourceGraphic" stdDeviation="0,0" />
+      </filter>
+      <filter id="shutter-blur-y" x="-25%" y="-25%" width="150%" height="150%">
+        <feGaussianBlur id="fe-blur-y" in="SourceGraphic" stdDeviation="0,0" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div id="app-shell">
+    <div id="stage-wrapper">
+      <div id="stage">
+        <!-- LAYER 1: Architectural Ground & Grid -->
+        <div id="bg-layer" class="stage-layer">
+          <div id="bg-grid"></div>
+        </div>
+
+        <!-- LAYER 2: Monumental Background Kinetic Typography (Behind 3D!) -->
+        <div id="back-type-layer" class="stage-layer">
+          <div id="act3-back">
+            <div class="line-mask"><div id="a3-back-1" class="a3-giant-word">SPATIAL</div></div>
+            <div class="line-mask"><div id="a3-back-2" class="a3-giant-word accent-cobalt">MECHANICS</div></div>
+          </div>
+        </div>
+
+        <!-- LAYER 3: Three.js WebGL2 3D Stage -->
+        <canvas id="webgl-canvas" class="stage-layer" width="1920" height="1080"></canvas>
+
+        <!-- LAYER 4: Procedural Physics, Bezier Rigs, Chronograph & Magnetic Field -->
+        <canvas id="canvas-2d" class="stage-layer" width="1920" height="1080"></canvas>
+
+        <!-- LAYER 5: Foreground Editorial Kinetic Typography & 3D-Tracked Callouts -->
+        <div id="front-dom-layer" class="stage-layer">
+          <!-- ACT 1: Kinetic Typography & Swiss Editorial Grid -->
+          <div id="act1-dom" class="act-scene">
+            <div id="a1-kicker" class="a1-kicker">
+              <span class="a1-kicker-pill">REEL 2026</span>
+              <span>CURATED MOTION ARCHITECTURE · 60.0 FPS</span>
+            </div>
+
+            <div class="a1-hero-left" id="a1-hero-wrap">
+              <div class="line-mask">
+                <div id="a1-form" class="a1-word-form">FORM</div>
+              </div>
+            </div>
+
+            <div class="a1-hero-row2" id="a1-row2-wrap">
+              <div class="line-mask">
+                <div id="a1-in" class="a1-word-in">in</div>
+              </div>
+              <div class="line-mask">
+                <div id="a1-motion" class="a1-word-motion">MOTION</div>
+              </div>
+            </div>
+
+            <div class="a1-spec-col" id="a1-spec-col">
+              <div class="a1-spec-item" id="a1-sp-1">
+                <span class="a1-spec-num">01</span>
+                <span class="a1-spec-label">Kinetic Type</span>
+                <span class="a1-spec-val">SWISS GRID</span>
+              </div>
+              <div class="a1-spec-item" id="a1-sp-2">
+                <span class="a1-spec-num">02</span>
+                <span class="a1-spec-label">Curve Physics</span>
+                <span class="a1-spec-val">C² CONTINUOUS</span>
+              </div>
+              <div class="a1-spec-item" id="a1-sp-3">
+                <span class="a1-spec-num">03</span>
+                <span class="a1-spec-label">Spatial 3D</span>
+                <span class="a1-spec-val">WEBGL2 PBR</span>
+              </div>
+              <div class="a1-spec-item" id="a1-sp-4">
+                <span class="a1-spec-num">04</span>
+                <span class="a1-spec-label">Sound Sync</span>
+                <span class="a1-spec-val">128.00 BPM</span>
+              </div>
+            </div>
+
+            <div class="a1-kinetic-strip" id="a1-strip">
+              <div class="a1-strip-cell" id="a1-cell-0">
+                <span class="a1-cell-tag">01 / TIMING</span>
+                <div class="line-mask"><div class="a1-cell-word" id="a1-cw-0">PRECISION</div></div>
+              </div>
+              <div class="a1-strip-cell" id="a1-cell-1">
+                <span class="a1-cell-tag">02 / CADENCE</span>
+                <div class="line-mask"><div class="a1-cell-word" id="a1-cw-1">RHYTHM</div></div>
+              </div>
+              <div class="a1-strip-cell" id="a1-cell-2">
+                <span class="a1-cell-tag">03 / RIGGING</span>
+                <div class="line-mask"><div class="a1-cell-word" id="a1-cw-2">TENSION</div></div>
+              </div>
+              <div class="a1-strip-cell" id="a1-cell-3">
+                <span class="a1-cell-tag">04 / TASTE</span>
+                <div class="line-mask"><div class="a1-cell-word" id="a1-cw-3">CRAFT</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACT 2: Cubic-Bezier Graph & Harmonic Pendulum -->
+          <div id="act2-dom" class="act-scene">
+            <div class="a2-header" id="a2-header">
+              <div class="line-mask"><span class="a2-title-main" id="a2-t1">CURVE</span></div>
+              <div class="line-mask"><span class="a2-title-serif" id="a2-t2">Choreography</span></div>
+            </div>
+            <div class="a2-curve-readout" id="a2-readout">
+              <span class="a2-mode-badge" id="a2-mode-badge">CRITICALLY DAMPED</span>
+              <span class="a2-formula" id="a2-formula">cubic-bezier(0.16, 1.00, 0.30, 1.00)</span>
+            </div>
+            <div class="a2-right-caption" id="a2-right-cap">
+              <span class="a2-rig-label">ARTICULATED PENDULUM · 6x ONION-SKIN ECHO</span>
+              <span class="a2-rig-metric" id="a2-vel-metric">v = +1.84 rad/s</span>
+            </div>
+          </div>
+
+          <!-- ACT 3: Front Stroke-Outline Depth Interleave + Live 3D Callouts -->
+          <div id="act3-dom" class="act-scene">
+            <div class="a3-front-outline-wrap">
+              <div id="a3-front-1" class="a3-giant-outline">SPATIAL</div>
+              <div id="a3-front-2" class="a3-giant-outline">MECHANICS</div>
+            </div>
+            <svg id="a3-callout-svg" viewBox="0 0 1920 1080"></svg>
+            <div class="a3-corner-spec" id="a3-corner-spec">
+              <span class="a3-spec-eyebrow">27-MODULE ISOMETRIC RIG · WEBGL2</span>
+              <span class="a3-spec-headline" id="a3-state-label">SERVO LOCK // ORTHOGRAPHIC 35.26°</span>
+            </div>
+          </div>
+
+          <!-- ACT 4: Tactile Chronograph & Keyframe Sequencer -->
+          <div id="act4-dom" class="act-scene">
+            <div class="a4-top-strip" id="a4-top-strip">
+              <div class="a4-heading">TACTILE <span>Systems &amp; Telemetry</span></div>
+              <div class="a4-status-pills">
+                <span class="a4-pill active" id="a4-pill-sync">SYNC LOCKED · 60Hz</span>
+                <span class="a4-pill" id="a4-pill-phase">PHASE Δ 0.00ms</span>
+                <span class="a4-pill" id="a4-pill-detent">DETENT 01/16</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACT 5: Generative Montage Overlays -->
+          <div id="act5-dom" class="act-scene">
+            <div class="a5-badge" id="a5-badge">400-NODE MAGNETIC VECTOR FIELD</div>
+            <div class="a5c-center-ring-label" id="a5c-label">
+              <div class="a5c-big" id="a5c-big">ALL OUT</div>
+              <div class="a5c-sub" id="a5c-sub">PROCEDURAL · REALTIME · DETERMINISTIC</div>
+            </div>
+          </div>
+
+          <!-- ACT 6: Asymmetric Swiss Résumé End-Slate -->
+          <div id="act6-dom" class="act-scene">
+            <div class="a6-grid">
+              <div class="a6-left">
+                <div>
+                  <div class="line-mask">
+                    <div class="a6-eyebrow" id="a6-eyebrow">
+                      <span>●</span>
+                      <span>CURATED PORTFOLIO REEL · 2026 EDITION</span>
+                    </div>
+                  </div>
+                  <div class="a6-name-block">
+                    <div class="line-mask"><div class="a6-name-bold" id="a6-name-1">ARGON</div></div>
+                    <div class="line-mask"><div class="a6-name-italic" id="a6-name-2">Motion Practice</div></div>
+                  </div>
+                  <div class="line-mask">
+                    <div class="a6-role-line" id="a6-role">Principal Motion Designer &amp; Creative Technologist</div>
+                  </div>
+                </div>
+
+                <div class="a6-metrics-row" id="a6-metrics">
+                  <div class="a6-metric-cell">
+                    <span class="a6-m-label">FRAME ENGINE</span>
+                    <span class="a6-m-val">60.0 FPS</span>
+                    <span class="a6-m-sub">Zero-Jitter Deterministic</span>
+                  </div>
+                  <div class="a6-metric-cell">
+                    <span class="a6-m-label">COMPOSITOR</span>
+                    <span class="a6-m-val">4-LAYER</span>
+                    <span class="a6-m-sub">WebGL2 · 2D · SVG · Type</span>
+                  </div>
+                  <div class="a6-metric-cell">
+                    <span class="a6-m-label">SOUND DESIGN</span>
+                    <span class="a6-m-val">128 BPM</span>
+                    <span class="a6-m-sub">48kHz Procedural Synth</span>
+                  </div>
+                </div>
+
+                <div class="a6-availability" id="a6-avail">
+                  <span class="a6-avail-badge">
+                    <span class="a6-avail-dot"></span>
+                    <span>AVAILABLE FOR PRINCIPAL ROLES &amp; SELECT COMMISSIONS</span>
+                  </span>
+                  <span>1920×1080 · 60 FPS · ZERO TEMPLATES</span>
+                </div>
+              </div>
+
+              <div class="a6-right">
+                <div class="a6-emblem-box" id="a6-emblem-box">
+                  <div class="a6-emblem-meta">
+                    <span>FIG 06 // GIMBAL POLYHEDRON</span>
+                    <span id="a6-gimbal-angle">θ = 042.8°</span>
+                  </div>
+                  <div class="a6-emblem-meta">
+                    <span>SHADER + VECTOR HYBRID</span>
+                    <span>SEED #2026</span>
+                  </div>
+                </div>
+
+                <div class="a6-disciplines">
+                  <div class="a6-disc-header">CORE MOTION CAPABILITIES</div>
+                  <div class="line-mask">
+                    <div class="a6-disc-row" id="a6-row-0">
+                      <div class="a6-disc-left">
+                        <span class="a6-disc-idx">01</span>
+                        <span class="a6-disc-name">Kinetic Identity &amp; Editorial Type</span>
+                      </div>
+                      <span class="a6-disc-tech">SWISS / VARIABLE</span>
+                    </div>
+                  </div>
+                  <div class="line-mask">
+                    <div class="a6-disc-row" id="a6-row-1">
+                      <div class="a6-disc-left">
+                        <span class="a6-disc-idx">02</span>
+                        <span class="a6-disc-name">3D Spatial &amp; Procedural Rigs</span>
+                      </div>
+                      <span class="a6-disc-tech">WEBGL2 / GLSL</span>
+                    </div>
+                  </div>
+                  <div class="line-mask">
+                    <div class="a6-disc-row" id="a6-row-2">
+                      <div class="a6-disc-left">
+                        <span class="a6-disc-idx">03</span>
+                        <span class="a6-disc-name">Tactile Product &amp; UI Choreography</span>
+                      </div>
+                      <span class="a6-disc-tech">C² SPRINGS / 60Hz</span>
+                    </div>
+                  </div>
+                  <div class="line-mask">
+                    <div class="a6-disc-row" id="a6-row-3">
+                      <div class="a6-disc-left">
+                        <span class="a6-disc-idx">04</span>
+                        <span class="a6-disc-name">Audio-Reactive Generative Tools</span>
+                      </div>
+                      <span class="a6-disc-tech">DSP / TELEMETRY</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LAYER 6: Optical Match-Cut Wipe Curtain (Occludes outgoing DOM + 3D + 2D cleanly!) -->
+        <canvas id="wipe-canvas" class="stage-layer" width="1920" height="1080"></canvas>
+
+        <!-- LAYER 7: Peripheral Vernier Studio HUD -->
+        <div id="vernier-hud" class="stage-layer">
+          <div class="crop-mark crop-tl"></div>
+          <div class="crop-mark crop-tr"></div>
+          <div class="crop-mark crop-bl"></div>
+          <div class="crop-mark crop-br"></div>
+
+          <div class="hud-bar-top">
+            <div class="hud-brand">
+              <span class="hud-dot" id="hud-pulse-dot"></span>
+              <span>ARGON // MOTION DESIGN REEL</span>
+            </div>
+            <div class="hud-meta" id="hud-act-code">01 / KINETIC TYPE</div>
+          </div>
+
+          <div class="hud-bar-bottom">
+            <div class="hud-progress-track">
+              <div id="hud-progress-fill"></div>
+            </div>
+            <div id="hud-timecode">00:00:00:00 · BAR 01.1 · 128.0 BPM</div>
+            <div class="hud-meta" id="hud-frame-counter">FRAME 000 / 899</div>
+          </div>
+        </div>
+
+        <!-- LAYER 7: Subtle Monochromatic Film/Paper Grain -->
+        <canvas id="grain-overlay" class="stage-layer" width="256" height="256"></canvas>
+      </div>
+    </div>
+
+    <!-- Interactive Studio Transport Deck (Hidden automatically during ?render=1) -->
+    <div id="studio-controls">
+      <button id="btn-play" class="ctrl-btn primary">PLAY</button>
+      <button id="btn-prev" class="ctrl-btn">-1F</button>
+      <button id="btn-next" class="ctrl-btn">+1F</button>
+      <input id="scrubber" type="range" min="0" max="899" value="0" step="1" />
+      <div class="act-jumps">
+        <button class="jump-pill active" data-frame="0">01</button>
+        <button class="jump-pill" data-frame="169">02</button>
+        <button class="jump-pill" data-frame="310">03</button>
+        <button class="jump-pill" data-frame="479">04</button>
+        <button class="jump-pill" data-frame="619">05</button>
+        <button class="jump-pill" data-frame="760">06</button>
+      </div>
+      <div id="ctrl-readout">00.00s · F000 · 60FPS</div>
+    </div>
+  </div>
+
+  <audio id="reel-audio" src="./assets/audio/soundtrack.wav" preload="auto"></audio>
+  <script src="./assets/vendor/gsap.min.js"></script>
+  <script src="./assets/audio/telemetry.js"></script>
+  <script type="module" src="./src/reel.js"></script>
+</body>
+</html>
