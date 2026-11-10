@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:," />
+  <title>2026–2056 · One Shot Across Thirty Years</title>
+  <style>
+    :root {
+      --leica-carbon: #141517;
+      --leica-recess: #0c0d0f;
+      --leica-panel: rgba(20, 21, 23, 0.88);
+      --leica-hairline: rgba(236, 232, 223, 0.13);
+      --leica-hairline-strong: rgba(236, 232, 223, 0.26);
+      --ink-primary: #ece8df;
+      --ink-secondary: #8c9099;
+      --ink-dim: #5d6169;
+      --signal-amber: #e8772e;
+      --signal-amber-bright: #f5924e;
+      --signal-amber-soft: rgba(232, 119, 46, 0.18);
+      --font-mono: "JetBrains Mono", "Cascadia Mono", "Consolas", "SFMono-Regular", monospace;
+      --font-sans: "Inter", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+      --font-serif: "Newsreader", "Georgia", "PingFang SC", "Microsoft YaHei UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--leica-carbon);
+      color: var(--ink-primary);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #app {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: #040507;
+    }
+
+    /* Top Matte Carbon Optical Telemetry Strip */
+    .top-bar {
+      height: 40px;
+      flex-shrink: 0;
+      background: var(--leica-carbon);
+      border-bottom: 1px solid var(--leica-hairline);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      z-index: 20;
+      gap: 16px;
+    }
+
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      white-space: nowrap;
+    }
+
+    .amber-led {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--signal-amber);
+    }
+
+    .brand-code {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--ink-primary);
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .brand-sep {
+      width: 1px;
+      height: 13px;
+      background: var(--leica-hairline);
+    }
+
+    .brand-sub {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--ink-secondary);
+    }
+
+    .telemetry-strip {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .tel-item {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .tel-key {
+      color: var(--ink-dim);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+    }
+
+    .tel-val {
+      color: var(--ink-primary);
+      font-weight: 500;
+    }
+
+    .controls-cluster {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .inst-btn {
+      appearance: none;
+      background: var(--leica-recess);
+      color: var(--ink-secondary);
+      border: 1px solid var(--leica-hairline);
+      height: 26px;
+      padding: 0 10px;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: border-color 160ms ease-out, color 160ms ease-out, background-color 160ms ease-out;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .inst-btn:hover {
+      color: var(--ink-primary);
+      border-color: var(--leica-hairline-strong);
+    }
+
+    .inst-btn.active {
+      color: var(--ink-primary);
+      border-color: var(--signal-amber);
+      background: var(--signal-amber-soft);
+    }
+
+    .inst-btn:focus-visible {
+      outline: 1px solid var(--signal-amber);
+      outline-offset: 1px;
+    }
+
+    /* Main 3D Viewport */
+    #viewport {
+      position: relative;
+      flex: 1 1 auto;
+      width: 100%;
+      min-height: 0;
+      cursor: grab;
+      overflow: hidden;
+      background: #030406;
+    }
+
+    #viewport:active {
+      cursor: grabbing;
+    }
+
+    #viewport canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Optical Rangefinder HUD Overlay inside Viewport */
+    .viewport-hud {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    /* Corner optical reticle hairlines */
+    .reticle-corner {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-color: rgba(236, 232, 223, 0.22);
+      border-style: solid;
+      transition: opacity 220ms ease-out;
+    }
+    .reticle-corner.tl { top: 18px; left: 20px; border-width: 1px 0 0 1px; }
+    .reticle-corner.tr { top: 18px; right: 20px; border-width: 1px 1px 0 0; }
+    .reticle-corner.bl { bottom: 18px; left: 20px; border-width: 0 0 1px 1px; }
+    .reticle-corner.br { bottom: 18px; right: 20px; border-width: 0 1px 1px 0; }
+
+    /* Epoch & Stop Caption Stamp (Bottom-Left of Viewport) */
+    .epoch-stamp {
+      position: absolute;
+      left: 34px;
+      bottom: 28px;
+      display: flex;
+      align-items: stretch;
+      gap: 16px;
+      transition: opacity 220ms ease-out, transform 220ms ease-out;
+    }
+
+    .epoch-year-box {
+      display: flex;
+      align-items: baseline;
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
+      line-height: 0.92;
+      text-shadow: 0 2px 18px rgba(0, 0, 0, 0.85);
+    }
+
+    #hud-year-int {
+      font-size: 52px;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      color: var(--ink-primary);
+    }
+
+    #hud-year-frac {
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--signal-amber);
+      margin-left: 1px;
+    }
+
+    .epoch-divider {
+      width: 2px;
+      background: var(--signal-amber);
+      margin: 4px 0;
+    }
+
+    .epoch-meta {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3px;
+      text-shadow: 0 1px 12px rgba(0, 0, 0, 0.9);
+    }
+
+    #hud-stop-index {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      color: var(--signal-amber);
+      font-weight: 600;
+    }
+
+    #hud-stop-title {
+      font-family: var(--font-mono);
+      font-size: 13.5px;
+      letter-spacing: 0.06em;
+      color: var(--ink-primary);
+      font-weight: 600;
+    }
+
+    #hud-stop-sub {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      color: rgba(236, 232, 223, 0.76);
+      letter-spacing: 0.02em;
+    }
+
+    .map-provenance {
+      position: absolute;
+      right: 34px;
+      bottom: 28px;
+      text-align: right;
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
+      text-shadow: 0 1px 12px rgba(0, 0, 0, 0.9);
+      transition: opacity 220ms ease-out;
+    }
+
+    .prov-label {
+      font-size: 9.5px;
+      letter-spacing: 0.14em;
+      color: var(--ink-secondary);
+      margin-bottom: 3px;
+    }
+
+    #hud-map-credit {
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      color: rgba(236, 232, 223, 0.84);
+    }
+
+    /* Bottom Matte Carbon Scrubber Deck */
+    .bottom-deck {
+      height: 66px;
+      flex-shrink: 0;
+      background: var(--leica-carbon);
+      border-top: 1px solid var(--leica-hairline);
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      gap: 18px;
+      z-index: 20;
+    }
+
+    .deck-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    #btn-play {
+      width: 68px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    #time-readout {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-secondary);
+      font-variant-numeric: tabular-nums;
+      width: 86px;
+      white-space: nowrap;
+    }
+
+    /* Engraved Optical Scale Scrubber */
+    #timeline-track {
+      position: relative;
+      flex: 1 1 auto;
+      height: 46px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      touch-action: none;
+    }
+
+    .track-rail {
+      position: relative;
+      width: 100%;
+      height: 3px;
+      background: rgba(236, 232, 223, 0.14);
+      overflow: hidden;
+    }
+
+    #timeline-fill {
+      width: 100%;
+      height: 100%;
+      background: var(--signal-amber);
+      transform-origin: left center;
+      transform: scaleX(0);
+    }
+
+    #ruler-ticks {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .ruler-tick {
+      position: absolute;
+      top: 27px;
+      width: 1px;
+      height: 5px;
+      background: rgba(236, 232, 223, 0.18);
+      transform: translateX(-0.5px);
+    }
+
+    .ruler-tick.major {
+      height: 9px;
+      background: rgba(236, 232, 223, 0.36);
+    }
+
+    #timeline-playhead {
+      position: absolute;
+      top: 15px;
+      width: 2px;
+      height: 20px;
+      background: var(--signal-amber-bright);
+      transform: translateX(-1px);
+      pointer-events: none;
+      z-index: 4;
+    }
+
+    #timeline-playhead::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      width: 8px;
+      height: 4px;
+      background: var(--signal-amber-bright);
+    }
+
+    #stop-detents {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .stop-detent {
+      position: absolute;
+      top: 0px;
+      transform: translateX(-50%);
+      background: none;
+      border: none;
+      color: var(--ink-secondary);
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-variant-numeric: tabular-nums;
+      cursor: pointer;
+      pointer-events: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      padding: 0px 6px;
+      transition: color 150ms ease-out;
+    }
+
+    .stop-detent:hover {
+      color: var(--ink-primary);
+    }
+
+    .stop-detent .detent-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--leica-carbon);
+      border: 1.5px solid var(--ink-secondary);
+      margin-top: 16px;
+      transition: border-color 150ms ease-out, background-color 150ms ease-out, transform 150ms ease-out;
+    }
+
+    .stop-detent .detent-year {
+      order: -1;
+      letter-spacing: 0.04em;
+    }
+
+    .stop-detent.active {
+      color: var(--signal-amber-bright);
+      font-weight: 600;
+    }
+
+    .stop-detent.active .detent-dot {
+      background: var(--signal-amber);
+      border-color: var(--signal-amber-bright);
+      transform: scale(1.2);
+    }
+
+    /* Loading Curtain */
+    #loading-overlay {
+      position: fixed;
+      inset: 0;
+      background: var(--leica-carbon);
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      transition: opacity 400ms ease-out;
+    }
+
+    #loading-overlay.loaded {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .loading-title {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      color: var(--ink-primary);
+    }
+
+    .loading-bar {
+      width: 240px;
+      height: 2px;
+      background: rgba(236, 232, 223, 0.12);
+      overflow: hidden;
+    }
+
+    #loading-bar-fill {
+      width: 100%;
+      height: 100%;
+      background: var(--signal-amber);
+      transform-origin: left center;
+      transform: scaleX(0.04);
+      transition: transform 120ms ease-out;
+    }
+
+    #loading-progress {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      color: var(--ink-secondary);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.06em;
+    }
+
+    /* Minimal HUD mode */
+    html.minimal-hud .reticle-corner,
+    html.minimal-hud .map-provenance,
+    html.minimal-hud #hud-stop-sub {
+      opacity: 0;
+    }
+
+    /* Cinema Capture Mode (?capture=1) for 1080p60 MP4 rendering */
+    html.capture-mode .top-bar,
+    html.capture-mode .bottom-deck,
+    html.capture-mode #loading-overlay {
+      display: none !important;
+    }
+
+    html.capture-mode .epoch-stamp {
+      left: 44px;
+      bottom: 38px;
+    }
+
+    html.capture-mode .map-provenance {
+      right: 44px;
+      bottom: 38px;
+    }
+
+    @media (max-width: 900px) {
+      .telemetry-strip { display: none; }
+      #hud-year-int { font-size: 38px; }
+      .epoch-stamp { left: 18px; bottom: 18px; }
+      .map-provenance { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="loading-overlay">
+    <div class="loading-title">CALIBRATING PLANETARY EPHEMERIS · 2026–2056</div>
+    <div class="loading-bar"><div id="loading-bar-fill"></div></div>
+    <div id="loading-progress">LOADING NASA / LRO / MOLA / SDO MAPS…</div>
+  </div>
+
+  <div id="app">
+    <header class="top-bar">
+      <div class="brand-cluster">
+        <span class="amber-led"></span>
+        <span class="brand-code">OPTICAL FLIGHT · 2026—2056</span>
+        <span class="brand-sep"></span>
+        <span class="brand-sub">ONE CONTINUOUS SHOT · NO CUTS</span>
+      </div>
+
+      <div class="telemetry-strip">
+        <div class="tel-item"><span class="tel-key">REF</span><span class="tel-val" id="tel-body">EARTH</span></div>
+        <div class="tel-item"><span class="tel-key">ALT</span><span class="tel-val" id="tel-alt">800 km</span></div>
+        <div class="tel-item"><span class="tel-key">HELIO</span><span class="tel-val" id="tel-helio">1.000 AU</span></div>
+        <div class="tel-item"><span class="tel-key">FOV</span><span class="tel-val" id="tel-fov">46.0°</span></div>
+      </div>
+
+      <div class="controls-cluster">
+        <button type="button" class="inst-btn" id="btn-recenter" hidden>RECENTER GIMBAL</button>
+        <button type="button" class="inst-btn" id="btn-sound">AUDIO OFF</button>
+        <button type="button" class="inst-btn" id="btn-hud">HUD: FULL</button>
+      </div>
+    </header>
+
+    <main id="viewport">
+      <div class="viewport-hud">
+        <div class="reticle-corner tl"></div>
+        <div class="reticle-corner tr"></div>
+        <div class="reticle-corner bl"></div>
+        <div class="reticle-corner br"></div>
+
+        <div class="epoch-stamp">
+          <div class="epoch-year-box">
+            <span id="hud-year-int">2026</span><span id="hud-year-frac">.0</span>
+          </div>
+          <div class="epoch-divider"></div>
+          <div class="epoch-meta">
+            <div id="hud-stop-index">STOP 01 / 05</div>
+            <div id="hud-stop-title">EARTH AT NIGHT · LEO SATELLITE CLOUD</div>
+            <div id="hud-stop-sub">2026 · 近地夜空与低轨卫星云</div>
+          </div>
+        </div>
+
+        <div class="map-provenance">
+          <div class="prov-label">SURFACE &amp; ALTIMETRY DATA</div>
+          <div id="hud-map-credit">NASA VIIRS Black Marble · Blue Marble · ETOPO1</div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bottom-deck">
+      <div class="deck-left">
+        <button type="button" class="inst-btn active" id="btn-play">PAUSE</button>
+        <span id="time-readout">00.0s / 66s</span>
+      </div>
+
+      <div id="timeline-track" aria-label="30-Year Flight Timeline">
+        <div id="ruler-ticks"></div>
+        <div class="track-rail">
+          <div id="timeline-fill"></div>
+        </div>
+        <div id="stop-detents"></div>
+        <div id="timeline-playhead"></div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
